@@ -271,7 +271,7 @@ with tab1:
             with col:
                 with st.container():
                     # Poster
-                    if row[7]:  # poster_url
+                    if row[7]:
                         st.image(row[7], use_container_width=True)
                     else:
                         st.image("https://via.placeholder.com/300x450?text=Brak+plakatu", use_container_width=True)
@@ -292,12 +292,12 @@ with tab1:
                             pass
                     st.caption(f"📺 {row[4]} • {start_time}")
                     
-                    if row[3]:  # is_premiere
+                    if row[3]:
                         st.markdown("🔥 **PREMIERA**")
                     
                     # Przycisk szczegółów
                     if st.button("Szczegóły", key=f"details_{row[0]}"):
-                        st.session_state.selected_movie = row[11]  # tmdb_id
+                        st.session_state.selected_movie = row[11]
                         st.rerun()
     
     conn.close()
@@ -323,7 +323,7 @@ with tab2:
         for idx, row in enumerate(fav_results):
             col = cols[idx % 4]
             with col:
-                if row[4]:  # poster_url
+                if row[4]:
                     st.image(row[4], use_container_width=True)
                 st.markdown(f"**{row[2]}** ({row[3]})")
                 st.markdown(f"⭐ {row[8]}/10")
@@ -336,8 +336,134 @@ with tab3:
     
     if not TMDB_API_KEY:
         st.error("⚠️ Brak TMDB API Key!")
-        st.info("""
-        **Ustaw TMDB_API_KEY w Streamlit Secrets:**
+        st.markdown("""
+**Ustaw TMDB_API_KEY w Streamlit Secrets:**
+
+1. Settings → Secrets
+2. Dodaj: `TMDB_API_KEY = "twoj_klucz"`
+
+**Jak zdobyć klucz:**
+1. https://www.themoviedb.org/signup
+2. Settings → API → Request API Key
+3. Developer
+4. Application URL: http://localhost:8501
+        """)
+    else:
+        col1, col2 = st.columns(2)
         
-        1. Settings → Secrets
-        2. Dodaj:
+        with col1:
+            movie_title = st.text_input("Tytuł filmu", "Dune")
+            movie_year = st.number_input("Rok", 2000, 2026, 2021, step=1)
+        
+        with col2:
+            channel_id = st.selectbox(
+                "Kanał", 
+                options=[ch['id'] for ch in CHANNELS], 
+                format_func=lambda x: next(ch['name'] for ch in CHANNELS if ch['id'] == x)
+            )
+            start_datetime = st.datetime_input(
+                "Data i godzina emisji", 
+                value=datetime.now() + timedelta(hours=2)
+            )
+        
+        if st.button("🔍 Znajdź w TMDB i dodaj"):
+            with st.spinner("Szukam filmu..."):
+                # Szukaj w TMDB
+                tmdb_movie = search_movie(movie_title, movie_year)
+                
+                if tmdb_movie:
+                    # Pobierz pełne detale
+                    details = get_movie_details(tmdb_movie['id'])
+                    
+                    if details:
+                        # Zapisz do bazy
+                        conn = get_connection()
+                        save_movie_to_db(details, conn)
+                        
+                        # Dodaj do programu TV
+                        cursor = conn.cursor()
+                        cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (tmdb_movie['id'],))
+                        movie_id = cursor.fetchone()[0]
+                        
+                        runtime = details.get('runtime', 120)
+                        end_time = start_datetime + timedelta(minutes=runtime)
+                        
+                        cursor.execute('''
+                            INSERT INTO tv_programs (channel_id, movie_id, start_time, end_time)
+                            VALUES (?, ?, ?, ?)
+                        ''', (
+                            channel_id,
+                            movie_id,
+                            start_datetime.isoformat(),
+                            end_time.isoformat()
+                        ))
+                        
+                        conn.commit()
+                        conn.close()
+                        
+                        st.success(f"✅ Dodano: {details['title']}")
+                        st.rerun()
+                    else:
+                        st.error("Nie udało się pobrać szczegółów filmu")
+                else:
+                    st.error("Nie znaleziono filmu w TMDB")
+
+# === MODAL SZCZEGÓŁÓW (sidebar) ===
+if st.session_state.selected_movie:
+    with st.sidebar:
+        st.markdown("---")
+        st.subheader("📽️ Szczegóły filmu")
+        
+        details = get_movie_details(st.session_state.selected_movie)
+        
+        if details:
+            if details.get('poster_path'):
+                st.image(f"{TMDB_IMAGE_BASE}{details['poster_path']}")
+            
+            st.markdown(f"### {details['title']}")
+            st.markdown(f"⭐ **{details.get('vote_average', 'N/A')}/10**")
+            st.markdown(f"📅 {details.get('release_date', 'N/A')}")
+            st.markdown(f"⏱️ {details.get('runtime', 'N/A')} min")
+            
+            st.markdown("**Opis:**")
+            st.write(details.get('overview', 'Brak opisu'))
+            
+            # Gatunki
+            genres_list = [g['name'] for g in details.get('genres', [])]
+            if genres_list:
+                st.markdown(f"**Gatunki:** {', '.join(genres_list)}")
+            
+            # Trailer
+            videos = details.get('videos', {}).get('results', [])
+            trailers = [v for v in videos if v['type'] == 'Trailer' and v['site'] == 'YouTube']
+            if trailers:
+                st.markdown("**Trailer:**")
+                st.video(f"https://www.youtube.com/watch?v={trailers[0]['key']}")
+            
+            # Ulubione
+            conn = get_connection()
+            cursor = conn.cursor()
+            cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (st.session_state.selected_movie,))
+            movie_row = cursor.fetchone()
+            
+            if movie_row:
+                movie_id = movie_row[0]
+                cursor.execute('SELECT id FROM favorites WHERE movie_id = ?', (movie_id,))
+                is_favorite = cursor.fetchone() is not None
+                
+                if is_favorite:
+                    if st.button("💔 Usuń z ulubionych"):
+                        cursor.execute('DELETE FROM favorites WHERE movie_id = ?', (movie_id,))
+                        conn.commit()
+                        st.rerun()
+                else:
+                    if st.button("❤️ Dodaj do ulubionych"):
+                        cursor.execute('INSERT INTO favorites (movie_id) VALUES (?)', (movie_id,))
+                        conn.commit()
+                        st.rerun()
+            
+            conn.close()
+            
+            if st.button("✖️ Zamknij"):
+                st.session_state.selected_movie = None
+                st.rerun()
