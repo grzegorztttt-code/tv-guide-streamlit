@@ -613,7 +613,43 @@ with tab4:
         conn.commit()
         st.success("✅ Baza wyczyszczona!")
         st.rerun()
+        st.divider()
     
+    # Dodaj nowy kanał
+    st.markdown("### ➕ Dodaj nowy kanał")
+    
+    col1, col2 = st.columns(2)
+    with col1:
+        new_channel_name = st.text_input("Nazwa kanału", "")
+    with col2:
+        new_channel_category = st.selectbox(
+            "Kategoria",
+            ["Ogólne", "Publiczne", "Filmowe", "Rozrywka", "Edukacja", "Premium", "Streaming"]
+        )
+    
+    if st.button("➕ Dodaj kanał"):
+        if new_channel_name:
+            cursor.execute('SELECT MAX(id) FROM channels')
+            max_id = cursor.fetchone()[0]
+            new_id = (max_id or 0) + 1
+            
+            cursor.execute(
+                'INSERT INTO channels (id, name, category) VALUES (?, ?, ?)',
+                (new_id, new_channel_name, new_channel_category)
+            )
+            conn.commit()
+            st.success(f"✅ Dodano kanał: {new_channel_name}")
+            st.rerun()
+        else:
+            st.error("Podaj nazwę kanału!")
+    
+    # Lista kanałów
+    st.markdown("### 📺 Wszystkie kanały")
+    cursor.execute('SELECT id, name, category FROM channels ORDER BY id')
+    all_channels = cursor.fetchall()
+    
+    for ch in all_channels:
+        st.write(f"{ch[0]}. **{ch[1]}** ({ch[2]})")
     conn.close()
 
 # === MODAL SZCZEGÓŁÓW (sidebar) ===
