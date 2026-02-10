@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import sqlite3
 import requests
 import os
+import pandas as pd
 
 # === CONFIG ===
 try:
@@ -215,10 +216,17 @@ genres = st.sidebar.multiselect(
 st.title("📺 Smart TV Guide")
 
 # Tabs
-tab1, tab2, tab3 = st.tabs(["🎬 Program TV", "⭐ Ulubione", "➕ Dodaj Film Testowy"])
+tab1, tab2, tab3, tab4 = st.tabs(["🎬 Program TV", "⭐ Ulubione", "➕ Dodaj Film", "🗑️ Zarządzanie"])
 
 # === TAB 1: PROGRAM TV ===
 with tab1:
+    # Wybór trybu wyświetlania
+    view_mode = st.radio(
+        "Tryb wyświetlania:",
+        ["📊 Po kanałach", "🎬 Grid (kafelki)", "📋 Tabela godzinowa"],
+        horizontal=True
+    )
+    
     conn = get_connection()
     cursor = conn.cursor()
     
@@ -230,6 +238,7 @@ with tab1:
             p.end_time,
             p.is_premiere,
             c.name as channel_name,
+            c.id as channel_id,
             m.title,
             m.year,
             m.poster_url,
@@ -243,7 +252,7 @@ with tab1:
         JOIN movies m ON p.movie_id = m.id
         WHERE DATE(p.start_time) BETWEEN ? AND ?
         AND m.imdb_rating >= ?
-        ORDER BY p.start_time
+        ORDER BY c.name, p.start_time
     ''', (str(date_from), str(date_to), min_rating))
     
     results = cursor.fetchall()
@@ -254,51 +263,163 @@ with tab1:
     
     # Filtruj po gatunkach
     if genres:
-        results = [r for r in results if any(g in str(r[9]) for g in genres)]
+        results = [r for r in results if any(g in str(r[10]) for g in genres)]
     
     st.write(f"**Znaleziono {len(results)} filmów**")
     
-    # Wyświetlanie w gridzie
     if len(results) == 0:
         st.info("Brak filmów spełniających kryteria. Dodaj testowe dane w zakładce ➕")
+    
     else:
-        # Grid layout
-        cols = st.columns(4)
-        
-        for idx, row in enumerate(results):
-            col = cols[idx % 4]
+        # === TRYB 1: PO KANAŁACH ===
+        if view_mode == "📊 Po kanałach":
+            # Grupuj po kanałach
+            channels_dict = {}
+            for row in results:
+                channel_name = row[4]
+                if channel_name not in channels_dict:
+                    channels_dict[channel_name] = []
+                channels_dict[channel_name].append(row)
             
-            with col:
-                with st.container():
-                    # Poster
-                    if row[7]:
-                        st.image(row[7], use_container_width=True)
-                    else:
-                        st.image("https://via.placeholder.com/300x450?text=Brak+plakatu", use_container_width=True)
+            # Wyświetl każdy kanał
+            for channel_name, movies in channels_dict.items():
+                with st.expander(f"📺 **{channel_name}** ({len(movies)} filmów)", expanded=True):
+                    for row in movies:
+                        col1, col2, col3 = st.columns([1, 4, 1])
+                        
+                        with col1:
+                            # Godzina
+                            start_time = row[1]
+                            if isinstance(start_time, str):
+                                try:
+                                    dt = datetime.fromisoformat(start_time)
+                                    time_str = dt.strftime("%H:%M")
+                                    date_str = dt.strftime("%d.%m")
+                                except:
+                                    time_str = start_time
+                                    date_str = ""
+                            st.markdown(f"### {time_str}")
+                            if date_str:
+                                st.caption(date_str)
+                        
+                        with col2:
+                            # Tytuł + info
+                            rating = row[9] if row[9] else 0
+                            rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+                            
+                            st.markdown(f"**{row[6]}** ({row[7]}) {rating_color} **{rating}/10**")
+                            
+                            if row[10]:  # genres
+                                genres_short = row[10][:60] + "..." if len(row[10]) > 60 else row[10]
+                                st.caption(f"🎭 {genres_short}")
+                            
+                            if row[3]:  # is_premiere
+                                st.markdown("🔥 **PREMIERA**")
+                        
+                        with col3:
+                            # Akcje
+                            if st.button("📖", key=f"det_{row[0]}", help="Szczegóły"):
+                                st.session_state.selected_movie = row[12]
+                                st.rerun()
+                        
+                        st.divider()
+        
+        # === TRYB 2: GRID ===
+        elif view_mode == "🎬 Grid (kafelki)":
+            cols = st.columns(4)
+            
+            for idx, row in enumerate(results):
+                col = cols[idx % 4]
+                
+                with col:
+                    with st.container():
+                        # Poster
+                        if row[8]:
+                            st.image(row[8], use_container_width=True)
+                        else:
+                            st.image("https://via.placeholder.com/300x450?text=Brak+plakatu", use_container_width=True)
+                        
+                        # Tytuł + ocena
+                        rating = row[9] if row[9] else 0
+                        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+                        st.markdown(f"**{row[6]}** ({row[7]})")
+                        st.markdown(f"{rating_color} **{rating}/10**")
+                        
+                        # Info
+                        start_time = row[1]
+                        if isinstance(start_time, str):
+                            try:
+                                dt = datetime.fromisoformat(start_time)
+                                start_time = dt.strftime("%d.%m %H:%M")
+                            except:
+                                pass
+                        st.caption(f"📺 {row[4]} • {start_time}")
+                        
+                        if row[3]:
+                            st.markdown("🔥 **PREMIERA**")
+                        
+                        # Przycisk szczegółów
+                        if st.button("Szczegóły", key=f"details_{row[0]}"):
+                            st.session_state.selected_movie = row[12]
+                            st.rerun()
+        
+        # === TRYB 3: TABELA GODZINOWA ===
+        elif view_mode == "📋 Tabela godzinowa":
+            # Przygotuj dane dla tabeli
+            table_data = []
+            for row in results:
+                start_time = row[1]
+                if isinstance(start_time, str):
+                    try:
+                        dt = datetime.fromisoformat(start_time)
+                        time_str = dt.strftime("%H:%M")
+                        date_str = dt.strftime("%d.%m")
+                    except:
+                        time_str = start_time
+                        date_str = ""
+                
+                rating = row[9] if row[9] else 0
+                rating_emoji = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+                
+                table_data.append({
+                    'Data': date_str,
+                    'Godzina': time_str,
+                    'Kanał': row[4],
+                    'Film': f"{row[6]} ({row[7]})",
+                    'Ocena': f"{rating_emoji} {rating}",
+                    'tmdb_id': row[12],
+                    'prog_id': row[0]
+                })
+            
+            if table_data:
+                df = pd.DataFrame(table_data)
+                
+                # Grupuj po dacie
+                for date in df['Data'].unique():
+                    st.markdown(f"### 📅 {date}")
                     
-                    # Tytuł + ocena
-                    rating = row[8] if row[8] else 0
-                    rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                    st.markdown(f"**{row[5]}** ({row[6]})")
-                    st.markdown(f"{rating_color} **{rating}/10**")
+                    date_df = df[df['Data'] == date].drop('Data', axis=1)
                     
-                    # Info
-                    start_time = row[1]
-                    if isinstance(start_time, str):
-                        try:
-                            dt = datetime.fromisoformat(start_time)
-                            start_time = dt.strftime("%d.%m %H:%M")
-                        except:
-                            pass
-                    st.caption(f"📺 {row[4]} • {start_time}")
+                    # Pivot table
+                    try:
+                        pivot = date_df.pivot_table(
+                            index='Godzina',
+                            columns='Kanał',
+                            values='Film',
+                            aggfunc='first',
+                            fill_value='-'
+                        )
+                        
+                        st.dataframe(pivot, use_container_width=True)
+                    except:
+                        # Jeśli pivot nie działa, pokaż zwykłą tabelę
+                        st.dataframe(
+                            date_df[['Godzina', 'Kanał', 'Film', 'Ocena']], 
+                            use_container_width=True,
+                            hide_index=True
+                        )
                     
-                    if row[3]:
-                        st.markdown("🔥 **PREMIERA**")
-                    
-                    # Przycisk szczegółów
-                    if st.button("Szczegóły", key=f"details_{row[0]}"):
-                        st.session_state.selected_movie = row[11]
-                        st.rerun()
+                    st.divider()
     
     conn.close()
 
@@ -330,9 +451,9 @@ with tab2:
     
     conn.close()
 
-# === TAB 3: DODAJ TESTOWE DANE ===
+# === TAB 3: DODAJ FILM ===
 with tab3:
-    st.subheader("Dodaj film testowy")
+    st.subheader("Dodaj film do programu")
     
     if not TMDB_API_KEY:
         st.error("⚠️ Brak TMDB API Key!")
@@ -388,25 +509,112 @@ with tab3:
                         runtime = details.get('runtime', 120)
                         end_time = start_datetime + timedelta(minutes=runtime)
                         
+                        # Sprawdź duplikaty
                         cursor.execute('''
-                            INSERT INTO tv_programs (channel_id, movie_id, start_time, end_time)
-                            VALUES (?, ?, ?, ?)
-                        ''', (
-                            channel_id,
-                            movie_id,
-                            start_datetime.isoformat(),
-                            end_time.isoformat()
-                        ))
+                            SELECT id FROM tv_programs 
+                            WHERE movie_id = ? AND channel_id = ? AND start_time = ?
+                        ''', (movie_id, channel_id, start_datetime.isoformat()))
                         
-                        conn.commit()
+                        if cursor.fetchone():
+                            st.warning(f"⚠️ **{details['title']}** już jest w programie o tej godzinie na tym kanale!")
+                        else:
+                            cursor.execute('''
+                                INSERT INTO tv_programs (channel_id, movie_id, start_time, end_time)
+                                VALUES (?, ?, ?, ?)
+                            ''', (
+                                channel_id,
+                                movie_id,
+                                start_datetime.isoformat(),
+                                end_time.isoformat()
+                            ))
+                            
+                            conn.commit()
+                            st.success(f"✅ Dodano: {details['title']}")
+                            st.rerun()
+                        
                         conn.close()
-                        
-                        st.success(f"✅ Dodano: {details['title']}")
-                        st.rerun()
                     else:
                         st.error("Nie udało się pobrać szczegółów filmu")
                 else:
                     st.error("Nie znaleziono filmu w TMDB")
+
+# === TAB 4: ZARZĄDZANIE ===
+with tab4:
+    st.subheader("🗑️ Zarządzanie bazą danych")
+    
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    # Statystyki
+    st.markdown("### 📊 Statystyki")
+    col1, col2, col3 = st.columns(3)
+    
+    cursor.execute('SELECT COUNT(*) FROM movies')
+    movies_count = cursor.fetchone()[0]
+    col1.metric("Filmy w bazie", movies_count)
+    
+    cursor.execute('SELECT COUNT(*) FROM tv_programs')
+    programs_count = cursor.fetchone()[0]
+    col2.metric("Emisje w programie", programs_count)
+    
+    cursor.execute('SELECT COUNT(*) FROM favorites')
+    favorites_count = cursor.fetchone()[0]
+    col3.metric("Ulubione", favorites_count)
+    
+    st.divider()
+    
+    # Duplikaty
+    st.markdown("### 🔍 Duplikaty w programie")
+    cursor.execute('''
+        SELECT 
+            m.title,
+            c.name,
+            p.start_time,
+            COUNT(*) as ile_razy
+        FROM tv_programs p
+        JOIN movies m ON p.movie_id = m.id
+        JOIN channels c ON p.channel_id = c.id
+        GROUP BY p.movie_id, p.channel_id, p.start_time
+        HAVING COUNT(*) > 1
+    ''')
+    
+    duplicates = cursor.fetchall()
+    
+    if duplicates:
+        st.warning(f"Znaleziono {len(duplicates)} duplikatów:")
+        for dup in duplicates:
+            st.write(f"- **{dup[0]}** na {dup[1]} o {dup[2]} ({dup[3]}x)")
+        
+        if st.button("🗑️ Usuń wszystkie duplikaty"):
+            cursor.execute('''
+                DELETE FROM tv_programs
+                WHERE id NOT IN (
+                    SELECT MIN(id)
+                    FROM tv_programs
+                    GROUP BY movie_id, channel_id, start_time
+                )
+            ''')
+            conn.commit()
+            st.success("✅ Duplikaty usunięte!")
+            st.rerun()
+    else:
+        st.success("✅ Brak duplikatów")
+    
+    st.divider()
+    
+    # Resetuj bazę
+    st.markdown("### ⚠️ Resetuj bazę danych")
+    st.warning("To usunie WSZYSTKIE filmy, program TV i ulubione!")
+    
+    if st.button("🗑️ RESETUJ BAZĘ (nieodwracalne!)"):
+        cursor.execute('DELETE FROM tv_programs')
+        cursor.execute('DELETE FROM favorites')
+        cursor.execute('DELETE FROM movies')
+        conn.commit()
+        st.success("✅ Baza wyczyszczona!")
+        st.rerun()
+    
+    conn.close()
 
 # === MODAL SZCZEGÓŁÓW (sidebar) ===
 if st.session_state.selected_movie:
@@ -467,3 +675,4 @@ if st.session_state.selected_movie:
             if st.button("✖️ Zamknij"):
                 st.session_state.selected_movie = None
                 st.rerun()
+
