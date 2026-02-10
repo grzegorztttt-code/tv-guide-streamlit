@@ -1,0 +1,127 @@
+[theme]
+primaryColor = "#FF4B4B"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#262730"
+textColor = "#FAFAFA"
+font = "sans serif"
+
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = true
+
+[browser]
+gatherUsageStats = false
+```
+
+---
+
+## 1️⃣1️⃣ **`data/.gitkeep`** (pusty plik, żeby folder istniał)
+
+Stwórz pusty plik `data/.gitkeep` - to zapewni, że folder `data/` będzie w repo, ale puste pliki `.db` NIE będą commitowane.
+
+Zawartość: (pusty plik)
+
+---
+
+## 📋 **Struktura finalna na GitHub:**
+```
+tv-guide-streamlit/
+├── .gitignore                 # ✅ DODAJ
+├── .env.example              # ✅ DODAJ
+├── requirements.txt          # ✅ DODAJ
+├── LICENSE                   # ✅ DODAJ (opcjonalnie)
+├── README.md                 # ✅ Już masz
+├── app.py                    # ✅ Już masz
+├── config.py                 # ✅ Już masz
+├── .streamlit/
+│   └── config.toml          # ✅ DODAJ (opcjonalnie)
+├── database/
+│   ├── __init__.py          # ✅ DODAJ
+│   └── db.py                # ✅ Już masz
+├── services/
+│   ├── __init__.py          # ✅ DODAJ
+│   ├── tmdb.py              # ✅ Już masz
+│   └── epg.py               # ✅ DODAJ
+├── utils/
+│   ├── __init__.py          # ✅ DODAJ
+│   └── helpers.py           # ✅ DODAJ
+└── data/
+    └── .gitkeep             # ✅ DODAJ
+```
+
+---
+
+## 🚀 **JAK DODAĆ TE PLIKI (z telefonu GitHub Web):**
+
+### **Pojedyncze pliki:**
+
+1. Idź do swojego repo na GitHubie
+2. **Add file** → **Create new file**
+3. Name: `requirements.txt`
+4. Wklej zawartość (skopiuj z góry)
+5. **Commit new file**
+6. Powtórz dla każdego pliku
+
+### **Pliki w folderach:**
+
+Dla `utils/helpers.py`:
+1. **Add file** → **Create new file**
+2. Name: `utils/helpers.py` (wpisz RAZEM z folderem!)
+3. GitHub automatycznie stworzy folder
+4. Wklej kod
+5. **Commit**
+
+### **Pusty plik (`.gitkeep`):**
+
+1. **Add file** → **Create new file**
+2. Name: `data/.gitkeep`
+3. Zostaw puste
+4. **Commit**
+
+---
+
+## 📱 **Kolejność dodawania (najlepsza):**
+```
+1. .gitignore              ← NAJPIERW (ochrona)
+2. requirements.txt        ← Zależności
+3. .env.example           ← Szablon
+4. utils/__init__.py      ← Puste
+5. utils/helpers.py       ← Kod
+6. database/__init__.py   ← Puste
+7. services/__init__.py   ← Puste
+8. services/epg.py        ← Kod
+9. data/.gitkeep          ← Pusty
+10. .streamlit/config.toml ← UI (opcjonalnie)
+11. LICENSE               ← Licencja (opcjonalnie)
+```
+
+---
+
+## ✅ **Sprawdzenie po dodaniu:**
+
+Twoje repo powinno wyglądać tak:
+```
+📁 tv-guide-streamlit
+  📄 .gitignore
+  📄 .env.example
+  📄 requirements.txt
+  📄 README.md
+  📄 app.py
+  📄 config.py
+  📄 LICENSE
+  📁 .streamlit
+    📄 config.toml
+  📁 database
+    📄 __init__.py
+    📄 db.py
+  📁 services
+    📄 __init__.py
+    📄 tmdb.py
+    📄 epg.py
+  📁 utils
+    📄 __init__.py
+    📄 helpers.py
+  📁 data
+    📄 .gitkeep
