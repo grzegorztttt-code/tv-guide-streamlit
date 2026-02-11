@@ -4,7 +4,6 @@ import sqlite3
 import requests
 import os
 import pandas as pd
-from bs4 import BeautifulSoup
 import time
 import xml.etree.ElementTree as ET
 
@@ -33,7 +32,6 @@ def init_db():
     conn = sqlite3.connect('data/tv_guide.db')
     cursor = conn.cursor()
     
-    # Movies
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS movies (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -50,7 +48,6 @@ def init_db():
         )
     ''')
     
-    # TV Programs (EPG)
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS tv_programs (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -66,8 +63,356 @@ def init_db():
         )
     ''')
     
-    # Channels
     cursor.execute('''
+        CREATE TABLE IF NOT EXISTS channels (
+            id TEXT PRIMARY KEY,
+            name TEXT NOT NULL,
+            category TEXT
+        )
+    ''')
+    
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS metadata (
+            key TEXT PRIMARY KEY,
+            value TEXT,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        )
+    ''')
+    
+    cursor.execute('CREATE INDEX IF NOT EXISTS idx_programs_time ON tv_programs(start_time)')
+    cursor.execute('CREATE INDEX IF NOT EXISTS idx_programs_channel ON tv_programs(channel_id)')
+    
+    conn.commit()
+    conn.close()
+
+def get_connection():
+    return sqlite3.connect('data/tv_guide.db', check_same_thread=False)
+
+# === EPG.OVH PARSER ===
+def download_epg_xml(epg_type='detailed'):
+    """Pobiera EPG XML z EPG.ovh"""
+    url = EPG_URLS.get(epg_type, EPG_URLS['detailed'])
+    
+    try:
+        response = requests.get(url, timeout=30)
+        response.raise_for_status()
+        
+        size_mb = len(response.content) / (1024 * 1024)
+        st.info(f"✅ Pobrano {size_mb:.1f} MB z EPG.ovh")
+        
+        return response.content
+    except Exception as e:
+        st.error(f"Błąd pobierania EPG: {e}")
+        return None
+
+def parse_epg_xml(xml_content):
+    """Parsuje XML EPG do struktury danych"""
+    try:
+        root = ET.fromstring(xml_content)
+        
+        channels = {}
+        for channel in root.findall('.//channel'):
+            channel_id = channel.get('id')
+            display_name = channel.find('display-name')
+            if display_name is not None:
+                channels[channel_id] = display_name.text
+        
+        programs = []
+        for programme in root.findall('.//programme'):
+            channel_id = programme.get('channel')
+            start = programme.get('start')
+            stop = programme.get('stop')
+            
+            title_elem = programme.find('title')
+            title = title_elem.text if title_elem is not None else 'Unknown'
+            
+            category_elem = programme.find('category')
+            category = category_elem.text if category_elem is not None else None
+            
+            date_elem = programme.find('date')
+            year = int(date_elem.text[:4]) if date_elem is not None and date_elem.text else None
+            
+            try:
+                start_dt = datetime.strptime(start[:14], '%Y%m%d%H%M%S')
+                stop_dt = datetime.strptime(stop[:14], '%Y%m%d%H%M%S')
+            except:
+                continue
+            
+            programs.append({
+                'channel_id': channel_id,
+                'channel_name': channels.get(channel_id, channel_id),
+                'title': title,
+                'start_time': start_dt,
+                'end_time': stop_dt,
+                'category': category,
+                'year': year
+            })
+        
+        return channels, programs
+    
+    except Exception as e:
+        st.error(f"Błąd parsowania XML: {e}")
+        return {}, []
+
+def is_movie_program(title, category, year):
+    """Sprawdza czy program to film"""
+    if not title:
+        return False
+    
+    title_lower = title.lower()
+    
+    non_movie = ['wiadomości', 'news', 'pogoda', 'sport', 'serial', 'telenovela', 
+                 'show', 'program', 'koncert', 'magazyn', 'talk']
+    
+    for keyword in non_movie:
+        if keyword in title_lower:
+            return False
+    
+    if category and 'film' in category.lower():
+        return True
+    
+    if year and year < datetime.now().year:
+        return True
+    
+    return False
+
+# === TMDB FUNCTIONS ===
+def search_movie_tmdb(title, year=None):
+    """Szuka filmu w TMDB"""
+    if not TMDB_API_KEY:
+        return None
+    
+    clean_title = title.split('(')[0].strip()
+    clean_title = clean_title.replace('Film:', '').strip()
+    
+    params = {
+        'api_key': TMDB_API_KEY,
+        'query': clean_title,
+        'language': 'pl-PL'
+    }
+    if year:
+        params['year'] = year
+    
+    try:
+        response = requests.get(f'{TMDB_BASE_URL}/search/movie', params=params)
+        results = response.json().get('results', [])
+        return results[0] if results else None
+    except:
+        return None
+
+def get_movie_details_tmdb(tmdb_id):
+    """Pobiera szczegóły filmu z TMDB"""
+    if not TMDB_API_KEY:
+        return None
+    
+    params = {
+        'api_key': TMDB_API_KEY,
+        'language': 'pl-PL',
+        'append_to_response': 'credits,videos'
+    }
+    
+    try:
+        response = requests.get(f'{TMDB_BASE_URL}/movie/{tmdb_id}', params=params)
+        return response.json()
+    except:
+        return None
+
+def save_movie_to_db(tmdb_data, conn):
+    """Zapisuje film do bazy"""
+    cursor = conn.cursor()
+    
+    genres = ','.join([g['name'] for g in tmdb_data.get('genres', [])])
+    poster_url = f"{TMDB_IMAGE_BASE}{tmdb_data['poster_path']}" if tmdb_data.get('poster_path') else None
+    
+    cursor.execute('''
+        INSERT OR IGNORE INTO movies 
+        (tmdb_id, title, original_title, year, poster_url, description, runtime, genres, imdb_rating)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ''', (
+        tmdb_data['id'],
+        tmdb_data.get('title'),
+        tmdb_data.get('original_title'),
+        tmdb_data.get('release_date', '')[:4] if tmdb_data.get('release_date') else None,
+        poster_url,
+        tmdb_data.get('overview'),
+        tmdb_data.get('runtime'),
+        genres,
+        tmdb_data.get('vote_average')
+    ))
+    
+    conn.commit()
+    cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (tmdb_data['id'],))
+    result = cursor.fetchone()
+    return result[0] if result else None
+
+# === MAIN IMPORT FUNCTION ===
+def import_epg_from_xml(selected_channel_filter=None, max_movies=500, epg_type='detailed', progress_bar=None, status_text=None):
+    """Importuje EPG z EPG.ovh z możliwością przerwania"""
+    
+    if progress_bar:
+        progress_bar.progress(0.1, text="Pobieranie EPG XML...")
+    
+    if st.session_state.get('import_cancelled', False):
+        return 0, 0
+    
+    xml_content = download_epg_xml(epg_type)
+    if not xml_content:
+        return 0, 0
+    
+    if progress_bar:
+        progress_bar.progress(0.2, text="Parsowanie XML...")
+    
+    if st.session_state.get('import_cancelled', False):
+        return 0, 0
+    
+    channels, programs = parse_epg_xml(xml_content)
+    
+    if not programs:
+        return 0, 0
+    
+    if selected_channel_filter:
+        programs = [p for p in programs if p['channel_name'] in selected_channel_filter]
+    
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    for channel_id, channel_name in channels.items():
+        cursor.execute('''
+            INSERT OR REPLACE INTO channels (id, name, category)
+            VALUES (?, ?, ?)
+        ''', (channel_id, channel_name, 'TV'))
+    
+    conn.commit()
+    
+    movie_programs = [p for p in programs if is_movie_program(p['title'], p['category'], p['year'])]
+    
+    if len(movie_programs) > max_movies:
+        movie_programs = movie_programs[:max_movies]
+    
+    total_programs = len(movie_programs)
+    total_movies = 0
+    tmdb_cache = {}
+    
+    for idx, program in enumerate(movie_programs):
+        if st.session_state.get('import_cancelled', False):
+            if status_text:
+                status_text.warning(f"⚠️ Przerwano po {idx}/{total_programs} filmach")
+            conn.commit()
+            conn.close()
+            return idx, total_movies
+        
+        if progress_bar and idx % 5 == 0:
+            progress = 0.2 + (0.7 * idx / total_programs)
+            progress_bar.progress(progress, text=f"Przetwarzanie: {idx}/{total_programs}...")
+        
+        if status_text and idx % 10 == 0:
+            status_text.info(f"📡 {idx}/{total_programs} | ✅ {total_movies} filmów z TMDB")
+        
+        cache_key = f"{program['title']}_{program['year']}"
+        
+        movie_id = None
+        
+        if cache_key in tmdb_cache:
+            movie_id = tmdb_cache[cache_key]
+            if movie_id:
+                total_movies += 1
+        else:
+            tmdb_movie = search_movie_tmdb(program['title'], program['year'])
+            
+            if tmdb_movie:
+                details = get_movie_details_tmdb(tmdb_movie['id'])
+                if details:
+                    movie_id = save_movie_to_db(details, conn)
+                    total_movies += 1
+            
+            tmdb_cache[cache_key] = movie_id
+        
+        cursor.execute('''
+            INSERT INTO tv_programs 
+            (channel_id, channel_name, movie_id, program_title, start_time, end_time, category, year)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ''', (
+            program['channel_id'],
+            program['channel_name'],
+            movie_id,
+            program['title'],
+            program['start_time'].isoformat(),
+            program['end_time'].isoformat(),
+            program['category'],
+            program['year']
+        ))
+        
+        if idx % 100 == 0:
+            conn.commit()
+    
+    cursor.execute('''
+        INSERT OR REPLACE INTO metadata (key, value, updated_at)
+        VALUES ('last_update', ?, datetime('now'))
+    ''', (datetime.now().strftime('%Y-%m-%d'),))
+    
+    conn.commit()
+    conn.close()
+    
+    return total_programs, total_movies
+
+# === STREAMLIT APP ===
+st.set_page_config(
+    page_title="📺 Smart TV Guide",
+    page_icon="📺",
+    layout="wide"
+)
+
+init_db()
+
+if 'import_running' not in st.session_state:
+    st.session_state.import_running = False
+if 'import_cancelled' not in st.session_state:
+    st.session_state.import_cancelled = False
+
+st.title("📺 Smart TV Guide - Program TV")
+
+# === SIDEBAR ===
+st.sidebar.title("🔍 Filtry")
+
+conn = get_connection()
+cursor = conn.cursor()
+cursor.execute('SELECT DISTINCT channel_id, channel_name FROM tv_programs ORDER BY channel_name')
+available_channels = cursor.fetchall()
+conn.close()
+
+if available_channels:
+    selected_channels = st.sidebar.multiselect(
+        "Wybierz kanały:",
+        options=[ch[0] for ch in available_channels],
+        default=[ch[0] for ch in available_channels[:10]],
+        format_func=lambda x: next((ch[1] for ch in available_channels if ch[0] == x), x)
+    )
+else:
+    st.sidebar.warning("Brak kanałów. Pobierz EPG!")
+    selected_channels = []
+
+date_from = st.sidebar.date_input("Data od:", value=datetime.now())
+date_to = st.sidebar.date_input("Data do:", value=datetime.now() + timedelta(days=3))
+
+min_rating = st.sidebar.slider("Min. ocena IMDb:", 0.0, 10.0, 6.0, 0.5)
+
+sort_option = st.sidebar.selectbox(
+    "Sortuj po:",
+    ["⏰ Czas emisji", "⭐ Ocena IMDb (malejąco)", "🎬 Tytuł (A-Z)"]
+)
+
+# === AKTUALIZACJA EPG ===
+st.markdown("---")
+
+st.markdown("### 🔄 Aktualizacja danych")
+
+conn = get_connection()
+cursor = conn.cursor()
+cursor.execute("SELECT value, updated_at FROM metadata WHERE key = 'last_update'")
+last_update = cursor.fetchone()
+conn.close()
+
+if    cursor.execute('''
         CREATE TABLE IF NOT EXISTS channels (
             id TEXT PRIMARY KEY,
             name TEXT NOT NULL,
