@@ -6,6 +6,8 @@ import os
 import pandas as pd
 import time
 import xml.etree.ElementTree as ET
+import asyncio
+import aiohttp
 
 # === CONFIG ===
 try:
@@ -246,19 +248,23 @@ def save_movie_to_db(tmdb_data, conn):
     return result[0] if result else None
 
 # === MAIN IMPORT FUNCTION ===
-def import_epg_from_xml(selected_channel_filter=None, max_movies=500, epg_type='detailed', progress_bar=None, status_text=None):
-    """Importuje EPG z EPG.ovh z możliwością przerwania"""
+def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_bar=None, status_text=None):
+    """
+    Importuje EPG z EPG.ovh - WERSJA ASYNC (SZYBKA!)
+    """
     
+    # Pobierz XML
     if progress_bar:
         progress_bar.progress(0.1, text="Pobieranie EPG XML...")
     
     if st.session_state.get('import_cancelled', False):
         return 0, 0
     
-    xml_content = download_epg_xml(epg_type)
+    xml_content = download_epg_xml('detailed')
     if not xml_content:
         return 0, 0
     
+    # Parsuj
     if progress_bar:
         progress_bar.progress(0.2, text="Parsowanie XML...")
     
@@ -270,9 +276,11 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, epg_type='
     if not programs:
         return 0, 0
     
+    # FILTRUJ KANAŁY
     if selected_channel_filter:
         programs = [p for p in programs if p['channel_name'] in selected_channel_filter]
     
+    # Zapisz kanały
     conn = get_connection()
     cursor = conn.cursor()
     
@@ -284,66 +292,79 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, epg_type='
     
     conn.commit()
     
+    # Filtruj tylko filmy
     movie_programs = [p for p in programs if is_movie_program(p['title'], p['category'], p['year'])]
     
+    # OGRANICZ liczbę
     if len(movie_programs) > max_movies:
         movie_programs = movie_programs[:max_movies]
     
     total_programs = len(movie_programs)
     total_movies = 0
-    tmdb_cache = {}
     
-    for idx, program in enumerate(movie_programs):
+    if status_text:
+        status_text.info(f"🎬 Znaleziono {total_programs} filmów do przetworzenia")
+    
+    # BATCH PROCESSING - przetwarzaj po 20 filmów naraz
+    BATCH_SIZE = 20
+    batches = [movie_programs[i:i + BATCH_SIZE] for i in range(0, len(movie_programs), BATCH_SIZE)]
+    
+    if progress_bar:
+        progress_bar.progress(0.3, text="Rozpoczynam przetwarzanie wsadowe...")
+    
+    for batch_idx, batch in enumerate(batches):
+        # SPRAWDŹ CZY ANULOWANO
         if st.session_state.get('import_cancelled', False):
             if status_text:
-                status_text.warning(f"⚠️ Przerwano po {idx}/{total_programs} filmach")
+                status_text.warning(f"⚠️ Przerwano po {batch_idx * BATCH_SIZE}/{total_programs} filmach")
             conn.commit()
             conn.close()
-            return idx, total_movies
+            return batch_idx * BATCH_SIZE, total_movies
         
-        if progress_bar and idx % 5 == 0:
-            progress = 0.2 + (0.7 * idx / total_programs)
-            progress_bar.progress(progress, text=f"Przetwarzanie: {idx}/{total_programs}...")
+        # Aktualizuj progress
+        progress = 0.3 + (0.6 * batch_idx / len(batches))
+        if progress_bar:
+            progress_bar.progress(progress, text=f"Batch {batch_idx + 1}/{len(batches)} ({batch_idx * BATCH_SIZE}/{total_programs})...")
         
-        if status_text and idx % 10 == 0:
-            status_text.info(f"📡 {idx}/{total_programs} | ✅ {total_movies} filmów z TMDB")
+        if status_text:
+            status_text.info(f"⚡ Przetwarzanie wsadowe: {batch_idx * BATCH_SIZE}-{min((batch_idx + 1) * BATCH_SIZE, total_programs)}/{total_programs} | ✅ {total_movies} z TMDB")
         
-        cache_key = f"{program['title']}_{program['year']}"
+        # ASYNC BATCH - wszystkie 20 filmów równocześnie
+        batch_results = run_async_batch(batch)
         
-        movie_id = None
-        
-        if cache_key in tmdb_cache:
-            movie_id = tmdb_cache[cache_key]
-            if movie_id:
-                total_movies += 1
-        else:
-            tmdb_movie = search_movie_tmdb(program['title'], program['year'])
+        # Przetwórz wyniki batcha
+        for program, tmdb_movie in batch_results:
+            movie_id = None
             
             if tmdb_movie:
+                # Pobierz szczegóły
                 details = get_movie_details_tmdb(tmdb_movie['id'])
                 if details:
                     movie_id = save_movie_to_db(details, conn)
                     total_movies += 1
             
-            tmdb_cache[cache_key] = movie_id
+            # Zapisz program
+            cursor.execute('''
+                INSERT INTO tv_programs 
+                (channel_id, channel_name, movie_id, program_title, start_time, end_time, category, year)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (
+                program['channel_id'],
+                program['channel_name'],
+                movie_id,
+                program['title'],
+                program['start_time'].isoformat(),
+                program['end_time'].isoformat(),
+                program['category'],
+                program['year']
+            ))
         
-        cursor.execute('''
-            INSERT INTO tv_programs 
-            (channel_id, channel_name, movie_id, program_title, start_time, end_time, category, year)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-        ''', (
-            program['channel_id'],
-            program['channel_name'],
-            movie_id,
-            program['title'],
-            program['start_time'].isoformat(),
-            program['end_time'].isoformat(),
-            program['category'],
-            program['year']
-        ))
-        
-        if idx % 100 == 0:
-            conn.commit()
+        # Commit po każdym batchu
+        conn.commit()
+    
+    # Zapisz timestamp
+    if progress_bar:
+        progress_bar.progress(0.95, text="Finalizacja...")
     
     cursor.execute('''
         INSERT OR REPLACE INTO metadata (key, value, updated_at)
@@ -969,3 +990,51 @@ if 'selected_movie' in st.session_state and st.session_state.selected_movie:
             if st.button("✖️ Zamknij"):
                 st.session_state.selected_movie = None
                 st.rerun()
+# === ASYNC TMDB FUNCTIONS ===
+async def search_movie_tmdb_async(session, title, year=None):
+    """Asynchroniczne szukanie filmu w TMDB"""
+    if not TMDB_API_KEY:
+        return None
+    
+    clean_title = title.split('(')[0].strip()
+    clean_title = clean_title.replace('Film:', '').strip()
+    
+    params = {
+        'api_key': TMDB_API_KEY,
+        'query': clean_title,
+        'language': 'pl-PL'
+    }
+    if year:
+        params['year'] = year
+    
+    try:
+        async with session.get(f'{TMDB_BASE_URL}/search/movie', params=params, timeout=10) as response:
+            data = await response.json()
+            results = data.get('results', [])
+            return results[0] if results else None
+    except:
+        return None
+
+async def process_movie_batch_async(programs_batch):
+    """Przetwarza batch filmów równolegle"""
+    async with aiohttp.ClientSession() as session:
+        tasks = []
+        for program in programs_batch:
+            task = search_movie_tmdb_async(session, program['title'], program['year'])
+            tasks.append((program, task))
+        
+        results = []
+        for program, task in tasks:
+            tmdb_movie = await task
+            results.append((program, tmdb_movie))
+        
+        return results
+
+def run_async_batch(programs_batch):
+    """Wrapper do uruchomienia async w Streamlit"""
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+    try:
+        return loop.run_until_complete(process_movie_batch_async(programs_batch))
+    finally:
+        loop.close()
