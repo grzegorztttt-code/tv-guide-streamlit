@@ -249,11 +249,8 @@ def save_movie_to_db(tmdb_data, conn):
 
 # === MAIN IMPORT FUNCTION ===
 def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_bar=None, status_text=None):
-    """
-    Importuje EPG z EPG.ovh - WERSJA ASYNC (SZYBKA!)
-    """
+    """Importuje EPG z EPG.ovh - WERSJA ASYNC"""
     
-    # Pobierz XML
     if progress_bar:
         progress_bar.progress(0.1, text="Pobieranie EPG XML...")
     
@@ -264,7 +261,6 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_b
     if not xml_content:
         return 0, 0
     
-    # Parsuj
     if progress_bar:
         progress_bar.progress(0.2, text="Parsowanie XML...")
     
@@ -276,26 +272,20 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_b
     if not programs:
         return 0, 0
     
-    # FILTRUJ KANAŁY
     if selected_channel_filter:
         programs = [p for p in programs if p['channel_name'] in selected_channel_filter]
     
-    # Zapisz kanały
     conn = get_connection()
     cursor = conn.cursor()
     
     for channel_id, channel_name in channels.items():
-        cursor.execute('''
-            INSERT OR REPLACE INTO channels (id, name, category)
-            VALUES (?, ?, ?)
-        ''', (channel_id, channel_name, 'TV'))
+        cursor.execute('INSERT OR REPLACE INTO channels (id, name, category) VALUES (?, ?, ?)',
+                      (channel_id, channel_name, 'TV'))
     
     conn.commit()
     
-    # Filtruj tylko filmy
     movie_programs = [p for p in programs if is_movie_program(p['title'], p['category'], p['year'])]
     
-    # OGRANICZ liczbę
     if len(movie_programs) > max_movies:
         movie_programs = movie_programs[:max_movies]
     
@@ -305,7 +295,6 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_b
     if status_text:
         status_text.info(f"🎬 Znaleziono {total_programs} filmów do przetworzenia")
     
-    # BATCH PROCESSING - przetwarzaj po 20 filmów naraz
     BATCH_SIZE = 20
     batches = [movie_programs[i:i + BATCH_SIZE] for i in range(0, len(movie_programs), BATCH_SIZE)]
     
@@ -313,7 +302,6 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_b
         progress_bar.progress(0.3, text="Rozpoczynam przetwarzanie wsadowe...")
     
     for batch_idx, batch in enumerate(batches):
-        # SPRAWDŹ CZY ANULOWANO
         if st.session_state.get('import_cancelled', False):
             if status_text:
                 status_text.warning(f"⚠️ Przerwano po {batch_idx * BATCH_SIZE}/{total_programs} filmach")
@@ -321,61 +309,47 @@ def import_epg_from_xml(selected_channel_filter=None, max_movies=500, progress_b
             conn.close()
             return batch_idx * BATCH_SIZE, total_movies
         
-        # Aktualizuj progress
         progress = 0.3 + (0.6 * batch_idx / len(batches))
         if progress_bar:
-            progress_bar.progress(progress, text=f"Batch {batch_idx + 1}/{len(batches)} ({batch_idx * BATCH_SIZE}/{total_programs})...")
+            progress_bar.progress(progress, text=f"Batch {batch_idx + 1}/{len(batches)}...")
         
         if status_text:
-            status_text.info(f"⚡ Przetwarzanie wsadowe: {batch_idx * BATCH_SIZE}-{min((batch_idx + 1) * BATCH_SIZE, total_programs)}/{total_programs} | ✅ {total_movies} z TMDB")
+            current_pos = batch_idx * BATCH_SIZE
+            end_pos = min((batch_idx + 1) * BATCH_SIZE, total_programs)
+            status_text.info(f"⚡ Batch: {current_pos}-{end_pos}/{total_programs} | ✅ {total_movies} z TMDB")
         
-        # ASYNC BATCH - wszystkie 20 filmów równocześnie
         batch_results = run_async_batch(batch)
         
-        # Przetwórz wyniki batcha
         for program, tmdb_movie in batch_results:
             movie_id = None
             
             if tmdb_movie:
-                # Pobierz szczegóły
                 details = get_movie_details_tmdb(tmdb_movie['id'])
                 if details:
                     movie_id = save_movie_to_db(details, conn)
                     total_movies += 1
             
-            # Zapisz program
-            cursor.execute('''
-                INSERT INTO tv_programs 
-                (channel_id, channel_name, movie_id, program_title, start_time, end_time, category, year)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (
-                program['channel_id'],
-                program['channel_name'],
-                movie_id,
-                program['title'],
-                program['start_time'].isoformat(),
-                program['end_time'].isoformat(),
-                program['category'],
-                program['year']
-            ))
+            cursor.execute(
+                'INSERT INTO tv_programs (channel_id, channel_name, movie_id, program_title, start_time, end_time, category, year) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+                (program['channel_id'], program['channel_name'], movie_id, program['title'], 
+                 program['start_time'].isoformat(), program['end_time'].isoformat(), 
+                 program['category'], program['year'])
+            )
         
-        # Commit po każdym batchu
         conn.commit()
     
-    # Zapisz timestamp
     if progress_bar:
         progress_bar.progress(0.95, text="Finalizacja...")
     
-    cursor.execute('''
-        INSERT OR REPLACE INTO metadata (key, value, updated_at)
-        VALUES ('last_update', ?, datetime('now'))
-    ''', (datetime.now().strftime('%Y-%m-%d'),))
+    cursor.execute(
+        'INSERT OR REPLACE INTO metadata (key, value, updated_at) VALUES (?, ?, datetime("now"))',
+        (datetime.now().strftime('%Y-%m-%d'),)
+    )
     
     conn.commit()
     conn.close()
     
     return total_programs, total_movies
-
 # === STREAMLIT APP ===
 st.set_page_config(
     page_title="📺 Smart TV Guide",
