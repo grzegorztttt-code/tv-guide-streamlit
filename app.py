@@ -112,8 +112,7 @@ def scrape_teleman_channel(channel_id, date_str):
         soup = BeautifulSoup(response.content, 'lxml')
         programs = []
         
-        # Znajdź wszystkie programy (struktura może się zmienić!)
-        # To jest przykładowa logika - może wymagać dostosowania
+        # Znajdź wszystkie programy
         program_items = soup.find_all('div', class_='program-item')
         
         for item in program_items:
@@ -146,14 +145,11 @@ def scrape_teleman_channel(channel_id, date_str):
         return []
 
 def is_movie_title(title):
-    """Sprawdza czy tytuł wygląda jak film (prosta heurystyka)"""
-    # Filmy często mają rok w nawiasach, są krótsze, itp.
-    movie_keywords = ['film', 'kino']
-    non_movie_keywords = ['wiadomości', 'serial', 'program', 'talk-show', 'sport']
+    """Sprawdza czy tytuł wygląda jak film"""
+    non_movie_keywords = ['wiadomości', 'serial', 'program', 'talk-show', 'sport', 'news', 'pogoda']
     
     title_lower = title.lower()
     
-    # Sprawdź czy to nie jest program informacyjny/serial
     for keyword in non_movie_keywords:
         if keyword in title_lower:
             return False
@@ -166,7 +162,7 @@ def search_movie_tmdb(title, year=None):
     if not TMDB_API_KEY:
         return None
     
-    # Oczyść tytuł (usuń napisy jak "Film:", rok w nawiasach, itp.)
+    # Oczyść tytuł
     clean_title = title.split('(')[0].strip()
     clean_title = clean_title.replace('Film:', '').strip()
     
@@ -277,10 +273,10 @@ def import_epg_for_channels(channel_ids, date_str, progress_bar=None):
                     1
                 ))
         
-        # Opóźnienie między requestami (żeby nie zbanowali)
+        # Opóźnienie między requestami
         time.sleep(1)
     
-    # Zapisz timestamp ostatniego update'u
+    # Zapisz timestamp
     cursor.execute('''
         INSERT OR REPLACE INTO metadata (key, value, updated_at)
         VALUES ('last_update', ?, datetime('now'))
@@ -363,7 +359,7 @@ with col2:
                 
                 date_str = selected_date.strftime('%Y-%m-%d')
                 
-                # Wyczyść stare dane dla tej daty
+                # Wyczyść stare dane
                 conn = get_connection()
                 cursor = conn.cursor()
                 cursor.execute('DELETE FROM tv_programs WHERE DATE(start_time) = ?', (date_str,))
@@ -385,7 +381,6 @@ with col2:
 st.markdown("---")
 
 # === WYŚWIETLANIE PROGRAMU ===
-# Wybór trybu
 view_mode = st.radio(
     "Tryb wyświetlania:",
     ["📊 Po kanałach", "🎬 Lista filmów", "📋 Tabela godzinowa"],
@@ -575,15 +570,3 @@ if 'selected_movie' in st.session_state and st.session_state.selected_movie:
             if st.button("✖️ Zamknij"):
                 st.session_state.selected_movie = None
                 st.rerun()
-```
-
----
-
-## 📝 **Zaktualizuj `requirements.txt`:**
-```
-streamlit
-requests
-python-dotenv
-pandas
-beautifulsoup4
-lxml
