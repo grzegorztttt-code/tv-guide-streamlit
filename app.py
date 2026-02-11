@@ -4,6 +4,8 @@ import sqlite3
 import requests
 import os
 import pandas as pd
+from bs4 import BeautifulSoup
+import time
 
 # === CONFIG ===
 try:
@@ -14,31 +16,32 @@ except:
 TMDB_BASE_URL = 'https://api.themoviedb.org/3'
 TMDB_IMAGE_BASE = 'https://image.tmdb.org/t/p/w500'
 
-CHANNELS = [
-    {'id': 1, 'name': 'TVN', 'category': 'Ogólne'},
-    {'id': 2, 'name': 'Polsat', 'category': 'Ogólne'},
-    {'id': 3, 'name': 'TVP1', 'category': 'Publiczne'},
-    {'id': 4, 'name': 'HBO', 'category': 'Filmowe'},
-    {'id': 5, 'name': 'Ale Kino+', 'category': 'Filmowe'},
+# Lista kanałów dostępnych do scrapowania
+AVAILABLE_CHANNELS = [
+    {'id': 'tvn', 'name': 'TVN', 'teleman_id': 'tvn'},
+    {'id': 'polsat', 'name': 'Polsat', 'teleman_id': 'polsat'},
+    {'id': 'tvp1', 'name': 'TVP1', 'teleman_id': 'tvp1'},
+    {'id': 'tvp2', 'name': 'TVP2', 'teleman_id': 'tvp2'},
+    {'id': 'hbo', 'name': 'HBO', 'teleman_id': 'hbo'},
+    {'id': 'hbo2', 'name': 'HBO2', 'teleman_id': 'hbo2'},
+    {'id': 'hbo3', 'name': 'HBO3', 'teleman_id': 'hbo3'},
+    {'id': 'cinemax', 'name': 'Cinemax', 'teleman_id': 'cinemax'},
+    {'id': 'cinemax2', 'name': 'Cinemax2', 'teleman_id': 'cinemax2'},
+    {'id': 'axn', 'name': 'AXN', 'teleman_id': 'axn'},
+    {'id': 'comedy-central', 'name': 'Comedy Central', 'teleman_id': 'comedy-central'},
+    {'id': 'filmbox', 'name': 'Filmbox', 'teleman_id': 'filmbox'},
+    {'id': 'canal-plus-premium', 'name': 'Canal+ Premium', 'teleman_id': 'canal-plus-premium'},
+    {'id': 'canal-plus-film', 'name': 'Canal+ Film', 'teleman_id': 'canal-plus-film'},
 ]
 
 # === DATABASE FUNCTIONS ===
 def init_db():
-    """Tworzy bazę danych z tabelami"""
+    """Tworzy bazę danych"""
     if not os.path.exists('data'):
         os.makedirs('data')
     
     conn = sqlite3.connect('data/tv_guide.db')
     cursor = conn.cursor()
-    
-    # Channels
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS channels (
-            id INTEGER PRIMARY KEY,
-            name TEXT NOT NULL,
-            category TEXT
-        )
-    ''')
     
     # Movies
     cursor.execute('''
@@ -46,6 +49,7 @@ def init_db():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             tmdb_id INTEGER UNIQUE,
             title TEXT NOT NULL,
+            original_title TEXT,
             year INTEGER,
             poster_url TEXT,
             description TEXT,
@@ -56,57 +60,119 @@ def init_db():
         )
     ''')
     
-    # TV Programs
+    # TV Programs (EPG)
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS tv_programs (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            channel_id INTEGER,
+            channel_id TEXT,
+            channel_name TEXT,
             movie_id INTEGER,
+            program_title TEXT,
             start_time TIMESTAMP,
             end_time TIMESTAMP,
-            is_premiere BOOLEAN DEFAULT 0,
-            FOREIGN KEY (channel_id) REFERENCES channels(id),
+            is_movie BOOLEAN DEFAULT 1,
             FOREIGN KEY (movie_id) REFERENCES movies(id)
         )
     ''')
     
-    # Favorites
+    # Last update timestamp
     cursor.execute('''
-        CREATE TABLE IF NOT EXISTS favorites (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            movie_id INTEGER,
-            added_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            FOREIGN KEY (movie_id) REFERENCES movies(id)
+        CREATE TABLE IF NOT EXISTS metadata (
+            key TEXT PRIMARY KEY,
+            value TEXT,
+            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     ''')
     
-    # Dodaj kanały jeśli puste
-    cursor.execute('SELECT COUNT(*) FROM channels')
-    if cursor.fetchone()[0] == 0:
-        for ch in CHANNELS:
-            cursor.execute('INSERT INTO channels (id, name, category) VALUES (?, ?, ?)',
-                         (ch['id'], ch['name'], ch['category']))
-    
-    # Indexy
     cursor.execute('CREATE INDEX IF NOT EXISTS idx_programs_time ON tv_programs(start_time)')
-    cursor.execute('CREATE INDEX IF NOT EXISTS idx_movies_tmdb ON movies(tmdb_id)')
+    cursor.execute('CREATE INDEX IF NOT EXISTS idx_programs_channel ON tv_programs(channel_id)')
     
     conn.commit()
     conn.close()
 
 def get_connection():
-    """Zwraca połączenie do bazy"""
     return sqlite3.connect('data/tv_guide.db', check_same_thread=False)
 
+# === SCRAPING FUNCTIONS ===
+def scrape_teleman_channel(channel_id, date_str):
+    """
+    Scrapuje program TV z teleman.pl
+    date_str format: YYYY-MM-DD
+    """
+    url = f"https://www.teleman.pl/program-tv/{channel_id}/{date_str}"
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        
+        soup = BeautifulSoup(response.content, 'lxml')
+        programs = []
+        
+        # Znajdź wszystkie programy (struktura może się zmienić!)
+        # To jest przykładowa logika - może wymagać dostosowania
+        program_items = soup.find_all('div', class_='program-item')
+        
+        for item in program_items:
+            try:
+                time_elem = item.find('span', class_='time')
+                title_elem = item.find('h3', class_='title') or item.find('a', class_='title')
+                
+                if time_elem and title_elem:
+                    time_str = time_elem.text.strip()
+                    title = title_elem.text.strip()
+                    
+                    # Parsuj czas
+                    hour, minute = map(int, time_str.split(':'))
+                    start_datetime = datetime.strptime(date_str, '%Y-%m-%d').replace(
+                        hour=hour, minute=minute
+                    )
+                    
+                    programs.append({
+                        'title': title,
+                        'start_time': start_datetime,
+                        'channel_id': channel_id
+                    })
+            except:
+                continue
+        
+        return programs
+    
+    except Exception as e:
+        st.error(f"Błąd scrapowania {channel_id}: {e}")
+        return []
+
+def is_movie_title(title):
+    """Sprawdza czy tytuł wygląda jak film (prosta heurystyka)"""
+    # Filmy często mają rok w nawiasach, są krótsze, itp.
+    movie_keywords = ['film', 'kino']
+    non_movie_keywords = ['wiadomości', 'serial', 'program', 'talk-show', 'sport']
+    
+    title_lower = title.lower()
+    
+    # Sprawdź czy to nie jest program informacyjny/serial
+    for keyword in non_movie_keywords:
+        if keyword in title_lower:
+            return False
+    
+    return True
+
 # === TMDB FUNCTIONS ===
-def search_movie(title, year=None):
+def search_movie_tmdb(title, year=None):
     """Szuka filmu w TMDB"""
     if not TMDB_API_KEY:
         return None
-        
+    
+    # Oczyść tytuł (usuń napisy jak "Film:", rok w nawiasach, itp.)
+    clean_title = title.split('(')[0].strip()
+    clean_title = clean_title.replace('Film:', '').strip()
+    
     params = {
         'api_key': TMDB_API_KEY,
-        'query': title,
+        'query': clean_title,
         'language': 'pl-PL'
     }
     if year:
@@ -119,11 +185,11 @@ def search_movie(title, year=None):
     except:
         return None
 
-def get_movie_details(tmdb_id):
-    """Pobiera szczegóły filmu"""
+def get_movie_details_tmdb(tmdb_id):
+    """Pobiera szczegóły filmu z TMDB"""
     if not TMDB_API_KEY:
         return None
-        
+    
     params = {
         'api_key': TMDB_API_KEY,
         'language': 'pl-PL',
@@ -145,11 +211,12 @@ def save_movie_to_db(tmdb_data, conn):
     
     cursor.execute('''
         INSERT OR IGNORE INTO movies 
-        (tmdb_id, title, year, poster_url, description, runtime, genres, imdb_rating)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        (tmdb_id, title, original_title, year, poster_url, description, runtime, genres, imdb_rating)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     ''', (
         tmdb_data['id'],
-        tmdb_data['title'],
+        tmdb_data.get('title'),
+        tmdb_data.get('original_title'),
         tmdb_data.get('release_date', '')[:4] if tmdb_data.get('release_date') else None,
         poster_url,
         tmdb_data.get('overview'),
@@ -159,506 +226,329 @@ def save_movie_to_db(tmdb_data, conn):
     ))
     
     conn.commit()
-    return cursor.lastrowid
+    cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (tmdb_data['id'],))
+    return cursor.fetchone()[0]
 
-# === MAIN APP ===
+# === MAIN IMPORT FUNCTION ===
+def import_epg_for_channels(channel_ids, date_str, progress_bar=None):
+    """Importuje EPG dla wybranych kanałów"""
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    total_programs = 0
+    total_movies = 0
+    
+    for idx, channel_id in enumerate(channel_ids):
+        if progress_bar:
+            progress_bar.progress((idx + 1) / len(channel_ids), 
+                                 text=f"Pobieranie: {channel_id}...")
+        
+        # Scrape EPG
+        programs = scrape_teleman_channel(channel_id, date_str)
+        
+        channel_name = next((ch['name'] for ch in AVAILABLE_CHANNELS if ch['id'] == channel_id), channel_id)
+        
+        for program in programs:
+            total_programs += 1
+            
+            # Sprawdź czy to film
+            if is_movie_title(program['title']):
+                # Szukaj w TMDB
+                tmdb_movie = search_movie_tmdb(program['title'])
+                
+                movie_id = None
+                if tmdb_movie:
+                    details = get_movie_details_tmdb(tmdb_movie['id'])
+                    if details:
+                        movie_id = save_movie_to_db(details, conn)
+                        total_movies += 1
+                
+                # Zapisz do programu TV
+                cursor.execute('''
+                    INSERT INTO tv_programs 
+                    (channel_id, channel_name, movie_id, program_title, start_time, is_movie)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                ''', (
+                    channel_id,
+                    channel_name,
+                    movie_id,
+                    program['title'],
+                    program['start_time'].isoformat(),
+                    1
+                ))
+        
+        # Opóźnienie między requestami (żeby nie zbanowali)
+        time.sleep(1)
+    
+    # Zapisz timestamp ostatniego update'u
+    cursor.execute('''
+        INSERT OR REPLACE INTO metadata (key, value, updated_at)
+        VALUES ('last_update', ?, datetime('now'))
+    ''', (date_str,))
+    
+    conn.commit()
+    conn.close()
+    
+    return total_programs, total_movies
+
+# === STREAMLIT APP ===
 st.set_page_config(
-    page_title="📺 Smart TV Guide",
+    page_title="📺 Smart TV Guide - Prawdziwy EPG",
     page_icon="📺",
     layout="wide"
 )
 
-# Inicjalizacja bazy
 init_db()
 
-# Session state
-if 'selected_movie' not in st.session_state:
-    st.session_state.selected_movie = None
+st.title("📺 Smart TV Guide - Prawdziwy Program TV")
 
-# === SIDEBAR - FILTRY ===
-st.sidebar.title("🔍 Filtry")
+# === SIDEBAR ===
+st.sidebar.title("🔍 Filtry i Ustawienia")
 
 # Wybór kanałów
-selected_channels = st.sidebar.multiselect(
-    "Kanały",
-    options=[ch['name'] for ch in CHANNELS],
-    default=[ch['name'] for ch in CHANNELS]
+st.sidebar.markdown("### Kanały do wyświetlenia")
+selected_channel_ids = st.sidebar.multiselect(
+    "Wybierz kanały:",
+    options=[ch['id'] for ch in AVAILABLE_CHANNELS],
+    default=[ch['id'] for ch in AVAILABLE_CHANNELS[:5]],
+    format_func=lambda x: next(ch['name'] for ch in AVAILABLE_CHANNELS if ch['id'] == x)
 )
 
-# Zakres dat
-date_from = st.sidebar.date_input(
-    "Data od",
-    value=datetime.now() - timedelta(days=1)
-)
-date_to = st.sidebar.date_input(
-    "Data do",
-    value=datetime.now() + timedelta(days=7)
+# Data
+st.sidebar.markdown("### Zakres dat")
+selected_date = st.sidebar.date_input(
+    "Data programu:",
+    value=datetime.now()
 )
 
-# Ocena minimalna
+# Min. ocena
+st.sidebar.markdown("### Filtrowanie")
 min_rating = st.sidebar.slider(
-    "Min. ocena IMDb",
-    min_value=0.0,
-    max_value=10.0,
-    value=0.0,
-    step=0.5
+    "Min. ocena IMDb:",
+    0.0, 10.0, 7.0, 0.5
 )
 
-# Gatunki
-all_genres = ['Akcja', 'Komedia', 'Dramat', 'Thriller', 'Sci-Fi', 'Horror', 'Romans', 'Animacja']
-genres = st.sidebar.multiselect(
-    "Gatunki",
-    options=all_genres,
-    default=[]
+# Sortowanie
+sort_option = st.sidebar.selectbox(
+    "Sortuj po:",
+    ["⏰ Czas emisji", "⭐ Ocena IMDb (malejąco)", "🎬 Tytuł (A-Z)"]
 )
 
-# === MAIN AREA ===
-st.title("📺 Smart TV Guide")
+# === AKTUALIZACJA EPG ===
+st.markdown("---")
+col1, col2 = st.columns([3, 1])
 
-# Tabs
-tab1, tab2, tab3, tab4 = st.tabs(["🎬 Program TV", "⭐ Ulubione", "➕ Dodaj Film", "🗑️ Zarządzanie"])
-
-# === TAB 1: PROGRAM TV ===
-with tab1:
-    # Wybór trybu wyświetlania
-    view_mode = st.radio(
-        "Tryb wyświetlania:",
-        ["📊 Po kanałach", "🎬 Grid (kafelki)", "📋 Tabela godzinowa"],
-        horizontal=True
-    )
+with col1:
+    st.markdown("### 🔄 Aktualizacja danych")
     
     conn = get_connection()
     cursor = conn.cursor()
+    cursor.execute("SELECT value, updated_at FROM metadata WHERE key = 'last_update'")
+    last_update = cursor.fetchone()
+    conn.close()
     
-    # Query z filtrami
-    cursor.execute('''
-        SELECT 
-            p.id,
-            p.start_time,
-            p.end_time,
-            p.is_premiere,
-            c.name as channel_name,
-            c.id as channel_id,
-            m.title,
-            m.year,
-            m.poster_url,
-            m.imdb_rating,
-            m.genres,
-            m.description,
-            m.tmdb_id,
-            m.id as movie_id
-        FROM tv_programs p
-        JOIN channels c ON p.channel_id = c.id
-        JOIN movies m ON p.movie_id = m.id
-        WHERE DATE(p.start_time) BETWEEN ? AND ?
-        AND m.imdb_rating >= ?
-        ORDER BY c.name, p.start_time
-    ''', (str(date_from), str(date_to), min_rating))
-    
-    results = cursor.fetchall()
-    
-    # Filtruj po kanałach
-    if selected_channels:
-        results = [r for r in results if r[4] in selected_channels]
-    
-    # Filtruj po gatunkach
-    if genres:
-        results = [r for r in results if any(g in str(r[10]) for g in genres)]
-    
-    st.write(f"**Znaleziono {len(results)} filmów**")
-    
-    if len(results) == 0:
-        st.info("Brak filmów spełniających kryteria. Dodaj testowe dane w zakładce ➕")
-    
+    if last_update:
+        st.info(f"Ostatnia aktualizacja: {last_update[1]} (data: {last_update[0]})")
     else:
-        # === TRYB 1: PO KANAŁACH ===
-        if view_mode == "📊 Po kanałach":
-            # Grupuj po kanałach
-            channels_dict = {}
-            for row in results:
-                channel_name = row[4]
-                if channel_name not in channels_dict:
-                    channels_dict[channel_name] = []
-                channels_dict[channel_name].append(row)
-            
-            # Wyświetl każdy kanał
-            for channel_name, movies in channels_dict.items():
-                with st.expander(f"📺 **{channel_name}** ({len(movies)} filmów)", expanded=True):
-                    for row in movies:
-                        col1, col2, col3 = st.columns([1, 4, 1])
-                        
-                        with col1:
-                            # Godzina
-                            start_time = row[1]
-                            if isinstance(start_time, str):
-                                try:
-                                    dt = datetime.fromisoformat(start_time)
-                                    time_str = dt.strftime("%H:%M")
-                                    date_str = dt.strftime("%d.%m")
-                                except:
-                                    time_str = start_time
-                                    date_str = ""
-                            st.markdown(f"### {time_str}")
-                            if date_str:
-                                st.caption(date_str)
-                        
-                        with col2:
-                            # Tytuł + info
-                            rating = row[9] if row[9] else 0
-                            rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                            
-                            st.markdown(f"**{row[6]}** ({row[7]}) {rating_color} **{rating}/10**")
-                            
-                            if row[10]:  # genres
-                                genres_short = row[10][:60] + "..." if len(row[10]) > 60 else row[10]
-                                st.caption(f"🎭 {genres_short}")
-                            
-                            if row[3]:  # is_premiere
-                                st.markdown("🔥 **PREMIERA**")
-                        
-                        with col3:
-                            # Akcje
-                            if st.button("📖", key=f"det_{row[0]}", help="Szczegóły"):
-                                st.session_state.selected_movie = row[12]
-                                st.rerun()
-                        
-                        st.divider()
-        
-        # === TRYB 2: GRID ===
-        elif view_mode == "🎬 Grid (kafelki)":
-            cols = st.columns(4)
-            
-            for idx, row in enumerate(results):
-                col = cols[idx % 4]
+        st.warning("Brak danych! Kliknij 'Pobierz program TV'")
+
+with col2:
+    st.markdown("###  ")
+    if st.button("🔄 Pobierz program TV", type="primary"):
+        if not selected_channel_ids:
+            st.error("Wybierz przynajmniej jeden kanał!")
+        else:
+            with st.spinner("Pobieranie danych z internetu..."):
+                progress = st.progress(0, text="Inicjalizacja...")
                 
-                with col:
-                    with st.container():
-                        # Poster
-                        if row[8]:
-                            st.image(row[8], use_container_width=True)
-                        else:
-                            st.image("https://via.placeholder.com/300x450?text=Brak+plakatu", use_container_width=True)
-                        
-                        # Tytuł + ocena
-                        rating = row[9] if row[9] else 0
-                        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                        st.markdown(f"**{row[6]}** ({row[7]})")
-                        st.markdown(f"{rating_color} **{rating}/10**")
-                        
-                        # Info
-                        start_time = row[1]
+                date_str = selected_date.strftime('%Y-%m-%d')
+                
+                # Wyczyść stare dane dla tej daty
+                conn = get_connection()
+                cursor = conn.cursor()
+                cursor.execute('DELETE FROM tv_programs WHERE DATE(start_time) = ?', (date_str,))
+                conn.commit()
+                conn.close()
+                
+                # Import
+                total_prog, total_mov = import_epg_for_channels(
+                    selected_channel_ids, 
+                    date_str, 
+                    progress
+                )
+                
+                progress.progress(1.0, text="Gotowe!")
+                st.success(f"✅ Pobrano {total_prog} programów, znaleziono {total_mov} filmów!")
+                time.sleep(1)
+                st.rerun()
+
+st.markdown("---")
+
+# === WYŚWIETLANIE PROGRAMU ===
+# Wybór trybu
+view_mode = st.radio(
+    "Tryb wyświetlania:",
+    ["📊 Po kanałach", "🎬 Lista filmów", "📋 Tabela godzinowa"],
+    horizontal=True
+)
+
+# Pobierz dane
+conn = get_connection()
+cursor = conn.cursor()
+
+date_str = selected_date.strftime('%Y-%m-%d')
+
+query = '''
+    SELECT 
+        p.id,
+        p.channel_id,
+        p.channel_name,
+        p.program_title,
+        p.start_time,
+        m.title,
+        m.year,
+        m.poster_url,
+        m.imdb_rating,
+        m.genres,
+        m.tmdb_id
+    FROM tv_programs p
+    LEFT JOIN movies m ON p.movie_id = m.id
+    WHERE DATE(p.start_time) = ?
+    AND p.is_movie = 1
+'''
+
+params = [date_str]
+
+if selected_channel_ids:
+    placeholders = ','.join(['?' for _ in selected_channel_ids])
+    query += f" AND p.channel_id IN ({placeholders})"
+    params.extend(selected_channel_ids)
+
+# Sortowanie
+if sort_option == "⏰ Czas emisji":
+    query += " ORDER BY p.start_time"
+elif sort_option == "⭐ Ocena IMDb (malejąco)":
+    query += " ORDER BY m.imdb_rating DESC, p.start_time"
+else:
+    query += " ORDER BY m.title"
+
+cursor.execute(query, params)
+results = cursor.fetchall()
+
+# Filtruj po ratingu
+results = [r for r in results if (r[8] or 0) >= min_rating]
+
+st.write(f"**Znaleziono {len(results)} filmów**")
+
+if len(results) == 0:
+    st.info("Brak filmów spełniających kryteria. Kliknij '🔄 Pobierz program TV' aby załadować dane.")
+else:
+    # === TRYB 1: PO KANAŁACH ===
+    if view_mode == "📊 Po kanałach":
+        channels_dict = {}
+        for row in results:
+            channel_name = row[2]
+            if channel_name not in channels_dict:
+                channels_dict[channel_name] = []
+            channels_dict[channel_name].append(row)
+        
+        for channel_name, movies in channels_dict.items():
+            with st.expander(f"📺 **{channel_name}** ({len(movies)} filmów)", expanded=True):
+                for row in movies:
+                    col1, col2, col3 = st.columns([1, 4, 1])
+                    
+                    with col1:
+                        start_time = row[4]
                         if isinstance(start_time, str):
                             try:
                                 dt = datetime.fromisoformat(start_time)
-                                start_time = dt.strftime("%d.%m %H:%M")
+                                time_str = dt.strftime("%H:%M")
                             except:
-                                pass
-                        st.caption(f"📺 {row[4]} • {start_time}")
-                        
-                        if row[3]:
-                            st.markdown("🔥 **PREMIERA**")
-                        
-                        # Przycisk szczegółów
-                        if st.button("Szczegóły", key=f"details_{row[0]}"):
-                            st.session_state.selected_movie = row[12]
-                            st.rerun()
-        
-        # === TRYB 3: TABELA GODZINOWA ===
-        elif view_mode == "📋 Tabela godzinowa":
-            # Przygotuj dane dla tabeli
-            table_data = []
-            for row in results:
-                start_time = row[1]
-                if isinstance(start_time, str):
-                    try:
-                        dt = datetime.fromisoformat(start_time)
-                        time_str = dt.strftime("%H:%M")
-                        date_str = dt.strftime("%d.%m")
-                    except:
-                        time_str = start_time
-                        date_str = ""
-                
-                rating = row[9] if row[9] else 0
-                rating_emoji = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                
-                table_data.append({
-                    'Data': date_str,
-                    'Godzina': time_str,
-                    'Kanał': row[4],
-                    'Film': f"{row[6]} ({row[7]})",
-                    'Ocena': f"{rating_emoji} {rating}",
-                    'tmdb_id': row[12],
-                    'prog_id': row[0]
-                })
-            
-            if table_data:
-                df = pd.DataFrame(table_data)
-                
-                # Grupuj po dacie
-                for date in df['Data'].unique():
-                    st.markdown(f"### 📅 {date}")
+                                time_str = start_time
+                        st.markdown(f"### {time_str}")
                     
-                    date_df = df[df['Data'] == date].drop('Data', axis=1)
-                    
-                    # Pivot table
-                    try:
-                        pivot = date_df.pivot_table(
-                            index='Godzina',
-                            columns='Kanał',
-                            values='Film',
-                            aggfunc='first',
-                            fill_value='-'
-                        )
+                    with col2:
+                        title = row[5] or row[3]
+                        year = f"({row[6]})" if row[6] else ""
+                        rating = row[8] if row[8] else 0
+                        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
                         
-                        st.dataframe(pivot, use_container_width=True)
-                    except:
-                        # Jeśli pivot nie działa, pokaż zwykłą tabelę
-                        st.dataframe(
-                            date_df[['Godzina', 'Kanał', 'Film', 'Ocena']], 
-                            use_container_width=True,
-                            hide_index=True
-                        )
+                        st.markdown(f"**{title}** {year} {rating_color} **{rating}/10**")
+                        
+                        if row[9]:
+                            st.caption(f"🎭 {row[9][:60]}")
+                    
+                    with col3:
+                        if row[10]:
+                            if st.button("📖", key=f"det_{row[0]}", help="Szczegóły"):
+                                st.session_state.selected_movie = row[10]
+                                st.rerun()
                     
                     st.divider()
     
-    conn.close()
-
-# === TAB 2: ULUBIONE ===
-with tab2:
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    cursor.execute('''
-        SELECT m.*, f.added_at
-        FROM favorites f
-        JOIN movies m ON f.movie_id = m.id
-        ORDER BY f.added_at DESC
-    ''')
-    
-    fav_results = cursor.fetchall()
-    
-    if len(fav_results) == 0:
-        st.info("Nie masz jeszcze ulubionych filmów")
-    else:
-        cols = st.columns(4)
-        for idx, row in enumerate(fav_results):
-            col = cols[idx % 4]
-            with col:
-                if row[4]:
-                    st.image(row[4], use_container_width=True)
-                st.markdown(f"**{row[2]}** ({row[3]})")
-                st.markdown(f"⭐ {row[8]}/10")
-    
-    conn.close()
-
-# === TAB 3: DODAJ FILM ===
-with tab3:
-    st.subheader("Dodaj film do programu")
-    
-    if not TMDB_API_KEY:
-        st.error("⚠️ Brak TMDB API Key!")
-        st.markdown("""
-**Ustaw TMDB_API_KEY w Streamlit Secrets:**
-
-1. Settings → Secrets
-2. Dodaj: `TMDB_API_KEY = "twoj_klucz"`
-
-**Jak zdobyć klucz:**
-1. https://www.themoviedb.org/signup
-2. Settings → API → Request API Key
-3. Developer
-4. Application URL: http://localhost:8501
-        """)
-    else:
-        col1, col2 = st.columns(2)
-        
-        with col1:
-            movie_title = st.text_input("Tytuł filmu", "Dune")
-            movie_year = st.number_input("Rok", 2000, 2026, 2021, step=1)
-        
-        with col2:
-            channel_id = st.selectbox(
-                "Kanał", 
-                options=[ch['id'] for ch in CHANNELS], 
-                format_func=lambda x: next(ch['name'] for ch in CHANNELS if ch['id'] == x)
-            )
-            start_datetime = st.datetime_input(
-                "Data i godzina emisji", 
-                value=datetime.now() + timedelta(hours=2)
-            )
-        
-        if st.button("🔍 Znajdź w TMDB i dodaj"):
-            with st.spinner("Szukam filmu..."):
-                # Szukaj w TMDB
-                tmdb_movie = search_movie(movie_title, movie_year)
-                
-                if tmdb_movie:
-                    # Pobierz pełne detale
-                    details = get_movie_details(tmdb_movie['id'])
-                    
-                    if details:
-                        # Zapisz do bazy
-                        conn = get_connection()
-                        save_movie_to_db(details, conn)
-                        
-                        # Dodaj do programu TV
-                        cursor = conn.cursor()
-                        cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (tmdb_movie['id'],))
-                        movie_id = cursor.fetchone()[0]
-                        
-                        runtime = details.get('runtime', 120)
-                        end_time = start_datetime + timedelta(minutes=runtime)
-                        
-                        # Sprawdź duplikaty
-                        cursor.execute('''
-                            SELECT id FROM tv_programs 
-                            WHERE movie_id = ? AND channel_id = ? AND start_time = ?
-                        ''', (movie_id, channel_id, start_datetime.isoformat()))
-                        
-                        if cursor.fetchone():
-                            st.warning(f"⚠️ **{details['title']}** już jest w programie o tej godzinie na tym kanale!")
-                        else:
-                            cursor.execute('''
-                                INSERT INTO tv_programs (channel_id, movie_id, start_time, end_time)
-                                VALUES (?, ?, ?, ?)
-                            ''', (
-                                channel_id,
-                                movie_id,
-                                start_datetime.isoformat(),
-                                end_time.isoformat()
-                            ))
-                            
-                            conn.commit()
-                            st.success(f"✅ Dodano: {details['title']}")
-                            st.rerun()
-                        
-                        conn.close()
-                    else:
-                        st.error("Nie udało się pobrać szczegółów filmu")
-                else:
-                    st.error("Nie znaleziono filmu w TMDB")
-
-# === TAB 4: ZARZĄDZANIE ===
-with tab4:
-    st.subheader("🗑️ Zarządzanie bazą danych")
-    
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    # Statystyki
-    st.markdown("### 📊 Statystyki")
-    col1, col2, col3 = st.columns(3)
-    
-    cursor.execute('SELECT COUNT(*) FROM movies')
-    movies_count = cursor.fetchone()[0]
-    col1.metric("Filmy w bazie", movies_count)
-    
-    cursor.execute('SELECT COUNT(*) FROM tv_programs')
-    programs_count = cursor.fetchone()[0]
-    col2.metric("Emisje w programie", programs_count)
-    
-    cursor.execute('SELECT COUNT(*) FROM favorites')
-    favorites_count = cursor.fetchone()[0]
-    col3.metric("Ulubione", favorites_count)
-    
-    st.divider()
-    
-    # Duplikaty
-    st.markdown("### 🔍 Duplikaty w programie")
-    cursor.execute('''
-        SELECT 
-            m.title,
-            c.name,
-            p.start_time,
-            COUNT(*) as ile_razy
-        FROM tv_programs p
-        JOIN movies m ON p.movie_id = m.id
-        JOIN channels c ON p.channel_id = c.id
-        GROUP BY p.movie_id, p.channel_id, p.start_time
-        HAVING COUNT(*) > 1
-    ''')
-    
-    duplicates = cursor.fetchall()
-    
-    if duplicates:
-        st.warning(f"Znaleziono {len(duplicates)} duplikatów:")
-        for dup in duplicates:
-            st.write(f"- **{dup[0]}** na {dup[1]} o {dup[2]} ({dup[3]}x)")
-        
-        if st.button("🗑️ Usuń wszystkie duplikaty"):
-            cursor.execute('''
-                DELETE FROM tv_programs
-                WHERE id NOT IN (
-                    SELECT MIN(id)
-                    FROM tv_programs
-                    GROUP BY movie_id, channel_id, start_time
-                )
-            ''')
-            conn.commit()
-            st.success("✅ Duplikaty usunięte!")
-            st.rerun()
-    else:
-        st.success("✅ Brak duplikatów")
-    
-    st.divider()
-    
-    # Resetuj bazę
-    st.markdown("### ⚠️ Resetuj bazę danych")
-    st.warning("To usunie WSZYSTKIE filmy, program TV i ulubione!")
-    
-    if st.button("🗑️ RESETUJ BAZĘ (nieodwracalne!)"):
-        cursor.execute('DELETE FROM tv_programs')
-        cursor.execute('DELETE FROM favorites')
-        cursor.execute('DELETE FROM movies')
-        conn.commit()
-        st.success("✅ Baza wyczyszczona!")
-        st.rerun()
-        st.divider()
-    
-    # Dodaj nowy kanał
-    st.markdown("### ➕ Dodaj nowy kanał")
-    
-    col1, col2 = st.columns(2)
-    with col1:
-        new_channel_name = st.text_input("Nazwa kanału", "")
-    with col2:
-        new_channel_category = st.selectbox(
-            "Kategoria",
-            ["Ogólne", "Publiczne", "Filmowe", "Rozrywka", "Edukacja", "Premium", "Streaming"]
-        )
-    
-    if st.button("➕ Dodaj kanał"):
-        if new_channel_name:
-            cursor.execute('SELECT MAX(id) FROM channels')
-            max_id = cursor.fetchone()[0]
-            new_id = (max_id or 0) + 1
+    # === TRYB 2: LISTA ===
+    elif view_mode == "🎬 Lista filmów":
+        for row in results:
+            col1, col2, col3, col4 = st.columns([1, 1, 3, 1])
             
-            cursor.execute(
-                'INSERT INTO channels (id, name, category) VALUES (?, ?, ?)',
-                (new_id, new_channel_name, new_channel_category)
-            )
-            conn.commit()
-            st.success(f"✅ Dodano kanał: {new_channel_name}")
-            st.rerun()
-        else:
-            st.error("Podaj nazwę kanału!")
+            with col1:
+                start_time = row[4]
+                if isinstance(start_time, str):
+                    dt = datetime.fromisoformat(start_time)
+                    time_str = dt.strftime("%H:%M")
+                st.markdown(f"**{time_str}**")
+            
+            with col2:
+                st.markdown(f"📺 {row[2]}")
+            
+            with col3:
+                title = row[5] or row[3]
+                year = f"({row[6]})" if row[6] else ""
+                rating = row[8] if row[8] else 0
+                rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+                
+                st.markdown(f"**{title}** {year} {rating_color} {rating}/10")
+            
+            with col4:
+                if row[10]:
+                    if st.button("📖", key=f"list_{row[0]}"):
+                        st.session_state.selected_movie = row[10]
+                        st.rerun()
+            
+            st.divider()
     
-    # Lista kanałów
-    st.markdown("### 📺 Wszystkie kanały")
-    cursor.execute('SELECT id, name, category FROM channels ORDER BY id')
-    all_channels = cursor.fetchall()
-    
-    for ch in all_channels:
-        st.write(f"{ch[0]}. **{ch[1]}** ({ch[2]})")
-    conn.close()
+    # === TRYB 3: TABELA ===
+    elif view_mode == "📋 Tabela godzinowa":
+        table_data = []
+        for row in results:
+            start_time = row[4]
+            if isinstance(start_time, str):
+                dt = datetime.fromisoformat(start_time)
+                time_str = dt.strftime("%H:%M")
+            
+            title = row[5] or row[3]
+            rating = row[8] if row[8] else 0
+            rating_emoji = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+            
+            table_data.append({
+                'Godzina': time_str,
+                'Kanał': row[2],
+                'Film': f"{title} ({row[6]})" if row[6] else title,
+                'Ocena': f"{rating_emoji} {rating}"
+            })
+        
+        df = pd.DataFrame(table_data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
 
-# === MODAL SZCZEGÓŁÓW (sidebar) ===
-if st.session_state.selected_movie:
+conn.close()
+
+# === MODAL SZCZEGÓŁÓW ===
+if 'selected_movie' in st.session_state and st.session_state.selected_movie:
     with st.sidebar:
         st.markdown("---")
         st.subheader("📽️ Szczegóły filmu")
         
-        details = get_movie_details(st.session_state.selected_movie)
+        details = get_movie_details_tmdb(st.session_state.selected_movie)
         
         if details:
             if details.get('poster_path'):
@@ -672,43 +562,28 @@ if st.session_state.selected_movie:
             st.markdown("**Opis:**")
             st.write(details.get('overview', 'Brak opisu'))
             
-            # Gatunki
             genres_list = [g['name'] for g in details.get('genres', [])]
             if genres_list:
                 st.markdown(f"**Gatunki:** {', '.join(genres_list)}")
             
-            # Trailer
             videos = details.get('videos', {}).get('results', [])
             trailers = [v for v in videos if v['type'] == 'Trailer' and v['site'] == 'YouTube']
             if trailers:
                 st.markdown("**Trailer:**")
                 st.video(f"https://www.youtube.com/watch?v={trailers[0]['key']}")
             
-            # Ulubione
-            conn = get_connection()
-            cursor = conn.cursor()
-            cursor.execute('SELECT id FROM movies WHERE tmdb_id = ?', (st.session_state.selected_movie,))
-            movie_row = cursor.fetchone()
-            
-            if movie_row:
-                movie_id = movie_row[0]
-                cursor.execute('SELECT id FROM favorites WHERE movie_id = ?', (movie_id,))
-                is_favorite = cursor.fetchone() is not None
-                
-                if is_favorite:
-                    if st.button("💔 Usuń z ulubionych"):
-                        cursor.execute('DELETE FROM favorites WHERE movie_id = ?', (movie_id,))
-                        conn.commit()
-                        st.rerun()
-                else:
-                    if st.button("❤️ Dodaj do ulubionych"):
-                        cursor.execute('INSERT INTO favorites (movie_id) VALUES (?)', (movie_id,))
-                        conn.commit()
-                        st.rerun()
-            
-            conn.close()
-            
             if st.button("✖️ Zamknij"):
                 st.session_state.selected_movie = None
                 st.rerun()
+```
 
+---
+
+## 📝 **Zaktualizuj `requirements.txt`:**
+```
+streamlit
+requests
+python-dotenv
+pandas
+beautifulsoup4
+lxml
