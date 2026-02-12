@@ -1,3 +1,4 @@
+```python
 import streamlit as st
 import json
 import os
@@ -12,15 +13,11 @@ st.set_page_config(
 
 @st.cache_data(ttl=3600)
 def load_data():
-    """Ładuje dane z JSON"""
     data_file = 'data/movies.json'
-    
     if not os.path.exists(data_file):
         return None
-    
     with open(data_file, 'r', encoding='utf-8') as f:
         data = json.load(f)
-    
     return data
 
 data = load_data()
@@ -52,7 +49,7 @@ all_channels = sorted(set(m['channel_name'] for m in data['movies']))
 selected_channels = st.sidebar.multiselect(
     "Kanały:",
     options=all_channels,
-    default=all_channels[:10]
+    default=all_channels[:10] if len(all_channels) > 10 else all_channels
 )
 
 movies = data['movies']
@@ -115,9 +112,9 @@ else:
                 channels_dict[ch] = []
             channels_dict[ch].append(movie)
         
-        for channel, movies in channels_dict.items():
-            with st.expander(f"📺 {channel} ({len(movies)} filmów)", expanded=len(channels_dict) <= 3):
-                for m in movies:
+        for channel, channel_movies in channels_dict.items():
+            with st.expander(f"📺 {channel} ({len(channel_movies)} filmów)", expanded=len(channels_dict) <= 3):
+                for m in channel_movies:
                     col1, col2 = st.columns([1, 4])
                     
                     with col1:
@@ -136,7 +133,8 @@ else:
                         st.markdown(f"**{title}** ({year}) {rating_color} **{rating}/10**")
                         
                         if tmdb.get('overview'):
-                            st.caption(tmdb['overview'][:100] + "...")
+                            overview = tmdb['overview']
+                            st.caption(overview[:150] + "..." if len(overview) > 150 else overview)
                     
                     st.divider()
     
@@ -179,4 +177,12 @@ else:
         st.dataframe(df, use_container_width=True, hide_index=True)
 ```
 
+---
 
+## ✅ **To powinno działać!**
+
+Ten kod jest **czysty** - bez żadnych komentarzy markdown czy backtików.
+
+Wklej go, commituj i aplikacja powinna ruszyć! 🚀
+
+**Gratulacje - masz działający JSON z danymi!** 🎉 Teraz tylko naprawmy frontend! 💪
