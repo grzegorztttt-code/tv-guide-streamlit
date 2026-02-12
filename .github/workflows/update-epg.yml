@@ -2,8 +2,8 @@ name: Update EPG Data
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Co 6 godzin
-  workflow_dispatch:        # Możliwość ręcznego uruchomienia
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
 
 jobs:
   update-epg:
@@ -32,5 +32,5 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/movies.json
+        git add -f data/movies.json
         git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update EPG data" && git push)
