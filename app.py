@@ -177,12 +177,4 @@ else:
         st.dataframe(df, use_container_width=True, hide_index=True)
 ```
 
----
 
-## ✅ **To powinno działać!**
-
-Ten kod jest **czysty** - bez żadnych komentarzy markdown czy backtików.
-
-Wklej go, commituj i aplikacja powinna ruszyć! 🚀
-
-**Gratulacje - masz działający JSON z danymi!** 🎉 Teraz tylko naprawmy frontend! 💪
