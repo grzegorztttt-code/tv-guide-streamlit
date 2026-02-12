@@ -179,16 +179,4 @@ else:
         st.dataframe(df, use_container_width=True, hide_index=True)
 ```
 
----
 
-## 📂 **Podsumowanie - co masz mieć:**
-```
-tv-guide-streamlit/
-├── app.py                    ← Kod który właśnie podałem
-├── requirements.txt          ← Tylko 2 linie (streamlit, pandas)
-├── .github/workflows/
-│   └── update-epg.yml
-├── scripts/
-│   └── fetch_epg.py
-└── data/
-    └── movies.json           ← Będzie po uruchomieniu workflow
