@@ -1,61 +1,47 @@
-
 # 📺 Smart TV Guide
 
-Prosta aplikacja do przeglądania programu TV z ocenami filmów.
+Lekka aplikacja do przeglądania programu TV z polskich kanałów filmowych.
 
 ## 🚀 Funkcje
 
-- ✅ Przeglądanie programu TV
-- ✅ Filtry: kanały, data, ocena, gatunki, godzina
-- ✅ Integracja z TMDB (plakaty, opisy, oceny)
-- ✅ Ulubione filmy
-- ✅ Szczegóły filmów + trailery
+- ✅ Automatyczna aktualizacja EPG co 6h (GitHub Actions)
+- ✅ Dane z EPG.ovh + oceny z TMDB
+- ✅ Filtrowanie po kanałach, datach, ocenach
+- ✅ 3 tryby wyświetlania
+- ✅ Ultra-szybka (tylko UI, dane pre-generated)
 
-## 🛠️ Instalacja lokalna
-```bash
-# Klonuj repo
-git clone https://github.com/TwojUsername/tv-guide-streamlit.git
-cd tv-guide-streamlit
+## 🛠️ Setup
 
-# Zainstaluj zależności
-pip install -r requirements.txt
+### 1. Dodaj TMDB API Key do GitHub Secrets
 
-# Ustaw API key
-# Stwórz plik .env i dodaj:
-# TMDB_API_KEY=twoj_klucz
+Settings → Secrets → Actions → New secret:
+- Name: `TMDB_API_KEY`
+- Value: `twoj_klucz_z_tmdb`
 
-# Uruchom
-streamlit run app.py
+### 2. Uruchom pierwszy import
+
+Actions → Update EPG Data → Run workflow
+
+### 3. Deploy na Streamlit Cloud
+
+Połącz repo i gotowe!
+
+## 📊 Jak to działa
+```
+GitHub Actions (co 6h)
+  ↓
+Pobiera EPG.ovh
+  ↓
+Matchuje z TMDB
+  ↓
+Zapisuje data/movies.json
+  ↓
+Streamlit ładuje JSON (cache 1h)
 ```
 
-## 🌐 Deploy na Streamlit Cloud
+## 🎯 Zalety
 
-1. Fork tego repo
-2. Idź na [share.streamlit.io](https://share.streamlit.io)
-3. Połącz swoje GitHub
-4. Wybierz repo i `app.py`
-5. Dodaj Secret: `TMDB_API_KEY`
-6. Deploy! 🎉
-
-## 📝 Jak zdobyć TMDB API Key
-
-1. Zarejestruj się na [themoviedb.org](https://www.themoviedb.org)
-2. Idź do Settings → API
-3. Request API Key (wybierz "Developer")
-4. Skopiuj klucz
-
-## 📸 Screenshots
-
-(Dodaj screenshoty później)
-
-## 🔮 Roadmap
-
-- [ ] EPG auto-update (cron)
-- [ ] Powiadomienia o ulubionych filmach
-- [ ] Eksport do kalendarza
-- [ ] Multi-user profiles
-- [ ] Rekomendacje AI
-
-## 📄 Licencja
-
-MIT
+- ⚡ Błyskawiczna (bez importu w UI)
+- 🤖 Automatyczna aktualizacja
+- 💰 Darmowa (GitHub Actions free tier)
+- 📦 Lekka (~200 linii kodu)
