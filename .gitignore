@@ -1,15 +1,14 @@
-# Secrets - NAJWAŻNIEJSZE!
+# Secrets
 .env
 .env.local
 .env.*.local
 secrets.toml
 .streamlit/secrets.toml
 
-# Database
-*.db
-*.sqlite
-*.sqlite3
-data/
+# Database files (ale NIE cały folder data/)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
 
 # Python
 __pycache__/
@@ -17,49 +16,19 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 venv/
 env/
 ENV/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Streamlit
-.streamlit/config.toml
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
 
 # OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
 # Logs
 *.log
-logs/
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
