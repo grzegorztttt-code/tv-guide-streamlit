@@ -4,15 +4,13 @@ import os
 from datetime import datetime, timedelta
 import pandas as pd
 
-# Konfiguracja
 st.set_page_config(
     page_title="📺 Smart TV Guide",
     page_icon="📺",
     layout="wide"
 )
 
-# === ŁADOWANIE DANYCH ===
-@st.cache_data(ttl=3600)  # Cache na 1h
+@st.cache_data(ttl=3600)
 def load_data():
     """Ładuje dane z JSON"""
     data_file = 'data/movies.json'
@@ -25,10 +23,8 @@ def load_data():
     
     return data
 
-# Załaduj dane
 data = load_data()
 
-# === HEADER ===
 st.title("📺 Smart TV Guide")
 
 if not data:
@@ -36,7 +32,6 @@ if not data:
     st.info("💡 Dane są aktualizowane automatycznie co 6 godzin przez GitHub Actions")
     st.stop()
 
-# Info o aktualizacji
 col1, col2, col3 = st.columns(3)
 with col1:
     updated = datetime.fromisoformat(data['updated_at'])
@@ -50,10 +45,8 @@ with col3:
 
 st.markdown("---")
 
-# === SIDEBAR - FILTRY ===
 st.sidebar.title("🔍 Filtry")
 
-# Pobierz unikalne kanały
 all_channels = sorted(set(m['channel_name'] for m in data['movies']))
 
 selected_channels = st.sidebar.multiselect(
@@ -62,12 +55,143 @@ selected_channels = st.sidebar.multiselect(
     default=all_channels[:10]
 )
 
-# Zakres dat
 movies = data['movies']
 if movies:
     dates = [datetime.fromisoformat(m['start_time']) for m in movies]
     min_date = min(dates).date()
     max_date = max(dates).date()
+    
+    date_from = st.sidebar.date_input("Data od:", value=datetime.now().date(), min_value=min_date, max_value=max_date)
+    date_to = st.sidebar.date_input("Data do:", value=datetime.now().date() + timedelta(days=3), min_value=min_date, max_value=max_date)
+else:
+    date_from = datetime.now().date()
+    date_to = date_from + timedelta(days=3)
+
+min_rating = st.sidebar.slider("Min. ocena IMDb:", 0.0, 10.0, 6.0, 0.5)
+
+sort_option = st.sidebar.selectbox(
+    "Sortuj po:",
+    ["⏰ Czas emisji", "⭐ Ocena IMDb", "🎬 Tytuł"]
+)
+
+filtered = data['movies']
+
+if selected_channels:
+    filtered = [m for m in filtered if m['channel_name'] in selected_channels]
+
+filtered = [
+    m for m in filtered 
+    if date_from <= datetime.fromisoformat(m['start_time']).date() <= date_to
+]
+
+filtered = [
+    m for m in filtered
+    if m.get('tmdb', {}).get('rating', 0) >= min_rating
+]
+
+if sort_option == "⏰ Czas emisji":
+    filtered.sort(key=lambda x: x['start_time'])
+elif sort_option == "⭐ Ocena IMDb":
+    filtered.sort(key=lambda x: x.get('tmdb', {}).get('rating', 0), reverse=True)
+else:
+    filtered.sort(key=lambda x: x.get('tmdb', {}).get('title', x['title']))
+
+st.write(f"**Znaleziono {len(filtered)} filmów**")
+
+if len(filtered) == 0:
+    st.info("Brak filmów spełniających kryteria. Zmień filtry.")
+else:
+    view_mode = st.radio(
+        "Tryb:",
+        ["📊 Po kanałach", "🎬 Lista", "📋 Tabela"],
+        horizontal=True
+    )
+    
+    if view_mode == "📊 Po kanałach":
+        channels_dict = {}
+        for movie in filtered:
+            ch = movie['channel_name']
+            if ch not in channels_dict:
+                channels_dict[ch] = []
+            channels_dict[ch].append(movie)
+        
+        for channel, movies in channels_dict.items():
+            with st.expander(f"📺 {channel} ({len(movies)} filmów)", expanded=len(channels_dict) <= 3):
+                for m in movies:
+                    col1, col2 = st.columns([1, 4])
+                    
+                    with col1:
+                        dt = datetime.fromisoformat(m['start_time'])
+                        st.markdown(f"### {dt.strftime('%H:%M')}")
+                        st.caption(dt.strftime('%d.%m'))
+                    
+                    with col2:
+                        tmdb = m.get('tmdb', {})
+                        title = tmdb.get('title', m['title'])
+                        year = tmdb.get('year', m.get('year', ''))
+                        rating = tmdb.get('rating', 0)
+                        
+                        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+                        
+                        st.markdown(f"**{title}** ({year}) {rating_color} **{rating}/10**")
+                        
+                        if tmdb.get('overview'):
+                            st.caption(tmdb['overview'][:100] + "...")
+                    
+                    st.divider()
+    
+    elif view_mode == "🎬 Lista":
+        for m in filtered:
+            col1, col2, col3 = st.columns([1, 1, 3])
+            
+            dt = datetime.fromisoformat(m['start_time'])
+            tmdb = m.get('tmdb', {})
+            title = tmdb.get('title', m['title'])
+            rating = tmdb.get('rating', 0)
+            rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+            
+            with col1:
+                st.markdown(f"**{dt.strftime('%d.%m %H:%M')}**")
+            with col2:
+                st.markdown(f"📺 {m['channel_name']}")
+            with col3:
+                st.markdown(f"**{title}** {rating_color} {rating}/10")
+            
+            st.divider()
+    
+    else:
+        table_data = []
+        for m in filtered:
+            dt = datetime.fromisoformat(m['start_time'])
+            tmdb = m.get('tmdb', {})
+            title = tmdb.get('title', m['title'])
+            rating = tmdb.get('rating', 0)
+            rating_emoji = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+            
+            table_data.append({
+                'Data i czas': dt.strftime('%d.%m %H:%M'),
+                'Kanał': m['channel_name'],
+                'Film': title,
+                'Ocena': f"{rating_emoji} {rating}"
+            })
+        
+        df = pd.DataFrame(table_data)
+        st.dataframe(df, use_container_width=True, hide_index=True)
+```
+
+---
+
+## 📂 **Podsumowanie - co masz mieć:**
+```
+tv-guide-streamlit/
+├── app.py                    ← Kod który właśnie podałem
+├── requirements.txt          ← Tylko 2 linie (streamlit, pandas)
+├── .github/workflows/
+│   └── update-epg.yml
+├── scripts/
+│   └── fetch_epg.py
+└── data/
+    └── movies.json           ← Będzie po uruchomieniu workflow    max_date = max(dates).date()
     
     date_from = st.sidebar.date_input("Data od:", value=datetime.now().date(), min_value=min_date, max_value=max_date)
     date_to = st.sidebar.date_input("Data do:", value=datetime.now().date() + timedelta(days=3), min_value=min_date, max_value=max_date)
