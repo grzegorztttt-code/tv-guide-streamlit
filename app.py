@@ -11,6 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+# Stylizacja paska bocznego
 st.markdown("""
 <style>
     section[data-testid="stSidebar"] {
@@ -24,6 +25,7 @@ st.markdown("""
 
 @st.cache_data(ttl=3600)
 def load_data():
+    # Upewnij się, że ścieżka do pliku jest poprawna
     data_file = 'data/movies.json'
     if not os.path.exists(data_file):
         return None
@@ -42,33 +44,36 @@ with st.sidebar:
     if data:
         all_channels = sorted(set(m['channel_name'] for m in data['movies']))
         
-        # --- ZMIANA TUTAJ: Dodano TVP1, TVP2, Ale Kino+ do listy priorytetowej ---
-        preferred_order = [
-            'TVP1', 'TVP2', 'Polsat', 'TVN', 'TVN7',  # Podstawowe
-            'Ale Kino+',                              # Filmowe
-            'HBO', 'HBO2', 'HBO3', 
-            'Cinemax', 'Cinemax2',
-            'Canal+ Premium', 'Canal+ Film',
-            'Filmbox'
-        ]
+        # DEFINICJA KANAŁÓW PRIORYTETOWYCH
+        # Dodajemy różne warianty zapisu, żeby na pewno je wyłapać
+        target_priorities = ['TVP1', 'TVP 1', 'TVP1 HD', 'TVP2', 'TVP 2', 'TVP 2 HD', 'Ale Kino+', 'Ale kino']
         
-        sorted_channels = []
-        # Dodajemy kanały z listy preferowanej (jeśli istnieją w danych)
-        for ch in preferred_order:
-            if ch in all_channels:
-                sorted_channels.append(ch)
+        preferred_order = []
+        # Najpierw dodaj te, które pasują do naszych priorytetów
+        for priority in target_priorities:
+            for real_channel in all_channels:
+                if priority.lower() in real_channel.lower() and real_channel not in preferred_order:
+                    preferred_order.append(real_channel)
         
-        # Dodajemy resztę kanałów alfabetycznie
-        for ch in all_channels:
-            if ch not in sorted_channels:
-                sorted_channels.append(ch)
+        # Potem dodaj resztę znanych stacji
+        other_popular = ['Polsat', 'TVN', 'TVN7', 'HBO', 'HBO2', 'HBO3', 'Cinemax', 'Canal+ Premium']
+        for p in other_popular:
+            for real_channel in all_channels:
+                if p.lower() in real_channel.lower() and real_channel not in preferred_order:
+                    preferred_order.append(real_channel)
+
+        # Na końcu cała reszta, której nie ma powyżej
+        sorted_channels = preferred_order + [ch for ch in all_channels if ch not in preferred_order]
         
-        default_channels = [ch for ch in sorted_channels[:15] if ch in all_channels]
-        
+        # Domyślnie zaznaczamy te z góry listy
+        default_selection = [ch for ch in sorted_channels if any(p.lower() in ch.lower() for p in target_priorities)]
+        if not default_selection:
+            default_selection = sorted_channels[:10]
+
         selected_channels = st.multiselect(
-            "Kanały:",
+            "Wybierz kanały:",
             options=sorted_channels,
-            default=default_channels
+            default=default_selection
         )
         
         movies = data['movies']
@@ -93,14 +98,20 @@ with st.sidebar:
             "Sortuj po:",
             ["⏰ Czas emisji", "⭐ Ocena IMDb", "🎬 Tytuł"]
         )
+        
+        st.divider()
+        if st.button("🔄 Odśwież dane"):
+            st.cache_data.clear()
+            st.rerun()
 
 st.title("📺 Smart TV Guide")
 
 if not data:
-    st.error("❌ Brak danych EPG! Czekam na pierwszą aktualizację...")
-    st.info("💡 Dane są aktualizowane automatycznie co 6 godzin przez GitHub Actions")
+    st.error("❌ Nie znaleziono pliku data/movies.json!")
+    st.info("Upewnij się, że skrypt skrapujący dane zadziałał poprawnie.")
     st.stop()
 
+# Nagłówki statystyk
 col1, col2, col3 = st.columns(3)
 with col1:
     updated = datetime.fromisoformat(data['updated_at'])
@@ -109,11 +120,11 @@ with col2:
     st.metric("Filmów w bazie", data['count'])
 with col3:
     next_update = updated + timedelta(hours=6)
-    hours_left = (next_update - datetime.now()).total_seconds() / 3600
-    st.metric("Następna za", f"{hours_left:.1f}h")
+    st.metric("Następna aktualizacja ok.", next_update.strftime("%H:%M"))
 
 st.markdown("---")
 
+# Filtrowanie
 filtered = data['movies']
 
 if selected_channels:
@@ -134,6 +145,7 @@ filtered = [
     if m.get('tmdb', {}).get('rating', 0) >= min_rating
 ]
 
+# Sortowanie
 if sort_option == "⏰ Czas emisji":
     filtered.sort(key=lambda x: x['start_time'])
 elif sort_option == "⭐ Ocena IMDb":
@@ -141,167 +153,93 @@ elif sort_option == "⭐ Ocena IMDb":
 else:
     filtered.sort(key=lambda x: x.get('tmdb', {}).get('title', x['title']))
 
-st.write(f"**Znaleziono {len(filtered)} filmów**")
+st.write(f"**Znaleziono {len(filtered)} filmów spełniających kryteria**")
 
 if len(filtered) == 0:
-    st.info("Brak filmów spełniających kryteria. Zmień filtry.")
+    st.warning("Brak filmów dla wybranych filtrów. Spróbuj zmniejszyć wymagania co do oceny lub dodać więcej kanałów.")
+    # Pomoc dla użytkownika: pokaż jakie kanały w ogóle są w bazie
+    with st.expander("Sprawdź dostępne kanały w bazie"):
+        st.write(", ".join(all_channels))
 else:
-    view_mode = st.radio(
-        "Tryb:",
-        ["📊 Po kanałach", "🎬 Lista z posterami", "📋 Tabela"],
-        horizontal=True
-    )
+    view_mode = st.radio("Widok:", ["📊 Kanały", "🎬 Plakaty", "📋 Tabela"], horizontal=True)
     
-    if view_mode == "📊 Po kanałach":
+    if view_mode == "📊 Kanały":
         channels_dict = {}
         for movie in filtered:
             ch = movie['channel_name']
-            if ch not in channels_dict:
-                channels_dict[ch] = []
+            if ch not in channels_dict: channels_dict[ch] = []
             channels_dict[ch].append(movie)
         
         for channel, channel_movies in channels_dict.items():
-            with st.expander(f"📺 {channel} ({len(channel_movies)} filmów)", expanded=len(channels_dict) <= 3):
+            with st.expander(f"📺 {channel} ({len(channel_movies)})", expanded=True):
                 for m in channel_movies:
                     tmdb = m.get('tmdb', {})
                     dt = datetime.fromisoformat(m['start_time'])
-                    
-                    movie_id = f"{m['channel_id']}_{m['start_time']}"
-                    
                     col1, col2, col3, col4 = st.columns([1, 1, 3, 1])
-                    
                     with col1:
-                        st.markdown(f"### {dt.strftime('%H:%M')}")
+                        st.markdown(f"**{dt.strftime('%H:%M')}**")
                         st.caption(dt.strftime('%d.%m'))
-                    
                     with col2:
-                        if tmdb.get('poster'):
-                            st.image(tmdb['poster'], width=100)
-                        else:
-                            st.markdown("🎬")
-                    
+                        if tmdb.get('poster'): st.image(tmdb['poster'], width=80)
                     with col3:
-                        title = tmdb.get('title', m['title'])
-                        year = tmdb.get('year', m.get('year', ''))
-                        rating = tmdb.get('rating', 0)
-                        
-                        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                        
-                        st.markdown(f"**{title}** ({year}) {rating_color} **{rating}/10**")
-                        
-                        if tmdb.get('overview'):
-                            overview = tmdb['overview']
-                            st.caption(overview[:100] + "..." if len(overview) > 100 else overview)
-                    
+                        st.markdown(f"**{tmdb.get('title', m['title'])}** ({tmdb.get('year', '')})")
+                        st.markdown(f"⭐ {tmdb.get('rating', 0)}/10")
                     with col4:
-                        if st.button("📖", key=movie_id):
+                        if st.button("Szczegóły", key=f"det_{m['channel_id']}_{m['start_time']}"):
                             st.session_state.selected_movie = m
                             st.rerun()
-                    
-                    st.divider()
-    
-    elif view_mode == "🎬 Lista z posterami":
+
+    elif view_mode == "🎬 Plakaty":
         for m in filtered:
             tmdb = m.get('tmdb', {})
             dt = datetime.fromisoformat(m['start_time'])
-            
-            movie_id = f"{m['channel_id']}_{m['start_time']}_list"
-            
-            col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 3, 1])
-            
+            col1, col2, col3 = st.columns([1, 4, 1])
             with col1:
-                st.markdown(f"**{dt.strftime('%d.%m %H:%M')}**")
-            
+                if tmdb.get('poster'): st.image(tmdb['poster'], width=120)
             with col2:
-                if tmdb.get('poster'):
-                    st.image(tmdb['poster'], width=80)
-            
+                st.subheader(tmdb.get('title', m['title']))
+                st.write(f"📺 {m['channel_name']} | ⏰ {dt.strftime('%d.%m %H:%M')}")
+                st.write(f"⭐ IMDb: {tmdb.get('rating', 0)}")
+                if tmdb.get('overview'): st.caption(tmdb['overview'][:200] + "...")
             with col3:
-                st.markdown(f"📺 {m['channel_name']}")
-            
-            with col4:
-                title = tmdb.get('title', m['title'])
-                rating = tmdb.get('rating', 0)
-                rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-                
-                st.markdown(f"**{title}** {rating_color} {rating}/10")
-                
-                if tmdb.get('overview'):
-                    st.caption(tmdb['overview'][:80] + "...")
-            
-            with col5:
-                if st.button("📖", key=movie_id):
+                if st.button("Więcej", key=f"post_{m['channel_id']}_{m['start_time']}"):
                     st.session_state.selected_movie = m
                     st.rerun()
-            
             st.divider()
-    
-    else:
-        table_data = []
-        for m in filtered:
-            dt = datetime.fromisoformat(m['start_time'])
-            tmdb = m.get('tmdb', {})
-            title = tmdb.get('title', m['title'])
-            rating = tmdb.get('rating', 0)
-            rating_emoji = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-            
-            table_data.append({
-                'Data i czas': dt.strftime('%d.%m %H:%M'),
-                'Kanał': m['channel_name'],
-                'Film': title,
-                'Ocena': f"{rating_emoji} {rating}"
-            })
-        
-        df = pd.DataFrame(table_data)
-        st.dataframe(df, use_container_width=True, hide_index=True)
 
+    else:
+        df_data = [{
+            'Czas': datetime.fromisoformat(m['start_time']).strftime('%d.%m %H:%M'),
+            'Kanał': m['channel_name'],
+            'Tytuł': m.get('tmdb', {}).get('title', m['title']),
+            'Ocena': m.get('tmdb', {}).get('rating', 0)
+        } for m in filtered]
+        st.dataframe(pd.DataFrame(df_data), use_container_width=True, hide_index=True)
+
+# Dialog ze szczegółami
 if st.session_state.selected_movie:
     m = st.session_state.selected_movie
     tmdb = m.get('tmdb', {})
     dt = datetime.fromisoformat(m['start_time'])
-    dt_end = datetime.fromisoformat(m['end_time'])
     
-    @st.dialog("🎬 Szczegóły filmu", width="large")
+    @st.dialog("🎬 Szczegóły filmu")
     def show_movie_details():
         col1, col2 = st.columns([1, 2])
-        
         with col1:
-            if tmdb.get('poster'):
-                st.image(tmdb['poster'], use_column_width=True)
-        
+            if tmdb.get('poster'): st.image(tmdb['poster'])
         with col2:
-            title = tmdb.get('title', m['title'])
-            year = tmdb.get('year', m.get('year', ''))
-            rating = tmdb.get('rating', 0)
-            
-            st.markdown(f"## {title}")
-            
-            if year:
-                st.markdown(f"📅 **Rok:** {year}")
-            
-            rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-            st.markdown(f"{rating_color} **Ocena IMDb:** {rating}/10")
-            
-            st.markdown("---")
-            st.markdown("### 📺 Emisja")
-            st.markdown(f"**Kanał:** {m['channel_name']}")
-            st.markdown(f"**Start:** {dt.strftime('%d.%m.%Y %H:%M')}")
-            st.markdown(f"**Koniec:** {dt_end.strftime('%H:%M')}")
-            
-            duration = (dt_end - dt).total_seconds() / 60
-            st.markdown(f"**Czas trwania:** {int(duration)} min")
+            st.title(tmdb.get('title', m['title']))
+            st.write(f"📅 Rok: {tmdb.get('year', 'Brak danych')}")
+            st.write(f"⭐ Ocena: {tmdb.get('rating', 0)}/10")
+            st.divider()
+            st.write(f"📺 Kanał: **{m['channel_name']}**")
+            st.write(f"⏰ Start: {dt.strftime('%d.%m %H:%M')}")
         
         if tmdb.get('overview'):
-            st.markdown("---")
-            st.markdown("### 📖 Opis")
+            st.write("### Opis fabuły")
             st.write(tmdb['overview'])
-        
-        if tmdb.get('tmdb_id'):
-            st.markdown("---")
-            tmdb_url = f"https://www.themoviedb.org/movie/{tmdb['tmdb_id']}"
-            st.markdown(f"[🔗 Zobacz na TMDB]({tmdb_url})")
-        
-        if st.button("✖️ Zamknij", use_container_width=True):
+            
+        if st.button("Zamknij"):
             st.session_state.selected_movie = None
             st.rerun()
     
