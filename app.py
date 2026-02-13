@@ -252,8 +252,7 @@ else:
             })
         
         df = pd.DataFrame(table_data)
-        st.dataframe(df, use_column_width=True, hide_index=True)
-
+        st.dataframe(df, use_container_width=True, hide_index=True)
 if st.session_state.selected_movie:
     m = st.session_state.selected_movie
     tmdb = m.get('tmdb', {})
