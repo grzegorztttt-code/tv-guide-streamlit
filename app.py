@@ -42,22 +42,23 @@ with st.sidebar:
     if data:
         all_channels = sorted(set(m['channel_name'] for m in data['movies']))
         
+        # --- ZMIANA TUTAJ: Dodano TVP1, TVP2, Ale Kino+ do listy priorytetowej ---
         preferred_order = [
+            'TVP1', 'TVP2', 'Polsat', 'TVN', 'TVN7',  # Podstawowe
+            'Ale Kino+',                              # Filmowe
             'HBO', 'HBO2', 'HBO3', 
             'Cinemax', 'Cinemax2',
-            'TVN', 'TVN7', 
-            'Polsat',
-            'TVP1', 'TVP2',
-            'Ale Kino+',
             'Canal+ Premium', 'Canal+ Film',
             'Filmbox'
         ]
         
         sorted_channels = []
+        # Dodajemy kanały z listy preferowanej (jeśli istnieją w danych)
         for ch in preferred_order:
             if ch in all_channels:
                 sorted_channels.append(ch)
         
+        # Dodajemy resztę kanałów alfabetycznie
         for ch in all_channels:
             if ch not in sorted_channels:
                 sorted_channels.append(ch)
@@ -253,6 +254,7 @@ else:
         
         df = pd.DataFrame(table_data)
         st.dataframe(df, use_container_width=True, hide_index=True)
+
 if st.session_state.selected_movie:
     m = st.session_state.selected_movie
     tmdb = m.get('tmdb', {})
