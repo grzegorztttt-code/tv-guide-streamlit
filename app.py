@@ -7,8 +7,20 @@ import pandas as pd
 st.set_page_config(
     page_title="📺 Smart TV Guide",
     page_icon="📺",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
+
+st.markdown("""
+<style>
+    section[data-testid="stSidebar"] {
+        width: 400px !important;
+    }
+    section[data-testid="stSidebar"] > div {
+        padding-top: 2rem;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 @st.cache_data(ttl=3600)
 def load_data():
@@ -21,15 +33,72 @@ def load_data():
 
 data = load_data()
 
+if 'selected_movie' not in st.session_state:
+    st.session_state.selected_movie = None
+
+with st.sidebar:
+    st.title("🔍 Filtry")
+    
+    if data:
+        all_channels = sorted(set(m['channel_name'] for m in data['movies']))
+        
+        preferred_order = [
+            'HBO', 'HBO2', 'HBO3', 
+            'Cinemax', 'Cinemax2',
+            'TVN', 'TVN7', 
+            'Polsat',
+            'TVP1', 'TVP2',
+            'Ale Kino+',
+            'Canal+ Premium', 'Canal+ Film',
+            'Filmbox'
+        ]
+        
+        sorted_channels = []
+        for ch in preferred_order:
+            if ch in all_channels:
+                sorted_channels.append(ch)
+        
+        for ch in all_channels:
+            if ch not in sorted_channels:
+                sorted_channels.append(ch)
+        
+        default_channels = [ch for ch in sorted_channels[:15] if ch in all_channels]
+        
+        selected_channels = st.multiselect(
+            "Kanały:",
+            options=sorted_channels,
+            default=default_channels
+        )
+        
+        movies = data['movies']
+        if movies:
+            dates = [datetime.fromisoformat(m['start_time']) for m in movies]
+            min_date = min(dates).date()
+            max_date = max(dates).date()
+            
+            date_from = st.date_input("Data od:", value=datetime.now().date(), min_value=min_date, max_value=max_date)
+            date_to = st.date_input("Data do:", value=datetime.now().date() + timedelta(days=3), min_value=min_date, max_value=max_date)
+        else:
+            date_from = datetime.now().date()
+            date_to = date_from + timedelta(days=3)
+        
+        st.markdown("### ⏰ Godziny emisji")
+        time_from = st.time_input("Od godziny:", value=time(18, 0))
+        time_to = st.time_input("Do godziny:", value=time(23, 59))
+        
+        min_rating = st.slider("Min. ocena IMDb:", 0.0, 10.0, 6.0, 0.5)
+        
+        sort_option = st.selectbox(
+            "Sortuj po:",
+            ["⏰ Czas emisji", "⭐ Ocena IMDb", "🎬 Tytuł"]
+        )
+
 st.title("📺 Smart TV Guide")
 
 if not data:
     st.error("❌ Brak danych EPG! Czekam na pierwszą aktualizację...")
     st.info("💡 Dane są aktualizowane automatycznie co 6 godzin przez GitHub Actions")
     st.stop()
-
-if 'selected_movie' not in st.session_state:
-    st.session_state.selected_movie = None
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -43,39 +112,6 @@ with col3:
     st.metric("Następna za", f"{hours_left:.1f}h")
 
 st.markdown("---")
-
-st.sidebar.title("🔍 Filtry")
-
-all_channels = sorted(set(m['channel_name'] for m in data['movies']))
-
-selected_channels = st.sidebar.multiselect(
-    "Kanały:",
-    options=all_channels,
-    default=all_channels[:10] if len(all_channels) > 10 else all_channels
-)
-
-movies = data['movies']
-if movies:
-    dates = [datetime.fromisoformat(m['start_time']) for m in movies]
-    min_date = min(dates).date()
-    max_date = max(dates).date()
-    
-    date_from = st.sidebar.date_input("Data od:", value=datetime.now().date(), min_value=min_date, max_value=max_date)
-    date_to = st.sidebar.date_input("Data do:", value=datetime.now().date() + timedelta(days=3), min_value=min_date, max_value=max_date)
-else:
-    date_from = datetime.now().date()
-    date_to = date_from + timedelta(days=3)
-
-st.sidebar.markdown("### ⏰ Godziny emisji")
-time_from = st.sidebar.time_input("Od godziny:", value=time(18, 0))
-time_to = st.sidebar.time_input("Do godziny:", value=time(23, 59))
-
-min_rating = st.sidebar.slider("Min. ocena IMDb:", 0.0, 10.0, 6.0, 0.5)
-
-sort_option = st.sidebar.selectbox(
-    "Sortuj po:",
-    ["⏰ Czas emisji", "⭐ Ocena IMDb", "🎬 Tytuł"]
-)
 
 filtered = data['movies']
 
@@ -157,7 +193,7 @@ else:
                             st.caption(overview[:100] + "..." if len(overview) > 100 else overview)
                     
                     with col4:
-                        if st.button("📖 Więcej", key=movie_id):
+                        if st.button("📖", key=movie_id):
                             st.session_state.selected_movie = m
                             st.rerun()
                     
@@ -224,33 +260,35 @@ if st.session_state.selected_movie:
     dt = datetime.fromisoformat(m['start_time'])
     dt_end = datetime.fromisoformat(m['end_time'])
     
-    with st.sidebar:
-        st.markdown("---")
-        st.markdown("## 🎬 Szczegóły filmu")
+    @st.dialog("🎬 Szczegóły filmu", width="large")
+    def show_movie_details():
+        col1, col2 = st.columns([1, 2])
         
-        if tmdb.get('poster'):
-            st.image(tmdb['poster'], use_column_width=True)
+        with col1:
+            if tmdb.get('poster'):
+                st.image(tmdb['poster'], use_column_width=True)
         
-        title = tmdb.get('title', m['title'])
-        year = tmdb.get('year', m.get('year', ''))
-        rating = tmdb.get('rating', 0)
-        
-        st.markdown(f"### {title}")
-        
-        if year:
-            st.markdown(f"📅 **Rok:** {year}")
-        
-        rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
-        st.markdown(f"{rating_color} **Ocena IMDb:** {rating}/10")
-        
-        st.markdown("---")
-        st.markdown("### 📺 Emisja")
-        st.markdown(f"**Kanał:** {m['channel_name']}")
-        st.markdown(f"**Start:** {dt.strftime('%d.%m.%Y %H:%M')}")
-        st.markdown(f"**Koniec:** {dt_end.strftime('%H:%M')}")
-        
-        duration = (dt_end - dt).total_seconds() / 60
-        st.markdown(f"**Czas trwania:** {int(duration)} min")
+        with col2:
+            title = tmdb.get('title', m['title'])
+            year = tmdb.get('year', m.get('year', ''))
+            rating = tmdb.get('rating', 0)
+            
+            st.markdown(f"## {title}")
+            
+            if year:
+                st.markdown(f"📅 **Rok:** {year}")
+            
+            rating_color = "🟢" if rating >= 7.5 else "🟡" if rating >= 6.0 else "🔴"
+            st.markdown(f"{rating_color} **Ocena IMDb:** {rating}/10")
+            
+            st.markdown("---")
+            st.markdown("### 📺 Emisja")
+            st.markdown(f"**Kanał:** {m['channel_name']}")
+            st.markdown(f"**Start:** {dt.strftime('%d.%m.%Y %H:%M')}")
+            st.markdown(f"**Koniec:** {dt_end.strftime('%H:%M')}")
+            
+            duration = (dt_end - dt).total_seconds() / 60
+            st.markdown(f"**Czas trwania:** {int(duration)} min")
         
         if tmdb.get('overview'):
             st.markdown("---")
@@ -265,3 +303,5 @@ if st.session_state.selected_movie:
         if st.button("✖️ Zamknij", use_container_width=True):
             st.session_state.selected_movie = None
             st.rerun()
+    
+    show_movie_details()
