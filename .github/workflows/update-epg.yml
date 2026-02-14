@@ -28,15 +28,9 @@ jobs:
       run: |
         python scripts/fetch_epg.py
     
-    - name: Fetch streaming data
-      env:
-        TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-      run: |
-        python scripts/fetch_streaming.py
-    
     - name: Commit and push if changed
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add -f data/movies.json data/streaming.json
-        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update EPG and streaming data" && git push)
+        git add -f data/movies.json
+        git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto-update EPG data" && git push)
