@@ -20,10 +20,11 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pip install requests beautifulsoup4 lxml
+        pip install requests
     
     - name: Fetch VOD streaming data
       env:
+        RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
       run: |
         python scripts/fetch_streaming.py
@@ -34,5 +35,5 @@ jobs:
         git config --local user.name "github-actions[bot]"
         if [ -f data/streaming.json ]; then
           git add -f data/streaming.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🎬 Update VOD streaming data" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🎬 Update VOD data" && git push)
         fi
