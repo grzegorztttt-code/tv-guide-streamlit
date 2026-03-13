@@ -36,7 +36,7 @@ def get_evening_movies(data):
                 })
     
     evening_movies.sort(key=lambda x: x['rating'], reverse=True)
-    return evening_movies[:3]
+    return evening_movies[:5]
 
 def create_tweet_text(movies):
     if not movies:
