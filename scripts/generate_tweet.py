@@ -42,21 +42,16 @@ def create_tweet_text(movies):
     if not movies:
         return "📺 Brak ciekawych filmów dziś wieczorem. Sprawdź program na kolejne dni!"
     
-    date_str = datetime.now().strftime('%d.%m.%Y')
-    tweet = f"📺 Wieczorny program TV ({date_str}):\n\n"
+    date_str = datetime.now().strftime('%d.%m')
+    tweet = f"📺 Dzisiaj wieczorem ({date_str}):\n\n"
     
     for movie in movies:
         rating_emoji = "🟢" if movie['rating'] >= 7.5 else "🟡"
         
         tweet += f"🎬 {movie['title']}\n"
-        tweet += f"{rating_emoji} {movie['rating']}/10 | {movie['channel']}, {movie['time']}\n"
-        
-        overview = movie['overview'][:80]
-        if len(movie['overview']) > 80:
-            overview += "..."
-        tweet += f"{overview}\n\n"
+        tweet += f"{rating_emoji} {movie['rating']}/10 | {movie['channel']}, {movie['time']}\n\n"
     
-    tweet += "#FilmyWieczorem #ProgramTV #FilmyNaDzis"
+    tweet += "#FilmyWieczorem #HBO #TVN"
     
     return tweet
 
