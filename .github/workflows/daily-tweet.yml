@@ -1,0 +1,30 @@
+name: Generate Daily Tweet
+
+on:
+  schedule:
+    - cron: '0 15 * * *'
+  workflow_dispatch:
+
+jobs:
+  generate-tweet:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Generate tweet file
+      run: |
+        python scripts/generate_tweet.py
+    
+    - name: Commit tweet file
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add data/tweet_*.txt
+        git diff --quiet && git diff --staged --quiet || (git commit -m "📝 Daily tweet $(date +%Y-%m-%d)" && git push)
