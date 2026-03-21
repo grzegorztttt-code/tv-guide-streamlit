@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-21T02:00:23.023978",
+  "updated_at": "2026-03-21T06:43:32.642884",
   "count": 1000,
   "movies": [
     {
@@ -4702,7 +4702,15 @@
       "start_time": "2026-03-22T05:25:00",
       "end_time": "2026-03-22T06:00:00",
       "category": "film krótkometrażowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1298562,
+        "title": "Przybieżeli",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/zl1DJtcntWtpyTk031HrLQbErhu.jpg",
+        "rating": 0.0,
+        "overview": "Tuż przed Świętami Bożego Narodzenia, w domu wdowy po miejscowym organiście, dzieją się rzeczy trudne do wyjaśnienia. Błotne ślady pozostawione w domu, tajemnicze cienie i dziwne dźwięki sprawiają, że Bogusia coraz pewniej zaczyna wierzyć, że mogą to być znaki od zmarłego tragicznie męża. Kobieta doświadcza zjawisk, które nasilają jej nieprzepracowaną żałobę."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
