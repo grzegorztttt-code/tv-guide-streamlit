@@ -1,101 +1,7 @@
 {
-  "updated_at": "2026-04-20T02:41:13.709151",
+  "updated_at": "2026-04-20T08:07:48.694759",
   "count": 1000,
   "movies": [
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Max Payne. ",
-      "start_time": "2026-04-18T01:20:00",
-      "end_time": "2026-04-18T03:40:00",
-      "category": "film sensacyjny",
-      "year": 2008,
-      "tmdb": {
-        "tmdb_id": 13051,
-        "title": "Max Payne",
-        "year": "2008",
-        "poster": "https://image.tmdb.org/t/p/w500/3cWnCG5NyXJYARO2hmNqfbbgrMA.jpg",
-        "rating": 5.408,
-        "overview": "Kinowa wersja kultowej gry komputerowej. Nominowany do Oscara Mark Wahlberg (\"Infiltracja\") w roli zdeterminowanego w walce z przestępczością policjanta z Nowego Jorku, który wpada na trop wielkiej afery."
-      }
-    },
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Kabaretowa Ekstraklasa. ",
-      "start_time": "2026-04-18T03:40:00",
-      "end_time": "2026-04-18T04:40:00",
-      "category": "program rozrywkowy",
-      "year": 2017
-    },
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Shrek ma wielkie oczy. ",
-      "start_time": "2026-04-18T12:20:00",
-      "end_time": "2026-04-18T12:50:00",
-      "category": "film animowany",
-      "year": 2010,
-      "tmdb": {
-        "tmdb_id": 48466,
-        "title": "Shrek ma wielkie oczy",
-        "year": "2010",
-        "poster": "https://image.tmdb.org/t/p/w500/aAQQJhX8NqKZ7ZNDUPQQKi1wK8h.jpg",
-        "rating": 6.686,
-        "overview": "Shrek wraz z przyjaciółmi wyrusza do nawiedzonego zamku lorda Farquaada, gdzie organizowany jest konkurs opowiadania przerażających historii."
-      }
-    },
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Karate Kid 4: Mistrz i uczennica. ",
-      "start_time": "2026-04-18T12:50:00",
-      "end_time": "2026-04-18T15:15:00",
-      "category": "film przygodowy",
-      "year": 1994,
-      "tmdb": {
-        "tmdb_id": 11231,
-        "title": "Karate Kid 4. Mistrz i uczennica",
-        "year": "1994",
-        "poster": "https://image.tmdb.org/t/p/w500/wI3gCi9w1cuUJCiwhviAy46we9Q.jpg",
-        "rating": 5.4,
-        "overview": "Mistrz karate Miyagi bierze pod opiekę nastolatkę, imieniem Julie. Od czasu śmierci rodziców siedemnastoletnia Julie Pierce mieszkała z babcią, ale nie układało im się razem, dlatego Miyagi został poproszony o pomoc. Wydawało mu się, że poradzi sobie z nią bez trudu, tymczasem okazało się inaczej. Dorastająca Julie daje mu niezłą \"szkołę przetrwania\". Miyagi nie zważa jednak na to - ma bowiem wobec jej rodziny dług wdzięczności. Jej dziadek uratował mu kiedyś życie."
-      }
-    },
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Narzeczony na niby. ",
-      "start_time": "2026-04-18T15:15:00",
-      "end_time": "2026-04-18T17:30:00",
-      "category": "komedia romantyczna",
-      "year": 2018,
-      "tmdb": {
-        "tmdb_id": 498208,
-        "title": "Narzeczony na niby",
-        "year": "2018",
-        "poster": "https://image.tmdb.org/t/p/w500/7rXwg79ufCi0cuqfubIKyfjD1qO.jpg",
-        "rating": 5.7,
-        "overview": "Opowieść o związkowych perypetiach, które pokocha każdy, kto choć raz zakochał się w niewłaściwej osobie. Idealne życie, o którym marzymy, rzadko kiedy tak naprawdę jest idealne, a ci którym oddajemy nasze serca, niestety potrafią je z łatwością łamać. Gdy któregoś dnia życie Kariny zamieni się w pasmo nieszczęść, postanowi ona wziąć sprawy w swoje ręce i \"podkoloruje\" rzeczywistość. Niestety uruchomiony festiwal małych i dużych kłamstw wymknie się jej spod kontroli doprowadzając do wielu przezabawnych sytuacji. W konsekwencji wszyscy bohaterowie filmu, będą musieli zrobić porządek zarówno w swoim życiu, jak i w swoich sercach."
-      }
-    },
-    {
-      "channel_id": "Polsat",
-      "channel_name": "Polsat",
-      "title": "Venom 3: Ostatni taniec. ",
-      "start_time": "2026-04-18T21:55:00",
-      "end_time": "2026-04-19T00:15:00",
-      "category": "film SF",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 912649,
-        "title": "Venom 3: Ostatni taniec",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/yOQAyQAka0h2Hl9sLnCS9wpLHjl.jpg",
-        "rating": 6.66,
-        "overview": "Eddie i Venom są zmuszeni do ucieczki przed przeciwnikami z różnych światów. Eddiego ściga FBI, aby go przesłuchać w sprawie zagadkowej śmierci policjanta i innych niewytłumaczalnych wydarzeń, które miały miejsce w katedrze w San Francisco. A Venom to klucz do wolności strasznego Knulla, który przy pomocy swoich wysłanników przeszukuje miliony planet, by ten klucz znaleźć. Duet będzie zmuszony do podjęcia druzgocącej decyzji."
-      }
-    },
     {
       "channel_id": "Polsat",
       "channel_name": "Polsat",
@@ -675,108 +581,90 @@
       }
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Szpital św. Anny. ",
-      "start_time": "2026-04-18T02:10:00",
-      "end_time": "2026-04-18T03:00:00",
-      "category": "serial obyczajowy",
-      "year": 2025
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Sortownia. ",
+      "start_time": "2026-04-24T01:20:00",
+      "end_time": "2026-04-24T02:25:00",
+      "category": "serial psychologiczny",
+      "year": 2023
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Szpital św. Anny. ",
-      "start_time": "2026-04-18T03:00:00",
-      "end_time": "2026-04-18T03:50:00",
-      "category": "serial obyczajowy",
-      "year": 2025
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Ostatni Mohikanin. ",
+      "start_time": "2026-04-24T02:25:00",
+      "end_time": "2026-04-24T04:50:00",
+      "category": "film przygodowy",
+      "year": 1992,
+      "tmdb": {
+        "tmdb_id": 9361,
+        "title": "Ostatni Mohikanin",
+        "year": "1992",
+        "poster": "https://image.tmdb.org/t/p/w500/vFbxmMViVuIA3jTfWtq14it1GIH.jpg",
+        "rating": 7.386,
+        "overview": "Adaptacja powieści Jamesa Fenimore'a Coopera. Trwa wojna Francji z Anglią o władze nad amerykańskimi koloniami. Bohaterem opowieści jest Hawkeye, jeden z ostatnich przedstawicieli szczepu Mohikanów, żyjących w harmonii z przyrodą. Do fortu William Henry mają przybyć dwie piękne córki kapitana Munro. W drodze zostają jednak zaatakowane przez grupę złowrogich Indian. Z pomocą przybywają Mohikanie..."
+      }
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "CSI: Kryminalne zagadki Las Vegas 10. ",
-      "start_time": "2026-04-18T04:05:00",
-      "end_time": "2026-04-18T04:50:00",
-      "category": "serial kryminalny",
-      "year": 2010
-    },
-    {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Nauka jazdy 5. ",
-      "start_time": "2026-04-18T05:15:00",
-      "end_time": "2026-04-18T05:40:00",
-      "category": "program rozrywkowy",
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Gliniarze. Gładkie kłamstwa. ",
+      "start_time": "2026-04-24T11:30:00",
+      "end_time": "2026-04-24T12:35:00",
+      "category": "serial paradokumentalny",
       "year": 2022
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Ukryta prawda. ",
-      "start_time": "2026-04-18T05:55:00",
-      "end_time": "2026-04-18T06:50:00",
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Gliniarze. Las po zmroku. ",
+      "start_time": "2026-04-24T12:35:00",
+      "end_time": "2026-04-24T13:35:00",
       "category": "serial paradokumentalny",
-      "year": 2024
+      "year": 2022
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Kuchenne rewolucje. Włocławek - Karczma Kujawska. ",
-      "start_time": "2026-04-18T06:50:00",
-      "end_time": "2026-04-18T07:45:00",
-      "category": "program rozrywkowy",
-      "year": 2024
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Gliniarze. Bez przedawnienia. ",
+      "start_time": "2026-04-24T13:35:00",
+      "end_time": "2026-04-24T14:40:00",
+      "category": "serial paradokumentalny",
+      "year": 2022
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Historia Kopciuszka. ",
-      "start_time": "2026-04-18T13:30:00",
-      "end_time": "2026-04-18T15:40:00",
-      "category": "komedia romantyczna",
-      "year": 2004,
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Farma. ",
+      "start_time": "2026-04-24T19:55:00",
+      "end_time": "2026-04-24T21:00:00",
+      "category": "reality show",
+      "year": 2025,
       "tmdb": {
-        "tmdb_id": 11247,
-        "title": "Historia Kopciuszka",
-        "year": "2004",
-        "poster": "https://image.tmdb.org/t/p/w500/ukwP7gDPWxj1R1dW5iN3mnxkL3D.jpg",
-        "rating": 6.591,
-        "overview": "Współczesna opowieść o kopciuszku. Pewna nastolatka jest zmuszana przez macochę do wykonywania najcięższych prac domowych. Jedyną odskocznią od niewesołej rzeczywistości jest dla niej internetowa korespondencja z pewnym uroczym nieznajomym. Wkrótce nadarzy się okazja na poznanie osobiście tajemniczego chłopaka, gdyż zbliża się wielki szkolny bal maskowy..."
+        "tmdb_id": 539745,
+        "title": "Animal Farm",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w500/6pzI1DIlxwAFffw9OZcG6cr031U.jpg",
+        "rating": 0.0,
+        "overview": "Grupa zwierząt buntuje się przeciwko swoim ludzkim panom i przejmuje kontrolę nad farmą. Po zakończeniu buntu stają przed nowymi wyzwaniami pod rządami przebiegłej świni o imieniu Napoleon. Ta sytuacja zmusza ich do znalezienia odwagi, by przeciwstawić się Napoleonowi."
       }
     },
     {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Mój książę z bajki. ",
-      "start_time": "2026-04-18T15:40:00",
-      "end_time": "2026-04-18T17:55:00",
-      "category": "komedia przygodowa",
-      "year": 2020,
+      "channel_id": "Polsat",
+      "channel_name": "Polsat",
+      "title": "Stan oblężenia. ",
+      "start_time": "2026-04-24T23:05:00",
+      "end_time": "2026-04-25T01:30:00",
+      "category": "thriller",
+      "year": 1998,
       "tmdb": {
-        "tmdb_id": 520725,
-        "title": "Mój książę z bajki",
-        "year": "2020",
-        "poster": "https://image.tmdb.org/t/p/w500/gq1x2HQoQxQjzrGj2elRJmo87mN.jpg",
-        "rating": 5.692,
-        "overview": "Wszystko w życiu Dżibiego obraca się wokół jego ukochanej siedmioletniej córki Sofii. Ten oddany, samotny ojciec nigdy nie omija rytuału opowieści na dobranoc. Każdej nocy, gdy Sofia zasypia, jej tata zabiera ją do „Storyland”, studia filmów fantasy, w którym ożywają ich niezwykłe bajkowe przygody, gdzie Dżibi gra główną rolę bohaterskiego księcia z bajki. Pięć lat później, Sofia jako nastolatka zaczyna wyrastać z opowieści ojca i zamiast tego wymyśla własne opowieści z Dżibim, który nie jest już pozytywną postacią. Gdy jego role zarówno w prawdziwym świecie, jak i w „Storyland” zaczynają się zmieniać, Dżibi musi znaleźć sposób, aby pozostać bohaterem życia, wyobraźni i historii swojej córki."
-      }
-    },
-    {
-      "channel_id": "TVN",
-      "channel_name": "TVN",
-      "title": "Tata kontra tata. ",
-      "start_time": "2026-04-18T22:20:00",
-      "end_time": "2026-04-19T00:15:00",
-      "category": "komedia",
-      "year": 2015,
-      "tmdb": {
-        "tmdb_id": 274167,
-        "title": "Tata kontra tata",
-        "year": "2015",
-        "poster": "https://image.tmdb.org/t/p/w500/sAFMISmBMmMHtSHvXvq9o8rFrVS.jpg",
-        "rating": 6.295,
-        "overview": "To nie może skończyć się dobrze. Chyba że… chyba że jednak może. Ojciec vs ojczym – Will Ferrell vs Mark Wahlberg. Jeden dumny ojciec spotyka drugiego dumnego tatę. Czy coś może pójść nie tak? Otóż może. Wszystko. Już pierwsze spotkanie dwóch ojców jest początkiem totalnej (i zabawnej) wojny dwóch biegunowo rożnych osobowości – spokojnego, rodzinnego Brada (Ferrell) i typowego bad boya, przystojniaka Dusty’ego (Wahlberg). Ale z każdym dniem stawka rośnie. Ojciec i ojczym prześcigają się w najdziwniejszych pomysłach, by okazać się „tym lepszym”. Kto wygra? Czy uda im się przetrwać tę rywalizację? Brad chce po prostu być prawdziwą częścią jego nowej rodziny, nie ma jednak pojęcia, ile będzie go to kosztowało, kiedy do domu wraca prawdziwy ojciec…"
+        "tmdb_id": 9882,
+        "title": "Stan Oblężenia",
+        "year": "1998",
+        "poster": "https://image.tmdb.org/t/p/w500/su6Vb6FwzhMFKONUCuq38dfxhVu.jpg",
+        "rating": 6.291,
+        "overview": "Organizacja terrorystyczna próbuje wymusić na rządzie Stanów Zjednoczonych uwolnienie swego przywódcy, grożąc, w razie odmowy, zrównaniem z ziemią całego Nowego Jorku. Do akcji wkracza specjalny agent FBI Anthony \"Hub\" Hubbard (Denzel Washington), który wraz z charyzmatycznym generałem amerykańskiej armii Williamem Deveraux (Bruce Willis), prowadzi zakrojone na szeroką skalę śledztwo. Nie przynosi ono jednak spodziewanych rezultatów. Pod wpływem eskalacji ataków terrorystycznych, Prezydent USA wydaje bezprecedensowy nakaz wprowadzenia stanu wyjątkowego na ulicach Nowego Jorku."
       }
     },
     {
@@ -1302,425 +1190,119 @@
       "year": 2021
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Miasteczko South Park 16. Forsa za złoto. ",
-      "start_time": "2026-04-18T00:15:00",
-      "end_time": "2026-04-18T00:40:00",
-      "category": "serial animowany dla dorosłych",
-      "year": 2012
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Szpital św. Anny. ",
+      "start_time": "2026-04-24T01:50:00",
+      "end_time": "2026-04-24T02:45:00",
+      "category": "serial obyczajowy",
+      "year": 2025
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Miasteczko South Park 16. Faith Hilling. ",
-      "start_time": "2026-04-18T00:40:00",
-      "end_time": "2026-04-18T01:10:00",
-      "category": "serial animowany dla dorosłych",
-      "year": 2012
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Szpital św. Anny. ",
+      "start_time": "2026-04-24T02:45:00",
+      "end_time": "2026-04-24T03:35:00",
+      "category": "serial obyczajowy",
+      "year": 2025
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Pracoholicy. Siku-miku. ",
-      "start_time": "2026-04-18T01:10:00",
-      "end_time": "2026-04-18T01:35:00",
-      "category": "serial komediowy",
-      "year": 2011
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "CSI: Kryminalne zagadki Las Vegas 11. ",
+      "start_time": "2026-04-24T03:50:00",
+      "end_time": "2026-04-24T04:40:00",
+      "category": "serial kryminalny",
+      "year": 2010
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Pracoholicy. Niech żyje kosz. ",
-      "start_time": "2026-04-18T01:35:00",
-      "end_time": "2026-04-18T02:05:00",
-      "category": "serial komediowy",
-      "year": 2011
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Jak to jest zrobione. ",
+      "start_time": "2026-04-24T04:40:00",
+      "end_time": "2026-04-24T05:05:00",
+      "category": "serial dokumentalny",
+      "year": 2013
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Śmieszniej nie będzie 6. Uroczy śmiech. ",
-      "start_time": "2026-04-18T02:05:00",
-      "end_time": "2026-04-18T02:35:00",
-      "category": "program rozrywkowy",
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Ukryta prawda. ",
+      "start_time": "2026-04-24T05:55:00",
+      "end_time": "2026-04-24T06:50:00",
+      "category": "serial paradokumentalny",
       "year": 2024
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Śmieszniej nie będzie 6. Kichnięcie. ",
-      "start_time": "2026-04-18T02:35:00",
-      "end_time": "2026-04-18T03:05:00",
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Kuchenne rewolucje. Borysławice. ",
+      "start_time": "2026-04-24T06:50:00",
+      "end_time": "2026-04-24T07:45:00",
       "category": "program rozrywkowy",
-      "year": 2024
+      "year": 2025
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Miasteczko South Park 15. Święto Dziękczynienia na kanale History. ",
-      "start_time": "2026-04-18T03:05:00",
-      "end_time": "2026-04-18T03:30:00",
-      "category": "serial animowany dla dorosłych",
-      "year": 2011
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Miasteczko South Park 15. Najbiedniejszy w szkole. ",
-      "start_time": "2026-04-18T03:30:00",
-      "end_time": "2026-04-18T04:00:00",
-      "category": "serial animowany dla dorosłych",
-      "year": 2011
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Miasteczko South Park 16. Odwrócona kowbojka. ",
-      "start_time": "2026-04-18T04:00:00",
-      "end_time": "2026-04-18T04:25:00",
-      "category": "serial animowany dla dorosłych",
-      "year": 2012
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Comedy Club 3. ",
-      "start_time": "2026-04-18T04:25:00",
-      "end_time": "2026-04-18T05:00:00",
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Kuchenne rewolucje. Białystok, James Bomba-Lina. ",
+      "start_time": "2026-04-24T11:25:00",
+      "end_time": "2026-04-24T12:35:00",
       "category": "program rozrywkowy",
-      "year": 2019
+      "year": 2018
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Comedy Club 3. ",
-      "start_time": "2026-04-18T05:00:00",
-      "end_time": "2026-04-18T05:30:00",
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Kuchenne rewolucje. Kępno - Kulinarna Warszawka. ",
+      "start_time": "2026-04-24T12:35:00",
+      "end_time": "2026-04-24T13:40:00",
       "category": "program rozrywkowy",
-      "year": 2019
+      "year": 2022
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Comedy Club 3. ",
-      "start_time": "2026-04-18T05:30:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "program rozrywkowy",
-      "year": 2019
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Ukryta prawda. ",
+      "start_time": "2026-04-24T13:40:00",
+      "end_time": "2026-04-24T14:40:00",
+      "category": "serial paradokumentalny",
+      "year": 2025
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "The Office PL 4. Powrót Łukiego. ",
-      "start_time": "2026-04-18T06:00:00",
-      "end_time": "2026-04-18T06:30:00",
-      "category": "serial komediowy",
-      "year": 2024
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Ukryta prawda. ",
+      "start_time": "2026-04-24T14:40:00",
+      "end_time": "2026-04-24T15:45:00",
+      "category": "serial paradokumentalny",
+      "year": 2025
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "The Office PL 4. Rower. ",
-      "start_time": "2026-04-18T06:30:00",
-      "end_time": "2026-04-18T07:05:00",
-      "category": "serial komediowy",
-      "year": 2024
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Adhesive Duck Deficiency. ",
-      "start_time": "2026-04-18T07:05:00",
-      "end_time": "2026-04-18T07:35:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Vengeance Formulation. ",
-      "start_time": "2026-04-18T07:35:00",
-      "end_time": "2026-04-18T08:05:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Gorilla Experiment. ",
-      "start_time": "2026-04-18T08:05:00",
-      "end_time": "2026-04-18T08:30:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Maternal Congruence. ",
-      "start_time": "2026-04-18T08:30:00",
-      "end_time": "2026-04-18T09:00:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Psychic Vortex. ",
-      "start_time": "2026-04-18T09:00:00",
-      "end_time": "2026-04-18T09:25:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Bozeman Reaction. ",
-      "start_time": "2026-04-18T09:25:00",
-      "end_time": "2026-04-18T09:55:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Einstein Approximation. ",
-      "start_time": "2026-04-18T09:55:00",
-      "end_time": "2026-04-18T10:20:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Large Hadron Collision. ",
-      "start_time": "2026-04-18T10:20:00",
-      "end_time": "2026-04-18T10:50:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Excelsior Acquisition. ",
-      "start_time": "2026-04-18T10:50:00",
-      "end_time": "2026-04-18T11:10:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Precious Fragmentation. ",
-      "start_time": "2026-04-18T11:10:00",
-      "end_time": "2026-04-18T11:40:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Pants Alternative. ",
-      "start_time": "2026-04-18T11:40:00",
-      "end_time": "2026-04-18T12:05:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Wheaton Recurrence. ",
-      "start_time": "2026-04-18T12:05:00",
-      "end_time": "2026-04-18T12:35:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Spaghetti Catalyst. ",
-      "start_time": "2026-04-18T12:35:00",
-      "end_time": "2026-04-18T13:00:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Teoria wielkiego podrywu 3. The Plimpton Stimulation. ",
-      "start_time": "2026-04-18T13:00:00",
-      "end_time": "2026-04-18T13:30:00",
-      "category": "serial komediowy",
-      "year": 2009
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele. The One Where Rachel Finds Out. ",
-      "start_time": "2026-04-18T13:30:00",
-      "end_time": "2026-04-18T14:00:00",
-      "category": "serial komediowy",
-      "year": 1994
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele. The One with Ross's New Girlfriend. ",
-      "start_time": "2026-04-18T14:00:00",
-      "end_time": "2026-04-18T14:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with the Breast Milk. ",
-      "start_time": "2026-04-18T14:30:00",
-      "end_time": "2026-04-18T15:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One Where Heckles Dies. ",
-      "start_time": "2026-04-18T15:00:00",
-      "end_time": "2026-04-18T15:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with Phoebe's Husband. ",
-      "start_time": "2026-04-18T15:30:00",
-      "end_time": "2026-04-18T16:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with Five Steaks & an Eggplant. ",
-      "start_time": "2026-04-18T16:00:00",
-      "end_time": "2026-04-18T16:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with the Baby on the Bus. ",
-      "start_time": "2026-04-18T16:30:00",
-      "end_time": "2026-04-18T17:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One Where Ross Finds Out. ",
-      "start_time": "2026-04-18T17:00:00",
-      "end_time": "2026-04-18T17:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with the List. ",
-      "start_time": "2026-04-18T17:30:00",
-      "end_time": "2026-04-18T18:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with Phoebe's Dad. ",
-      "start_time": "2026-04-18T18:00:00",
-      "end_time": "2026-04-18T18:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with Russ. ",
-      "start_time": "2026-04-18T18:30:00",
-      "end_time": "2026-04-18T19:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One with the Lesbian Wedding. ",
-      "start_time": "2026-04-18T19:00:00",
-      "end_time": "2026-04-18T19:30:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Przyjaciele 2. The One After the Super Bowl - Part 1. ",
-      "start_time": "2026-04-18T19:30:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "serial komediowy",
-      "year": 1996
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Duchy. Pilot. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T20:30:00",
-      "category": "serial fantasy",
-      "year": 2021
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Duchy. Cześć. ",
-      "start_time": "2026-04-18T20:30:00",
-      "end_time": "2026-04-18T21:00:00",
-      "category": "serial fantasy",
-      "year": 2021
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Dwaj zgryźliwi tetrycy. ",
-      "start_time": "2026-04-18T21:00:00",
-      "end_time": "2026-04-18T23:10:00",
-      "category": "komedia",
-      "year": 1993,
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Shrek Forever. ",
+      "start_time": "2026-04-24T20:00:00",
+      "end_time": "2026-04-24T22:10:00",
+      "category": "film animowany",
+      "year": 2010,
       "tmdb": {
-        "tmdb_id": 11520,
-        "title": "Dwaj Zgryźliwi Tetrycy",
-        "year": "1993",
-        "poster": "https://image.tmdb.org/t/p/w500/ltx0C4TqlSsw67OlYWyTiCkU2su.jpg",
-        "rating": 6.656,
-        "overview": "W małym miasteczku w stanie Minnesota mieszkają dwaj skłóceni sąsiedzi, John (Jack Lemmon) i Max (Walter Matthau). Każdy z nich codziennie obmyśla plan, jak zdenerwować oraz wydrwić przeciwnika. Tak dzieje się już od ponad 50 lat i nic nie zapowiada zmiany. Tymczasem do miasteczka przybywa atrakcyjna wdowa w średnim wieku. Czarująca kobieta staje się przyczyną nowych spięć między staruszkami."
+        "tmdb_id": 10192,
+        "title": "Shrek Forever",
+        "year": "2010",
+        "poster": "https://image.tmdb.org/t/p/w500/mAn7hsIH0HgVVQOylvldl1HzySE.jpg",
+        "rating": 6.393,
+        "overview": "Czym zajmują się ogry, kiedy już rozprawią się ze straszliwym smokiem, poślubią piękną królewnę i ocalą królestwo teścia? Shrek został pantoflarzem. Małorolni nie uciekają już przed nim z krzykiem. Dziś proszą, żeby podpisał im się na widłach. Tęskniąc za czasami, kiedy \"żył jak na ogra przystało\", Shrek nieopatrznie zawiera pakt z podstępnym Rumplesnickim i ląduje w rządzonej przez niego, spaczonej, alternatywnej wersji Zasiedmiogórogrodu. Tu na ogry się poluje, a Shrek i Fiona nigdy się nie spotkali. Czy Shrekowi uda się odwrócić zaklęcie, uratować przyjaciół i odzyskać ukochaną?"
       }
     },
     {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Colin od rachunków 2. Na skraju. ",
-      "start_time": "2026-04-18T23:10:00",
-      "end_time": "2026-04-18T23:55:00",
-      "category": "serial komediowy",
-      "year": 2024
-    },
-    {
-      "channel_id": "Comedy Central",
-      "channel_name": "Comedy Central",
-      "title": "Colin od rachunków 2. Weekend w Yass. ",
-      "start_time": "2026-04-18T23:55:00",
-      "end_time": "2026-04-19T00:30:00",
-      "category": "serial komediowy",
+      "channel_id": "TVN",
+      "channel_name": "TVN",
+      "title": "Wojna domowa. ",
+      "start_time": "2026-04-24T22:10:00",
+      "end_time": "2026-04-25T00:20:00",
+      "category": "film wojenny",
       "year": 2024
     },
     {
@@ -3963,244 +3545,454 @@
       "year": 2018
     },
     {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Opętany. ",
-      "start_time": "2026-04-18T01:30:00",
-      "end_time": "2026-04-18T02:55:00",
-      "category": "horror",
-      "year": 2023,
-      "tmdb": {
-        "tmdb_id": 946215,
-        "title": "Opętany",
-        "year": "2023",
-        "poster": "https://image.tmdb.org/t/p/w500/rS6GBWRgKkvmcPvtKNuhGkQggjz.jpg",
-        "rating": 4.6,
-        "overview": "Psychiatra trafia do odległej wioski, by pomóc chłopcu uznawanemu za opętanego. Pełen napięcia thriller z elementami horroru, osadzony w XIX-wiecznej Sycylii."
-      }
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Miasteczko South Park 16. Niepewność. ",
+      "start_time": "2026-04-24T00:05:00",
+      "end_time": "2026-04-24T00:30:00",
+      "category": "serial animowany dla dorosłych",
+      "year": 2012
     },
     {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Wiarołom. ",
-      "start_time": "2026-04-18T02:55:00",
-      "end_time": "2026-04-18T04:10:00",
-      "category": "dramat obyczajowy",
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Miasteczko South Park 16. Tubylcem być. ",
+      "start_time": "2026-04-24T00:30:00",
+      "end_time": "2026-04-24T01:00:00",
+      "category": "serial animowany dla dorosłych",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Pracoholicy. Ćwicz ten mięsień. ",
+      "start_time": "2026-04-24T01:00:00",
+      "end_time": "2026-04-24T01:30:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Pracoholicy. Kolejka do zwolnienia. ",
+      "start_time": "2026-04-24T01:30:00",
+      "end_time": "2026-04-24T02:00:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Śmieszniej nie będzie 6. Wdech. ",
+      "start_time": "2026-04-24T02:00:00",
+      "end_time": "2026-04-24T02:30:00",
+      "category": "program rozrywkowy",
+      "year": 2024
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Śmieszniej nie będzie 6. Pęknięcie. ",
+      "start_time": "2026-04-24T02:30:00",
+      "end_time": "2026-04-24T03:00:00",
+      "category": "program rozrywkowy",
+      "year": 2024
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Miasteczko South Park 16. Wielka miłość Cartmana. ",
+      "start_time": "2026-04-24T03:00:00",
+      "end_time": "2026-04-24T03:30:00",
+      "category": "serial animowany dla dorosłych",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Miasteczko South Park 16. Sarkazmobol. ",
+      "start_time": "2026-04-24T03:30:00",
+      "end_time": "2026-04-24T04:00:00",
+      "category": "serial animowany dla dorosłych",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Miasteczko South Park 16. Podnoszenie poprzeczki. ",
+      "start_time": "2026-04-24T04:00:00",
+      "end_time": "2026-04-24T04:30:00",
+      "category": "serial animowany dla dorosłych",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Comedy Club 4. ",
+      "start_time": "2026-04-24T04:30:00",
+      "end_time": "2026-04-24T05:00:00",
+      "category": "program rozrywkowy",
+      "year": 2019
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Comedy Club 4. ",
+      "start_time": "2026-04-24T05:00:00",
+      "end_time": "2026-04-24T05:30:00",
+      "category": "program rozrywkowy",
+      "year": 2019
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Comedy Club 4. ",
+      "start_time": "2026-04-24T05:30:00",
+      "end_time": "2026-04-24T06:00:00",
+      "category": "program rozrywkowy",
+      "year": 2019
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Pingwiny z Madagaskaru 3. Najlepszy wróg/Noc Wezuwiuszów. ",
+      "start_time": "2026-04-24T06:00:00",
+      "end_time": "2026-04-24T06:25:00",
+      "category": "serial animowany",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Pingwiny z Madagaskaru 3. Operacja Jednorożec apokalipsy\\. ",
+      "start_time": "2026-04-24T06:25:00",
+      "end_time": "2026-04-24T07:00:00",
+      "category": "serial animowany",
+      "year": 2012
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Chamskie i niepotrzebne. ",
+      "start_time": "2026-04-24T07:00:00",
+      "end_time": "2026-04-24T07:30:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Rozkaz, kapitanie. ",
+      "start_time": "2026-04-24T07:30:00",
+      "end_time": "2026-04-24T08:00:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Siusiać jak księżniczka. ",
+      "start_time": "2026-04-24T08:00:00",
+      "end_time": "2026-04-24T08:30:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Znalazłem twój wąs. ",
+      "start_time": "2026-04-24T08:30:00",
+      "end_time": "2026-04-24T08:55:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 3. The One With Ross's Thing. ",
+      "start_time": "2026-04-24T08:55:00",
+      "end_time": "2026-04-24T09:25:00",
+      "category": "serial komediowy",
+      "year": 1996
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 3. The One With The Ultimate Fighting Champion. ",
+      "start_time": "2026-04-24T09:25:00",
+      "end_time": "2026-04-24T09:55:00",
+      "category": "serial komediowy",
+      "year": 1996
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 3. The One at the Beach. ",
+      "start_time": "2026-04-24T09:55:00",
+      "end_time": "2026-04-24T10:25:00",
+      "category": "serial komediowy",
+      "year": 1996
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with the Jellyfish. ",
+      "start_time": "2026-04-24T10:25:00",
+      "end_time": "2026-04-24T10:55:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with the Cat. ",
+      "start_time": "2026-04-24T10:55:00",
+      "end_time": "2026-04-24T11:25:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with the 'Cuffs. ",
+      "start_time": "2026-04-24T11:25:00",
+      "end_time": "2026-04-24T11:55:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Permutacja izolacji. ",
+      "start_time": "2026-04-24T11:55:00",
+      "end_time": "2026-04-24T12:20:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Fobijna fiksacja. ",
+      "start_time": "2026-04-24T12:20:00",
+      "end_time": "2026-04-24T12:50:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Uczuciowa inicjacja. ",
+      "start_time": "2026-04-24T12:50:00",
+      "end_time": "2026-04-24T13:10:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Speckermanowa inwazja. ",
+      "start_time": "2026-04-24T13:10:00",
+      "end_time": "2026-04-24T13:35:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Błyskotkowa manipulacja. ",
+      "start_time": "2026-04-24T13:35:00",
+      "end_time": "2026-04-24T14:05:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Hipoteza rekombinacji. ",
+      "start_time": "2026-04-24T14:05:00",
+      "end_time": "2026-04-24T14:30:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Buzia na kłódkę. ",
+      "start_time": "2026-04-24T14:30:00",
+      "end_time": "2026-04-24T15:00:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Keith Moon puszcza pawia w grobie. ",
+      "start_time": "2026-04-24T15:00:00",
+      "end_time": "2026-04-24T15:30:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Nazwałem go Magoo. ",
+      "start_time": "2026-04-24T15:30:00",
+      "end_time": "2026-04-24T16:00:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Dwóch i pół 7. Gumby z pałką. ",
+      "start_time": "2026-04-24T16:00:00",
+      "end_time": "2026-04-24T16:30:00",
+      "category": "serial komediowy",
+      "year": 2009
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with the Ballroom Dancing. ",
+      "start_time": "2026-04-24T16:30:00",
+      "end_time": "2026-04-24T17:00:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with Joey's New Girlfriend. ",
+      "start_time": "2026-04-24T17:00:00",
+      "end_time": "2026-04-24T17:30:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with the Dirty Girl. ",
+      "start_time": "2026-04-24T17:30:00",
+      "end_time": "2026-04-24T18:00:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One Where Chandler Crosses the Line. ",
+      "start_time": "2026-04-24T18:00:00",
+      "end_time": "2026-04-24T18:30:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One with Chandler in a Box. ",
+      "start_time": "2026-04-24T18:30:00",
+      "end_time": "2026-04-24T19:00:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Przyjaciele 4. The One Where They're Going to Party. ",
+      "start_time": "2026-04-24T19:00:00",
+      "end_time": "2026-04-24T19:30:00",
+      "category": "serial komediowy",
+      "year": 1997
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Betatestowa inicjacja. ",
+      "start_time": "2026-04-24T19:30:00",
+      "end_time": "2026-04-24T19:55:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Przyjaźniana kontrakcja. ",
+      "start_time": "2026-04-24T19:55:00",
+      "end_time": "2026-04-24T20:25:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Urlopowa rekreacja. ",
+      "start_time": "2026-04-24T20:25:00",
+      "end_time": "2026-04-24T20:50:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Rothmanowa dezintegracja. ",
+      "start_time": "2026-04-24T20:50:00",
+      "end_time": "2026-04-24T21:10:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Wilkołacza transformacja. ",
+      "start_time": "2026-04-24T21:10:00",
+      "end_time": "2026-04-24T21:35:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Teoria wielkiego podrywu 5. Weekendowa atrakcja. ",
+      "start_time": "2026-04-24T21:35:00",
+      "end_time": "2026-04-24T22:00:00",
+      "category": "serial komediowy",
+      "year": 2011
+    },
+    {
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "The Office PL. Stażystka. ",
+      "start_time": "2026-04-24T22:00:00",
+      "end_time": "2026-04-24T22:30:00",
+      "category": "serial komediowy",
       "year": 2021
     },
     {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Nadzieja. ",
-      "start_time": "2026-04-18T04:10:00",
-      "end_time": "2026-04-18T05:50:00",
-      "category": "dramat sensacyjny",
-      "year": 2006,
-      "tmdb": {
-        "tmdb_id": 11,
-        "title": "Gwiezdne wojny",
-        "year": "1977",
-        "poster": "https://image.tmdb.org/t/p/w500/shXRdVjx8fPJmwSNOfH7xa9GYT1.jpg",
-        "rating": 8.203,
-        "overview": "Dawno, dawno temu w odległej galaktyce... Rycerze Jedi zostali wytępieni, a Imperium żelazną ręka sprawuje rządy nad całą galaktyką. Mała grupa Rebeliantów podejmuje walkę kradnąc tajne plany najpotężniejszej broni Imperium - tzw. Gwiazdy Śmierci. Najbardziej zaufany sługa Imperatora - Darth Vader musi odzyskać plany i odnaleźć ukrytą bazę buntowników. Księżniczka Leia - wzięta do niewoli przywódczyni Rebeliantów, wysyła sygnał z wezwaniem pomocy, który zostaje przechwycony przez zwykłego chłopaka z farmy - Luke'a Skywalkera. Wychodząc naprzeciw swemu przeznaczeniu, Luke podejmuje wyzwanie i rusza na ratunek Księżniczce chcąc pomóc Rebeliantom w obaleniu Imperium. W misji pomagają mu niezwykli sojusznicy - mądry Obi-Wan Kenobi, nieco arogancki gwiezdny awanturnik Han Solo i jego lojalny towarzysz Chewbacca a także dwa droidy R2-D2 i C-3PO."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Making of. Klangor 2\\. ",
-      "start_time": "2026-04-18T05:50:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "magazyn filmowy",
-      "year": 2025
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Chopin, Chopin. ",
-      "start_time": "2026-04-18T06:05:00",
-      "end_time": "2026-04-18T08:15:00",
-      "category": "dramat biograficzny",
-      "year": 2025,
-      "tmdb": {
-        "tmdb_id": 1299799,
-        "title": "Chopin, Chopin!",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/f4cLh2vVzKH8WCbplPFo6aCMpRC.jpg",
-        "rating": 7.3,
-        "overview": "Paryż, 1835 rok. Fryderyk Chopin ma 25 lat i jest ulubieńcem paryskich salonów, arystokracji i króla Francji. Żadne znaczące wydarzenie nie może odbyć się bez jego udziału. Widzimy go podczas nocnych eskapad i afterparty po koncertach. Zazwyczaj pełnego energii, przykrywającego chorobę żartem. Jego życie ucieka, jednak Fryderyk nie zwalnia. Komponuje arcydzieła, także na zamówienie. Ze względu na zobowiązania finansowe udziela lekcji gry na fortepianie. Przyjaciele go podziwiają, a kobiety pragną jako kochanka."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Dalajlama. Przez mądrość do szczęścia. ",
-      "start_time": "2026-04-18T08:15:00",
-      "end_time": "2026-04-18T09:45:00",
-      "category": "film dokumentalny",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1340449,
-        "title": "Dalajlama. Przez mądrość do szczęścia",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/mpaq4D2y4HMYzPoEMzHJvjXtowT.jpg",
-        "rating": 7.3,
-        "overview": "Głęboko intymny i niezwykle filmowy dokument opowiadający o Dalajlamie, który w wieku prawie dziewięćdziesięciu lat udziela praktycznych porad, jak stawiać czoła wyzwaniom XXI wieku."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "MTV Unplugged: Maryla Rodowicz. ",
-      "start_time": "2026-04-18T09:45:00",
-      "end_time": "2026-04-18T11:05:00",
-      "category": "koncert",
-      "year": 2025,
-      "tmdb": {
-        "tmdb_id": 1593653,
-        "title": "MTV Unplugged: Maryla Rodowicz",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/bY4S9T8TAgelAuNaQpwTjU9eOEC.jpg",
-        "rating": 8.0,
-        "overview": "Muzyczny spektakl, będący gratką dla prawdziwych fanów Rodowicz - nagrany na początku września 2025 roku jubileuszowy koncert artystki, której na scenie towarzyszyły gwiazdy, takie jak Bambi, Ewa Farna, Igor Herbut, Mrozu, Natalia Szroeder i Krzysztof Zalewski. Efektem tej współpracy jest wspaniałe widowisko, w którym ikona polskiej muzyki pokazuje swoje kameralne, akustyczne brzmienie, emanując znaną i uwielbianą przez publiczność energią.  "
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Anna Karenina. ",
-      "start_time": "2026-04-18T11:20:00",
-      "end_time": "2026-04-18T13:25:00",
-      "category": "dramat kostiumowy",
-      "year": 2012,
-      "tmdb": {
-        "tmdb_id": 96724,
-        "title": "Anna Karenina",
-        "year": "2012",
-        "poster": "https://image.tmdb.org/t/p/w500/2DvjkCbmlg8sbBHZKUZvYPgsT5V.jpg",
-        "rating": 6.706,
-        "overview": "Ekranizacja jednej z największych \"love story\" na świecie, powieści Lwa Tołstoja. To historia tragicznej miłości Anny Kareniny (Keira Knightley) i Aleksego Wrońskiego (Aaron Johnson). Początkowo Anna broni się przed uczuciem, chce pozostać wierną żoną i matką. Jednak ulega namiętności i jednocześnie decyduje się powiedzieć prawdę mężowi (Jude Law). Zostaje wykluczona z petersburskiego high life'u, zabrania się jej kontaktów z ukochanym synkiem Sieriożą. Jej szaleńcze uzależnienie od Aleksego doprowadza w końcu do tragedii..."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "The Office PL 2. Powrót Gosi. ",
-      "start_time": "2026-04-18T13:25:00",
-      "end_time": "2026-04-18T13:55:00",
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "The Office PL. Krzyż. ",
+      "start_time": "2026-04-24T22:30:00",
+      "end_time": "2026-04-24T23:05:00",
       "category": "serial komediowy",
-      "year": 2022
+      "year": 2021
     },
     {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "The Office PL 2. Piknik. ",
-      "start_time": "2026-04-18T13:55:00",
-      "end_time": "2026-04-18T14:30:00",
-      "category": "serial komediowy",
-      "year": 2022
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Comedy Club 2. ",
+      "start_time": "2026-04-24T23:05:00",
+      "end_time": "2026-04-24T23:35:00",
+      "category": "program rozrywkowy",
+      "year": 2018
     },
     {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Iran: Pokolenie Z - między wolnością a represją. ",
-      "start_time": "2026-04-18T14:30:00",
-      "end_time": "2026-04-18T15:30:00",
-      "category": "film dokumentalny",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1419783,
-        "title": "Iran: Pokolenie Z – między wolnością a represją",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/odz9ye888G4hQirbhTOiIUiHyft.jpg",
-        "rating": 0.0,
-        "overview": "Dokument przedstawia bunt irańskiego pokolenia Z, które w cieniu rygorystycznej teokracji walczy o prawo do wolności, nowoczesności i zachodniego stylu życia. Film ukazuje ukrytą codzienność młodych ludzi, ich potajemne imprezy oraz odwagę w sprzeciwianiu się surowym normom religijnym po śmierci Mahsy Amini."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Notting Hill. ",
-      "start_time": "2026-04-18T15:30:00",
-      "end_time": "2026-04-18T17:30:00",
-      "category": "komedia romantyczna",
-      "year": 1999,
-      "tmdb": {
-        "tmdb_id": 509,
-        "title": "Notting Hill",
-        "year": "1999",
-        "poster": "https://image.tmdb.org/t/p/w500/hHRIf2XHeQMbyRb3HUx19SF5Ujw.jpg",
-        "rating": 7.267,
-        "overview": "William Thacker mieszka w zachodnim Londynie, w dzielnicy dla indywidualistów - Notting Hill. Jest rozwiedziony, sam myśli o sobie jako o dziwnym człowieku żyjącym na \"pół gwizdka\". Dzieli swoje mieszkanie z dziwacznym, nieogolonym Walijczykiem, Spikeem. Utrzymanie zapewnia mu kiepsko prosperująca księgarnia, której jest właścicielem. Pewnego dnia, przychodzi rano do swojej księgarni, wita się ze swym entuzjastycznym asystentem i gdy ten wychodzi, aby napić się cappucino, drzwi otwierają się cicho, William podnosi wzrok i jest zdumiony widząc, że jego klientką jest Anna Scott, największa współczesna gwiazda filmowa..."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Jason Bourne. ",
-      "start_time": "2026-04-18T17:30:00",
-      "end_time": "2026-04-18T19:30:00",
-      "category": "thriller",
-      "year": 2016,
-      "tmdb": {
-        "tmdb_id": 324668,
-        "title": "Jason Bourne",
-        "year": "2016",
-        "poster": "https://image.tmdb.org/t/p/w500/ufdoy4CWiBnpS1cA2KYvZ40MF0C.jpg",
-        "rating": 6.374,
-        "overview": "Prawie dwie dekady temu błyskotliwy młody żołnierz (Matt Damon) zgłosił się na ochotnika do eksperymentalnego programu specjalnego, po tym, gdy dowiedział się, że terroryści zabili jego ojca. Wiedział, że tylko w ten sposób będzie mógł pomścić jego śmierć. Obiecano mu, że przysłuży się w ten sposób bezpieczeństwu kraju i nabierze niezwykłych umiejętności. Tyle tylko, że wszystko to było kłamstwem... Poddawany nieludzkim treningom, stał się Jasonem Bourne’m, wartą sto milionów dolarów bronią w ludzkiej postaci, która – według jej twórców – przestała działać zgodnie z oczekiwaniami. I to wtedy Bourne postanawia wycofać się. Uciec. Zniknąć. Znaleźć spokój. Ale udręczone dusze nigdy nie zaznają spokoju. Kiedy więc zostaje aktywowany nowy globalny program, Bourne zostaje wyciągnięty z ukrycia i znajduje się w centrum czegoś, czemu jeszcze nigdy nie stawiał czoła. Globalnej sieci sterującej terrorem."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Peacock. ",
-      "start_time": "2026-04-18T19:30:00",
-      "end_time": "2026-04-18T21:00:00",
-      "category": "thriller",
-      "year": 2010,
-      "tmdb": {
-        "tmdb_id": 11761,
-        "title": "Peacock",
-        "year": "2010",
-        "poster": "https://image.tmdb.org/t/p/w500/iEtrsxfNw9qmAeML3QSzOe0hrS0.jpg",
-        "rating": 6.126,
-        "overview": "Peacock to niewielkie miasto w stanie Nebrasca, w którym rozgrywają się losy bohaterów. Film opowiada historię cichego urzędnika bankowego (Cillian Murphy) z sekretnym żeńskim alter ego o imieniu Emma. Pewnego dnia życie Johna zmienia się całkowicie, gdy na jego podwórzu wykoleja się pociąg i miasteczko poznaje Emmę. Od tej pory musi on oszukiwać mieszkańców swojego miasteczka, że jego dwie osobowości są mężem i żoną. Tymczasem Emma zbliża się do młodej, samotnej matki (Ellen Page), w której rękach znajduje się klucz do przeszłości mężczyzny..."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Nie mów zła. ",
-      "start_time": "2026-04-18T21:00:00",
-      "end_time": "2026-04-18T22:50:00",
-      "category": "thriller",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1114513,
-        "title": "Nie mów zła",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/8BzM7JG894sKtEQz7A4AWlEnR0W.jpg",
-        "rating": 7.138,
-        "overview": "Kiedy amerykańska rodzina zostaje zaproszona na weekend do idyllicznej wiejskiej posiadłości czarującej brytyjskiej rodziny, z którą zaprzyjaźnili się na wakacjach, to to, co zaczyna się jako wymarzone wakacje, szybko przeradza się w pokręcony psychologiczny koszmar."
-      }
-    },
-    {
-      "channel_id": "Canal+ Premium",
-      "channel_name": "Canal+ Premium",
-      "title": "Ali. ",
-      "start_time": "2026-04-18T22:50:00",
-      "end_time": "2026-04-19T01:25:00",
-      "category": "dramat biograficzny",
-      "year": 2001,
-      "tmdb": {
-        "tmdb_id": 8489,
-        "title": "Ali",
-        "year": "2001",
-        "poster": "https://image.tmdb.org/t/p/w500/hDT4rVDOIKPeIMA2hs9nm0RIuTL.jpg",
-        "rating": 6.753,
-        "overview": "Pełna rozmachu opowieść o jednej z najbardziej kontrowersyjnych postaci współczesnego sportu. Cassius Clay powszechnie znany jako Muhammad Ali był wielokrotnym mistrzem świata wagi ciężkiej w boksie zawodowym. Przez jednych kochany, przez innych obrzucany obelgami był człowiekiem, którego siła sięgała daleko poza bokserski ring. Kiedy przechodząc na Islam przybrał nazwisko Muhammad Ali, stał się celem nieustannych ataków. Jednak nie ugiął się nawet pod naciskami władz, którym nie podobała się jego postawa wobec wojny w Wietnamie. Ali całe życie poświęcił walce na ringu i miłości do kobiet. Nigdy nie bał się wyzwań i nie uznawał kompromisów."
-      }
+      "channel_id": "Comedy Central",
+      "channel_name": "Comedy Central",
+      "title": "Comedy Club 2. ",
+      "start_time": "2026-04-24T23:35:00",
+      "end_time": "2026-04-25T00:05:00",
+      "category": "program rozrywkowy",
+      "year": 2018
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5337,156 +5129,88 @@
       }
     },
     {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Puchatek: Krew i miód 2. ",
-      "start_time": "2026-04-18T01:05:00",
-      "end_time": "2026-04-18T02:35:00",
-      "category": "horror",
-      "year": 2024,
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Jarhead: Żołnierz piechoty morskiej. ",
+      "start_time": "2026-04-24T00:30:00",
+      "end_time": "2026-04-24T02:30:00",
+      "category": "dramat wojenny",
+      "year": 2005,
       "tmdb": {
-        "tmdb_id": 1079485,
-        "title": "Puchatek: Krew i miód 2",
+        "tmdb_id": 25,
+        "title": "Jarhead: Żołnierz Piechoty Morskiej",
+        "year": "2005",
+        "poster": "https://image.tmdb.org/t/p/w500/qmXaE4EjcFoHEeFaG9wAXjYIi6P.jpg",
+        "rating": 6.681,
+        "overview": "Reżyser, prezentuje w Żołnierzu piechoty morskiej historię brutalnie szczerą i prawdziwą, pozbawioną tanich chwytów i ozdobników, ale niezwykle pięknie sfilmowaną. Obserwujemy losy rekruta o przezwisku \"Swoff\" od jego pierwszych, nieporadnych kroków w koszarach, aż po snajperskie akcje na piaszczystych równinach Iraku, podczas których nie sposób znaleźć żadnego schronienia przed wrogiem i lejącym się z nieba żarem. Swoff i jego towarzysze broni znaleźli się w bolesnej sytuacji. Muszą walczyć w bezwzględnej wojnie, której przyczyn nie rozumieją i nierzadko nie akceptują. [Opis dystrybutora]"
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Imago. ",
+      "start_time": "2026-04-24T02:30:00",
+      "end_time": "2026-04-24T04:20:00",
+      "category": "dramat biograficzny",
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1139774,
+        "title": "Imago",
         "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/AvCJPwLrnOcbJDUFcwRLoAbMHoD.jpg",
-        "rating": 5.773,
-        "overview": "Minęło pięć miesięcy od masakrze w Stumilowym Lesie. Krzyś próbuje wrócić do normalności. Policja szuka bestii, ale mieszkańcy obwiniają Krzysia. Podczas terapii wraca on do dramatycznych wydarzeń z dzieciństwa, kiedy to na jego piąte urodziny uprowadzono grupę dzieci, w tym jego brata bliźniaka. Puchatek, skryty w głębi lasu, pała żądzą zemsty. Razem z nowymi, przerażającymi kompanami planuje zgładzić Krzysia i wszystkich ocalałych z tamtego przyjęcia. Kolejna odsłona krwawej serii, stanowiącej przewrotną reinterpretację ukochanych przez dzieci książek A.A. Milne’a."
+        "poster": "https://image.tmdb.org/t/p/w500/1eY1swuqUVCuMKkpBkTbpxcjjwB.jpg",
+        "rating": 7.1,
+        "overview": "Post-punkowy dramat psychologiczny o młodej kobiecie łaknącej życia pośród szarości PRL-u. Opowieść o więzi matki i córki, głodzie wolności, seksie i medytacji. Historia rozpoczyna się w Trójmieście w 1987 roku, a kończy w 1989, po pierwszych wolnych wyborach w Polsce. Jej tłem jest buntownicza trójmiejska scena muzyczna końca lat 80., kulturalny i społeczny fenomen tego okresu i zapowiedź rewolucyjnych zmian w Polsce."
       }
     },
     {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Moje miasto. ",
-      "start_time": "2026-04-18T02:35:00",
-      "end_time": "2026-04-18T03:35:00",
-      "category": "serial dokumentalny",
-      "year": 2002,
-      "tmdb": {
-        "tmdb_id": 958056,
-        "title": "Moje miasto",
-        "year": "2002",
-        "poster": "https://image.tmdb.org/t/p/w500/ivKvBFRvPODR1b1pnvlxBkKhBrd.jpg",
-        "rating": 6.3,
-        "overview": "Opowieść o mieszkańcach pewnego bloku, stojącego gdzieś na skraju górnośląskiego miasta,  zwyczajnych ludziach żyjących z dnia na dzień, w poczuciu beznadziei i apatii. 25-letni Goździk mieszka tu od urodzenia. Nie ma pracy, nie uczy się. Jedynym jego zajęciem jest gra w hokeja w okręgowej drużynie. Wśród lokatorów bloku są między innymi staruszek Leon i bracia Dąbrowscy-dresiarze. Pojawienie się pięknej Zosi, uosobienia lepszego świata, wnosi trochę radości w szare życie Goździka."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Fotograf. ",
-      "start_time": "2026-04-18T03:35:00",
-      "end_time": "2026-04-18T05:30:00",
-      "category": "film kryminalny",
-      "year": 2014,
-      "tmdb": {
-        "tmdb_id": 299796,
-        "title": "Fotograf",
-        "year": "2014",
-        "poster": "https://image.tmdb.org/t/p/w500/7nNHWzHHAyjD4n5i8kkxvS390T8.jpg",
-        "rating": 6.3,
-        "overview": "Na terenie współczesnej Moskwy grasuje nieuchwytny seryjny morderca. Funkcjonariusze nadali mu przydomek \"Fotograf\", gdyż przy ciałach swoich ofiar zostawia kartoniki z numerami, stosowane przez ekipy śledcze, kiedy fotografują zwłoki i potencjalne dowody na miejscach zbrodni. Tropy prowadzą do dawnego garnizonu Armii Radzieckiej w Legnicy i serii dramatycznych wydarzeń, które rozegrały się tam w latach 70. Rosyjska ekipa dochodzeniowa wyrusza do Polski, korzystając na miejscu ze wsparcia oficera lokalnej policji. W składzie ekipy jest milicjantka Natasza - jedyna osoba, która rozmawiała z mordercą i zdołała przeżyć. Jedyna, która jest w stanie go rozpoznać, gdyby doszło do konfrontacji."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Piękna łąka kwietna. ",
-      "start_time": "2026-04-18T05:30:00",
-      "end_time": "2026-04-18T05:58:00",
-      "category": "film krótkometrażowy",
-      "year": 2022,
-      "tmdb": {
-        "tmdb_id": 1031908,
-        "title": "Piękna łąka kwietna",
-        "year": "2022",
-        "poster": "https://image.tmdb.org/t/p/w500/2rdJnVWXdwk0D5BkAS2aareSl5X.jpg",
-        "rating": 0.0,
-        "overview": "Architekt krajobrazu Emil toczy nierówną walkę ze światem ludzi obojętnych na piękno natury. Przez swoją neurotyczną nieugiętość pogrążą się w spirali absurdalnych wydarzeń, a przy tym wszystkim próbuje jeszcze być dobrym ojcem."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Pan Tadeusz. ",
-      "start_time": "2026-04-18T06:30:00",
-      "end_time": "2026-04-18T09:05:00",
-      "category": "film kostiumowy",
-      "year": 1999,
-      "tmdb": {
-        "tmdb_id": 4966,
-        "title": "Pan Tadeusz",
-        "year": "1999",
-        "poster": "https://image.tmdb.org/t/p/w500/3oSRt8qV2oxrr14Igo8och6nkN8.jpg",
-        "rating": 5.433,
-        "overview": "Jest rok 1811. Tadeusz Soplica wraca po ukończeniu nauk do rodzinnego dworku w Soplicowe, na Litwie. Gospodarzem posiadłości jest stryj i opiekun młodzieńca, Sędzia. Wydaje się, że dom jest zupełnie pusty, jego mieszkańcy wybrali się do pobliskiego lasu. Zwiedzając stare zakamarki, Tadeusz trafia do dawnego pokoju dziecinnego, w którym spotyka Zosię. Świeżość i uroda dziewczyny podbijają serce młodzieńca."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Elfy rozrabiają. ",
-      "start_time": "2026-04-18T09:05:00",
-      "end_time": "2026-04-18T10:20:00",
-      "category": "film animowany",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1244112,
-        "title": "Elfy rozrabiają",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/QuuyFdtuAIes24WGWxldVtq4Ho.jpg",
-        "rating": 6.7,
-        "overview": "Elfi należy do zgranej ekipy elfów, które mieszkają w wielkim mieście. Przemykając się między wysokimi budynkami, służą swoją drobną pomocą mieszkającym tam ludziom i pozornie zwyczajne odnalezienie zagubionej maskotki staje się dla nich czystą przyjemnością. Pewnego dnia okazuje się jednak, że w tej samej metropolii grasuje gang innych elfów, które słyną z wykorzystania najnowocześniejszych technologii oraz przodują jeżeli chodzi o zabawę i poszukiwanie mocnych wrażeń. Jednym z przedstawicieli nowych znajomych jest najmłodszy w grupie Bo, z którym zaprzyjaźnia się Elfi. Czy dzięki poznaniu się tej dwójki możliwe będzie pogodzenie się obu elfich klanów po ponad 250 latach?"
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Liza Minnelli. Niesamowita historia absolutnie prawdziwa. ",
-      "start_time": "2026-04-18T10:20:00",
-      "end_time": "2026-04-18T12:00:00",
-      "category": "film dokumentalny",
-      "year": 2024
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Kiler. ",
-      "start_time": "2026-04-18T12:00:00",
-      "end_time": "2026-04-18T13:45:00",
-      "category": "komedia sensacyjna",
-      "year": 1997,
-      "tmdb": {
-        "tmdb_id": 31132,
-        "title": "Kiler",
-        "year": "1997",
-        "poster": "https://image.tmdb.org/t/p/w500/sCpk0CC9MKODKGJWxQtNgz6sZhP.jpg",
-        "rating": 7.617,
-        "overview": "Jak pech to pech! Warszawski taksówkarz Jurek Kiler zostaje rozpoznany przez komisarza Rybę jako najniebezpieczniejszy płatny morderca i ląduje za kratkami. Z więzienia wyfruwa jeszcze szybciej, gdyż potrzebuje go - jako specjalistę od brudnej roboty - szef stołecznej mafii, Siara. Jak pech to pech! Każdy chce żyć, więc z gruntu uczciwy Kiler przyjmuje zlecenie na usunięcie niewygodnego wspólnika. Na wszelki wypadek przyjmuje kontrakt i na Siarę. Wystarczy jednak parę zręcznych ruchów, miła dziewczyna u boku i... Jak pech to pech! Jaki pech? Ta gotówka to samo szczęście w nieszczęściu."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Holiday. ",
-      "start_time": "2026-04-18T13:45:00",
-      "end_time": "2026-04-18T15:55:00",
-      "category": "komedia romantyczna",
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Nadzieja. ",
+      "start_time": "2026-04-24T04:20:00",
+      "end_time": "2026-04-24T06:00:00",
+      "category": "dramat sensacyjny",
       "year": 2006,
       "tmdb": {
-        "tmdb_id": 1581,
-        "title": "Holiday",
-        "year": "2006",
-        "poster": "https://image.tmdb.org/t/p/w500/ew4gt1IYriNJiUbdnC3O9nWj2BY.jpg",
-        "rating": 7.1,
-        "overview": "Amanda, bizneswoman z Los Angeles, wyrzuca z domu niewiernego kochanka. Mieszkająca w Londynie Iris kocha mężczyznę, który lada dzień ma poślubić inną kobietę. Zdesperowane panie trafiają na siebie na stronie internetowej, oferującej tymczasowe zamiany domów. Choć dzielą je 4 tys. kilometrów, narodowość, doświadczenie i kultura, odnajdują wspólny język. Postanawiają zamienić się miejscami na czas świąt Bożego Narodzenia. W przysypanej śniegiem Anglii Amanda spotyka brata Iris. Ta w słonecznej Kalifornii poznaje współpracownika Amandy."
+        "tmdb_id": 11,
+        "title": "Gwiezdne wojny",
+        "year": "1977",
+        "poster": "https://image.tmdb.org/t/p/w500/shXRdVjx8fPJmwSNOfH7xa9GYT1.jpg",
+        "rating": 8.203,
+        "overview": "Dawno, dawno temu w odległej galaktyce... Rycerze Jedi zostali wytępieni, a Imperium żelazną ręka sprawuje rządy nad całą galaktyką. Mała grupa Rebeliantów podejmuje walkę kradnąc tajne plany najpotężniejszej broni Imperium - tzw. Gwiazdy Śmierci. Najbardziej zaufany sługa Imperatora - Darth Vader musi odzyskać plany i odnaleźć ukrytą bazę buntowników. Księżniczka Leia - wzięta do niewoli przywódczyni Rebeliantów, wysyła sygnał z wezwaniem pomocy, który zostaje przechwycony przez zwykłego chłopaka z farmy - Luke'a Skywalkera. Wychodząc naprzeciw swemu przeznaczeniu, Luke podejmuje wyzwanie i rusza na ratunek Księżniczce chcąc pomóc Rebeliantom w obaleniu Imperium. W misji pomagają mu niezwykli sojusznicy - mądry Obi-Wan Kenobi, nieco arogancki gwiezdny awanturnik Han Solo i jego lojalny towarzysz Chewbacca a także dwa droidy R2-D2 i C-3PO."
       }
     },
     {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "W kogo ja się wrodziłem. ",
+      "start_time": "2026-04-24T06:05:00",
+      "end_time": "2026-04-24T07:05:00",
+      "category": "film obyczajowy",
+      "year": 2001
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Jutro będzie nasze. ",
+      "start_time": "2026-04-24T07:05:00",
+      "end_time": "2026-04-24T09:00:00",
+      "category": "komediodramat",
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1026227,
+        "title": "Jutro będzie nasze",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/hc9SHN0vB6iyr6MBYI6bKrpDHvJ.jpg",
+        "rating": 8.078,
+        "overview": "W powojennych Włoszech rodzina typowej gospodyni domowej Delii jest w chaosie z powodu zbliżających się zaręczyn ukochanej pierworodnej Marcelli. Nadejście tajemniczego listu sprawi jednak, że Delia odważy się stawić czoła znęcającemu się nad nią mężowi i wyobrazić sobie lepszą przyszłość."
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
       "title": "LARP. Miłość, trolle i inne questy. ",
-      "start_time": "2026-04-18T15:55:00",
-      "end_time": "2026-04-18T17:30:00",
+      "start_time": "2026-04-24T09:00:00",
+      "end_time": "2026-04-24T10:35:00",
       "category": "komedia",
       "year": 2025,
       "tmdb": {
@@ -5499,97 +5223,149 @@
       }
     },
     {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Hollywood Buzz. ",
-      "start_time": "2026-04-18T17:30:00",
-      "end_time": "2026-04-18T17:55:00",
-      "category": "magazyn filmowy",
-      "year": null,
-      "tmdb": {
-        "tmdb_id": 812983,
-        "title": "The Fly Papers: The Buzz on Hollywood's Scariest Insect",
-        "year": "2000",
-        "poster": "https://image.tmdb.org/t/p/w500/b0HKEaQ6p69TVNBNyBb60TuAl49.jpg",
-        "rating": 0.0,
-        "overview": ""
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Warcraft: Początek. ",
-      "start_time": "2026-04-18T17:55:00",
-      "end_time": "2026-04-18T19:55:00",
-      "category": "film fantasy",
-      "year": 2016,
-      "tmdb": {
-        "tmdb_id": 68735,
-        "title": "Warcraft: Początek",
-        "year": "2016",
-        "poster": "https://image.tmdb.org/t/p/w500/jkiPtqCWHctKKd9N6cKXm2wyhwV.jpg",
-        "rating": 6.4,
-        "overview": "Spokój Azeroth zostaje zaburzony miażdżącym atakiem Orków, którzy przeczuwają, że ich cywilizacja dobiega końca. Obie armie zetrą się w spektakularnej wojnie, jedna zostanie zniszczona, druga zgładzona. Ale wojna ma wiele twarzy, a walczyć musi każdy."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Łapu Capu. ",
-      "start_time": "2026-04-18T19:55:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "program rozrywkowy",
-      "year": 2025
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Rust. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T22:15:00",
-      "category": "western",
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Naturalna dzikość serca. ",
+      "start_time": "2026-04-24T10:35:00",
+      "end_time": "2026-04-24T12:00:00",
+      "category": "film dokumentalny",
       "year": 2024,
       "tmdb": {
-        "tmdb_id": 710258,
-        "title": "Rust. Legenda Zachodu",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/g5J5hqV5uIfhzfe6V7UbqmiJ3RO.jpg",
-        "rating": 6.666,
-        "overview": "Życie 13-letniego Lucasa Hollistera, mieszkającego na podupadającej farmie pośród ośnieżonych gór Wyoming, toczy się wokół opieki nad młodszym bratem Jacobem. Dla pozostawionych samym sobie, osieroconych chłopców świat to okrutne miejsce, wypełnione ciężką pracą na jałowej ziemi, a pozornie niekończący się horyzont wydaje się z nich jedynie drwić, kusząc wizją wielkiego świata z dala od pól pszenicy i trudów codziennego życia. Świata, którego nigdy nie ujrzą. Gdy pewnego dnia Lucas usiłuje odpędzić wilka krążącego wokół farmy, przypadkowo strzela do ranczera z sąsiedniego gospodarstwa. Postrzelony mężczyzna umiera, a chłopak zostaje skazany na śmierć przez powieszenie."
-      }
-    },
-    {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Armor. ",
-      "start_time": "2026-04-18T22:15:00",
-      "end_time": "2026-04-18T23:50:00",
-      "category": "film sensacyjny",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1182387,
-        "title": "Armor",
+        "tmdb_id": 1208994,
+        "title": "Naturalna dzikość serca",
         "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/pnXLFioDeftqjlCVlRmXvIdMsdP.jpg",
-        "rating": 5.564,
-        "overview": "Ochroniarz James Brody, pracujący przy transporcie pieniędzy w opancerzonej ciężarówce, przewozi miliony dolarów między bankami wraz ze swoim synem Caseyem. Wtedy grupa złodziei, na czele której stoi Rook, organizuje atak na ich pojazd, aby przejąć fortunę."
+        "poster": "https://image.tmdb.org/t/p/w500/znufRhOP1b2TzRUZgUPTNgOYPIY.jpg",
+        "rating": 7.8,
+        "overview": "Intymna opowieść o wyborach życiowych, wolności, miłości, ale też stracie. Rodzina Marii i Nika prowadzi samowystarczalne życie w zgodzie z naturą na małej farmie zaszytej w norweskim lesie. Wybierają świadomie, z odpowiedzialnością za świat i przyszłość swoich dzieci."
       }
     },
     {
-      "channel_id": "Canal+ Film",
-      "channel_name": "Canal+ Film",
-      "title": "Siedem zasłon. ",
-      "start_time": "2026-04-18T23:50:00",
-      "end_time": "2026-04-19T01:40:00",
-      "category": "dramat psychologiczny",
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Masz ci los. ",
+      "start_time": "2026-04-24T12:00:00",
+      "end_time": "2026-04-24T13:30:00",
+      "category": "komedia",
       "year": 2023,
       "tmdb": {
-        "tmdb_id": 1083782,
-        "title": "Siedem zasłon",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/OTA0pezp1vjDANnQwYLc7aMNi4.jpg",
-        "rating": 5.6,
-        "overview": "Reżyserka teatralna po latach przerwy wraca do pracy aby zmierzyć się z największym dziełem w dorobku swojego mentora operą \"Salome\". Jednak tłumiona przez lata trauma zaczyna wpływać na jej życie."
+        "tmdb_id": 1063637,
+        "title": "Masz ci los!",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/6w6nrWO8CpjKcPkufMyDbz943YB.jpg",
+        "rating": 5.8,
+        "overview": "Podczas stypy po pogrzebie ukochanego dziadka rodzina orientuje się, że w loterii padły właśnie numery, którymi staruszek grał przez całe życie. Nie ma czasu na rozpacz i łzy, kiedy zwycięski kupon jest w marynarce, 3 metry pod ziemią. Rodzina i przyjaciele nagle z wielką mocą odczuwają potrzebę zobaczenia dziadka jeszcze raz…"
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "The Office PL 3. Wywiad. ",
+      "start_time": "2026-04-24T13:35:00",
+      "end_time": "2026-04-24T14:05:00",
+      "category": "serial komediowy",
+      "year": 2023
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "The Office PL 3. Widzenie. ",
+      "start_time": "2026-04-24T14:05:00",
+      "end_time": "2026-04-24T14:30:00",
+      "category": "serial komediowy",
+      "year": 2023
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Szpieg, który współczuł. ",
+      "start_time": "2026-04-24T14:30:00",
+      "end_time": "2026-04-24T16:15:00",
+      "category": "film dokumentalny",
+      "year": 2022
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Czarna woda. ",
+      "start_time": "2026-04-24T16:15:00",
+      "end_time": "2026-04-24T16:35:00",
+      "category": "film krótkometrażowy",
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1220465,
+        "title": "Czarna woda",
+        "year": "2023",
+        "poster": null,
+        "rating": 0.0,
+        "overview": "Emilka jest młoda, bezrobotna i panicznie boi się zbiorników wodnych. Po rodzinnej tragedii cały swój czas spędza z młodszą siostrą. Nowa praca, która wymaga całkowitego zanurzenia w przeszłości, może być jej szansą na nowy start."
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Battleship: Bitwa o Ziemię. ",
+      "start_time": "2026-04-24T16:35:00",
+      "end_time": "2026-04-24T18:45:00",
+      "category": "film SF",
+      "year": 2012,
+      "tmdb": {
+        "tmdb_id": 44833,
+        "title": "Battleship: Bitwa o Ziemię",
+        "year": "2012",
+        "poster": "https://image.tmdb.org/t/p/w500/er5lnWGPQkUa63SLavBZmNTxMDX.jpg",
+        "rating": 5.884,
+        "overview": "NASA odkrywa planetę, na której są warunki zbliżone do tych na Ziemi. Wysyłają tam sygnał. Pięć niezidentyfikowanych obiektów rozpoczyna ataki, gdzie cztery lądują na Hawajach, a ostatni w Hongkongu niszcząc miasto. Admirał Shane wysyła patrol składający się z dwóch amerykańskich i jednego japońskiego niszczyciela. Dwa okręty zamykają się w polu siłowych. Trzeci statek dowodzony przez Alexa Hoppera zostaje uszkodzony. Od tej chwili mężczyzna musi sam podjąć walkę z wrogiem i powstrzymać go od wezwania posiłków."
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Saga Zmierzch: Księżyc w nowiu. ",
+      "start_time": "2026-04-24T18:50:00",
+      "end_time": "2026-04-24T21:00:00",
+      "category": "film fantasy",
+      "year": 2009,
+      "tmdb": {
+        "tmdb_id": 18239,
+        "title": "Saga „Zmierzch”: Księżyc w nowiu",
+        "year": "2009",
+        "poster": "https://image.tmdb.org/t/p/w500/eqgPeYE5MuZqiZZ1jibJ4EnkRll.jpg",
+        "rating": 5.99,
+        "overview": "Bella Swan (Kristen Stewart) i Edward Cullen (Robert Pattinson) tworzą bardzo szczęśliwą, choć niecodzienną parę. Ich romans trwa do dnia feralnych osiemnastych urodzin dziewczyny. Po tym wydarzeniu Cullenowie wyjeżdżają z miasta, zaś Edward porzuca ukochaną. Głęboko zraniona dziewczyna na długie miesiące popada w przygnębienie. Szczęśliwie przyjaciel Belli z dzieciństwa – Jacob (Taylor Lautner) – pomaga jej odzyskać psychiczną równowagę. Młodzi czują do siebie coraz większą sympatię. Jednak Jacob również skrywa mroczną tajemnicę…"
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Nie mów zła. ",
+      "start_time": "2026-04-24T21:55:00",
+      "end_time": "2026-04-24T23:45:00",
+      "category": "thriller",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1114513,
+        "title": "Nie mów zła",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/8BzM7JG894sKtEQz7A4AWlEnR0W.jpg",
+        "rating": 7.138,
+        "overview": "Kiedy amerykańska rodzina zostaje zaproszona na weekend do idyllicznej wiejskiej posiadłości czarującej brytyjskiej rodziny, z którą zaprzyjaźnili się na wakacjach, to to, co zaczyna się jako wymarzone wakacje, szybko przeradza się w pokręcony psychologiczny koszmar."
+      }
+    },
+    {
+      "channel_id": "Canal+ Premium",
+      "channel_name": "Canal+ Premium",
+      "title": "Barry Seal: Król przemytu. ",
+      "start_time": "2026-04-24T23:45:00",
+      "end_time": "2026-04-25T01:35:00",
+      "category": "film biograficzny",
+      "year": 2017,
+      "tmdb": {
+        "tmdb_id": 337170,
+        "title": "Barry Seal: Król przemytu",
+        "year": "2017",
+        "poster": "https://image.tmdb.org/t/p/w500/4j1A1XBz1KWEH0RNk5MermzBrcA.jpg",
+        "rating": 6.901,
+        "overview": "Film opowiada prawdziwą historię. W tym sensacyjnym dramacie Tom Cruise wciela się w postać Barry’ego Seala, człowieka, który swoją biografią mógłby obdzielić kilka osób. W wieku piętnastu lat był pilotem, jednym z najzdolniejszych, najlepszych pilotów Ameryki, miał na koncie również udział w wojnie w Wietnamie. Pracował na usługach kolumbijskiego kartelu narkotykowego Medellín oraz dla… CIA. Za głowę Seala słynny baron narkotykowy Pablo Escobar (Mauricio Mejía)wyznaczył nagrodę w wysokości pół miliona dolarów. Za przywiezienie go do Kolumbii żywego – milion dolarów. Tłem historii jest wielka polityka, w której przewijają się najważniejsze nazwiska Ameryki."
       }
     },
     {
@@ -6718,7 +6494,7 @@
         "title": "Kung Fu Panda 2",
         "year": "2011",
         "poster": "https://image.tmdb.org/t/p/w500/mtqqD00vB4PGRt20gWtGqFhrkd0.jpg",
-        "rating": 7.1,
+        "rating": 7.059,
         "overview": "Kontynuacja przygód Po i jego przyjaciół. Tym razem grupa sympatycznych adeptów kung-fu będzie musiała stawić czoła nikczemnemu lordowi Shenowi, który za cel postawił sobie podbicie Chin. Po i jego towarzysze wkrótce odkrywają, że ich wróg dysponuje potężną bronią."
       }
     },
@@ -6870,256 +6646,253 @@
       }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Widzew. Razem tworzymy siłę. Klasyk. ",
-      "start_time": "2026-04-18T00:00:00",
-      "end_time": "2026-04-18T00:55:00",
-      "category": "serial dokumentalny",
-      "year": 2023
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Sztuka pięknego życia. ",
+      "start_time": "2026-04-24T00:50:00",
+      "end_time": "2026-04-24T02:40:00",
+      "category": "melodramat",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1100099,
+        "title": "Sztuka pięknego życia",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/cbdgRKVj1EBvdIFBlNzjlmN9CiA.jpg",
+        "rating": 7.224,
+        "overview": "Nagły wypadek samochodowy splata losy Almut i Tobiasa, odmieniając je na zawsze. Od momentu, kiedy wspólnie trafiają na pogotowie, zaczyna w nich kiełkować silna więź, która z biegiem czasu przeradza się w głębokie uczucie. Poprzez migawki ich wzajemnego zauroczenia, budowania domu i stawania się rodziną – nieoczekiwanie wychodzi na jaw prawda o zdrowiu Almut, która może zachwiać fundamentem tego co stworzyli. Paradoksalnie, motywuje to parę do realizacji marzeń i uczy cenić każdą chwilę z niekonwencjonalnej drogi, jaką obrało ich życie. Oto trwająca dekadę, utkana z subtelnych momentów bliskości, głęboko wzruszająca, a czasami nieoczekiwanie zabawna, piękna historia miłosna."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Łowcy tajemnic Bałtyku. Nowe odkrycie. ",
-      "start_time": "2026-04-18T00:55:00",
-      "end_time": "2026-04-18T02:00:00",
-      "category": "serial dokumentalny",
-      "year": 2020
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Lany poniedziałek. ",
+      "start_time": "2026-04-24T02:40:00",
+      "end_time": "2026-04-24T04:05:00",
+      "category": "komediodramat",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1207447,
+        "title": "Lany Poniedziałek",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/7NJFgGsIDvLapaxZxFNXv6FDIh7.jpg",
+        "rating": 5.667,
+        "overview": "W Lany Poniedziałek 15-letnia Klara zostaje zgwałcona przez zamaskowanego chłopaka. Zbliża się kolejna Wielkanoc, a bohaterkę dręczą koszmary i ataki paniki. Marta, starsza siostra każe jej o wszystkim zapomnieć. Dziewczyna wbrew zakazom starszej siostry uczy się jednak dopuszczać do siebie trudne emocje. Wspiera ją w tym nowa przyjaciółka, Diana, która jest outsiderką oraz tajemnicza Bogini."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "To jest żużel. ",
-      "start_time": "2026-04-18T02:00:00",
-      "end_time": "2026-04-18T02:40:00",
-      "category": "serial dokumentalny",
-      "year": 2022
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Innego końca nie będzie. ",
+      "start_time": "2026-04-24T04:05:00",
+      "end_time": "2026-04-24T05:35:00",
+      "category": "film obyczajowy",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1282165,
+        "title": "Innego końca nie będzie",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/raxdFxCNzTYsX7izacxNAmJ7hNg.jpg",
+        "rating": 5.9,
+        "overview": "Po powrocie do rodzinnego domu Ola musi naprawić relacje z najbliższymi, którzy próbują ułożyć sobie życie po samobójczej śmierci ojca."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Złota Dekada. Historia Lecha Poznań 1983-1993. ",
-      "start_time": "2026-04-18T02:40:00",
-      "end_time": "2026-04-18T03:40:00",
-      "category": "serial dokumentalny",
-      "year": 2022
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Call me lala. ",
+      "start_time": "2026-04-24T05:35:00",
+      "end_time": "2026-04-24T05:56:00",
+      "category": "film krótkometrażowy",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1233722,
+        "title": "Call me Lala",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/2tumHjBZ2U5ET7DrNXMg1ItiOXj.jpg",
+        "rating": 0.0,
+        "overview": "Dwie przyjaciółki, taksówkarka Lala i stewardessa Wera, marzą o wyjeździe do Ameryki. Każda z nich ma jednak inny pomysł na spełnienie tego marzenia."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Pogotowie remontowe Wieśka 4. ",
-      "start_time": "2026-04-18T03:40:00",
-      "end_time": "2026-04-18T04:15:00",
-      "category": "magazyn poradnikowy",
-      "year": 2020
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Pan Tadeusz. ",
+      "start_time": "2026-04-24T06:30:00",
+      "end_time": "2026-04-24T09:00:00",
+      "category": "film kostiumowy",
+      "year": 1999,
+      "tmdb": {
+        "tmdb_id": 4966,
+        "title": "Pan Tadeusz",
+        "year": "1999",
+        "poster": "https://image.tmdb.org/t/p/w500/3oSRt8qV2oxrr14Igo8och6nkN8.jpg",
+        "rating": 5.433,
+        "overview": "Jest rok 1811. Tadeusz Soplica wraca po ukończeniu nauk do rodzinnego dworku w Soplicowe, na Litwie. Gospodarzem posiadłości jest stryj i opiekun młodzieńca, Sędzia. Wydaje się, że dom jest zupełnie pusty, jego mieszkańcy wybrali się do pobliskiego lasu. Zwiedzając stare zakamarki, Tadeusz trafia do dawnego pokoju dziecinnego, w którym spotyka Zosię. Świeżość i uroda dziewczyny podbijają serce młodzieńca."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Pogotowie remontowe Wieśka 4. ",
-      "start_time": "2026-04-18T04:15:00",
-      "end_time": "2026-04-18T04:55:00",
-      "category": "magazyn poradnikowy",
-      "year": 2020
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Łapu Capu. ",
+      "start_time": "2026-04-24T09:00:00",
+      "end_time": "2026-04-24T09:05:00",
+      "category": "program rozrywkowy",
+      "year": 2025
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Zwierzęta Wajraka. Skrócone wędrówki. ",
-      "start_time": "2026-04-18T04:55:00",
-      "end_time": "2026-04-18T05:30:00",
-      "category": "serial dokumentalny",
-      "year": 2020
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Zwierzęta Wajraka. Niebezpieczne szopy. ",
-      "start_time": "2026-04-18T05:30:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "serial dokumentalny",
-      "year": 2020
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "13 posterunek 2. ",
-      "start_time": "2026-04-18T06:00:00",
-      "end_time": "2026-04-18T06:40:00",
-      "category": "serial komediowy",
-      "year": 2000
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "13 posterunek 2. ",
-      "start_time": "2026-04-18T06:40:00",
-      "end_time": "2026-04-18T07:20:00",
-      "category": "serial komediowy",
-      "year": 2000
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Cztery pory Igi. ",
-      "start_time": "2026-04-18T07:20:00",
-      "end_time": "2026-04-18T08:30:00",
-      "category": "serial dokumentalny",
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Megamocny kontra Syndykat Zagłady. ",
+      "start_time": "2026-04-24T09:05:00",
+      "end_time": "2026-04-24T10:30:00",
+      "category": "film animowany",
       "year": 2024
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Mam zamek. ",
-      "start_time": "2026-04-18T08:30:00",
-      "end_time": "2026-04-18T09:00:00",
-      "category": "serial dokumentalny",
-      "year": 2024
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Kung Fu Panda 3. ",
+      "start_time": "2026-04-24T10:30:00",
+      "end_time": "2026-04-24T12:05:00",
+      "category": "film animowany",
+      "year": 2016,
+      "tmdb": {
+        "tmdb_id": 140300,
+        "title": "Kung Fu Panda 3",
+        "year": "2016",
+        "poster": "https://image.tmdb.org/t/p/w500/oajNi4Su39WAByHI6EONu8G8HYn.jpg",
+        "rating": 6.921,
+        "overview": "Po wyrusza z ojcem do ukrytej przed światem wioski pand. Gdy jednak Chinom zaczyna zagrażać zły duch, Po musi naprędce stworzyć armię zdolną stawić mu czoła."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Zabójcze drogi. ",
-      "start_time": "2026-04-18T09:00:00",
-      "end_time": "2026-04-18T10:00:00",
-      "category": "serial dokumentalny",
-      "year": 2019
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Łapu Capu. ",
+      "start_time": "2026-04-24T12:05:00",
+      "end_time": "2026-04-24T12:10:00",
+      "category": "program rozrywkowy",
+      "year": 2025
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Zholowani: ciężarówki w opałach 6. ",
-      "start_time": "2026-04-18T10:00:00",
-      "end_time": "2026-04-18T10:55:00",
-      "category": "serial dokumentalny",
-      "year": 2022
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Kiler. ",
+      "start_time": "2026-04-24T12:10:00",
+      "end_time": "2026-04-24T13:55:00",
+      "category": "komedia sensacyjna",
+      "year": 1997,
+      "tmdb": {
+        "tmdb_id": 31132,
+        "title": "Kiler",
+        "year": "1997",
+        "poster": "https://image.tmdb.org/t/p/w500/sCpk0CC9MKODKGJWxQtNgz6sZhP.jpg",
+        "rating": 7.617,
+        "overview": "Jak pech to pech! Warszawski taksówkarz Jurek Kiler zostaje rozpoznany przez komisarza Rybę jako najniebezpieczniejszy płatny morderca i ląduje za kratkami. Z więzienia wyfruwa jeszcze szybciej, gdyż potrzebuje go - jako specjalistę od brudnej roboty - szef stołecznej mafii, Siara. Jak pech to pech! Każdy chce żyć, więc z gruntu uczciwy Kiler przyjmuje zlecenie na usunięcie niewygodnego wspólnika. Na wszelki wypadek przyjmuje kontrakt i na Siarę. Wystarczy jednak parę zręcznych ruchów, miła dziewczyna u boku i... Jak pech to pech! Jaki pech? Ta gotówka to samo szczęście w nieszczęściu."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Grip - w świecie supersamochodów. ",
-      "start_time": "2026-04-18T10:55:00",
-      "end_time": "2026-04-18T11:55:00",
-      "category": "serial dokumentalny",
-      "year": 2022
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Mamma Mia! Here We Go Again. ",
+      "start_time": "2026-04-24T13:55:00",
+      "end_time": "2026-04-24T15:45:00",
+      "category": "komedia muzyczna",
+      "year": 2018,
+      "tmdb": {
+        "tmdb_id": 458423,
+        "title": "Mamma Mia! Here We Go Again",
+        "year": "2018",
+        "poster": "https://image.tmdb.org/t/p/w500/lCMPn1TfSQZT8b507H8fwMIW6J.jpg",
+        "rating": 7.079,
+        "overview": "Sophie spotyka się na greckiej wyspie Kalokairi z przyjaciółkami swojej matki Donny, z Rosie i Tanyą. Dziewczyna ogłasza im, że jest w ciąży i obawia się, że nie da rady sama wychować dziecka. Kobiety oferują swoją pomoc, w czym wesprze ją mąż Donny, Sam oraz jej byli partnerzy: Harry i Bill. Wszyscy zaczynają opowiadać historię nastoletniej Donny, która została matką w młodym wieku i samodzielnie wychowywała dziecko, jednocześnie prowadząc grecką willę oraz śpiewając w girls bandzie."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Siostry Williams. ",
-      "start_time": "2026-04-18T11:55:00",
-      "end_time": "2026-04-18T13:00:00",
-      "category": "film dokumentalny",
-      "year": 2023
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "47 roninów. ",
+      "start_time": "2026-04-24T15:45:00",
+      "end_time": "2026-04-24T17:40:00",
+      "category": "film kostiumowy",
+      "year": 2013,
+      "tmdb": {
+        "tmdb_id": 64686,
+        "title": "47 roninów",
+        "year": "2013",
+        "poster": "https://image.tmdb.org/t/p/w500/xDHnmcroujCRG0ysYQaiswjbyHd.jpg",
+        "rating": 6.202,
+        "overview": "Historia bierze początek w momencie, kiedy bezwzględny, żądny władzy szogun zabija swojego mistrza, skazując jednocześnie na wygnanie swoich współbraci. 47. pozostawionych samym sobie samurajów poprzysięga mu zemstę, chcąc tym samym odzyskać honor i utraconą ziemię. Wygnani ze swoich domów, rozproszeni po całym kraju członkowie grupy roninów muszą szukać pomocy u Kaia (Keanu Reeves) – ronina półkrwi, którego ongiś odrzucili. Ma on wesprzeć ich w walce o utraconą godność, walce z siłami zła w świecie, w którym roi się od mitycznych bestii i czarnej magii. Kai - pozbawiony swojego miejsca i godności banita staje się najbardziej niebezpieczną, śmiercionośną bronią roninów. Jego postawa sprawi, że wyrośnie on z czasem na bohatera i będzie inspiracją dla grupy buntowników stawiających czoła złu, które przejęło ich ziemię, a teraz chce również przechwycić wieczność."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "W trasie z Normanem Reedusem. ",
-      "start_time": "2026-04-18T13:00:00",
-      "end_time": "2026-04-18T13:55:00",
-      "category": "serial dokumentalny",
-      "year": 2016
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Holiday. ",
+      "start_time": "2026-04-24T17:40:00",
+      "end_time": "2026-04-24T19:55:00",
+      "category": "komedia romantyczna",
+      "year": 2006,
+      "tmdb": {
+        "tmdb_id": 1581,
+        "title": "Holiday",
+        "year": "2006",
+        "poster": "https://image.tmdb.org/t/p/w500/ew4gt1IYriNJiUbdnC3O9nWj2BY.jpg",
+        "rating": 7.1,
+        "overview": "Amanda, bizneswoman z Los Angeles, wyrzuca z domu niewiernego kochanka. Mieszkająca w Londynie Iris kocha mężczyznę, który lada dzień ma poślubić inną kobietę. Zdesperowane panie trafiają na siebie na stronie internetowej, oferującej tymczasowe zamiany domów. Choć dzielą je 4 tys. kilometrów, narodowość, doświadczenie i kultura, odnajdują wspólny język. Postanawiają zamienić się miejscami na czas świąt Bożego Narodzenia. W przysypanej śniegiem Anglii Amanda spotyka brata Iris. Ta w słonecznej Kalifornii poznaje współpracownika Amandy."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Co poszło nie tak 4. ",
-      "start_time": "2026-04-18T13:55:00",
-      "end_time": "2026-04-18T15:00:00",
-      "category": "serial dokumentalny",
-      "year": 2024
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Łapu Capu. ",
+      "start_time": "2026-04-24T19:55:00",
+      "end_time": "2026-04-24T20:00:00",
+      "category": "program rozrywkowy",
+      "year": 2025
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Porzucona Ameryka 3. ",
-      "start_time": "2026-04-18T15:00:00",
-      "end_time": "2026-04-18T15:55:00",
-      "category": "serial dokumentalny",
-      "year": 2023
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Cash Out 2: Wysoka stawka. ",
+      "start_time": "2026-04-24T20:00:00",
+      "end_time": "2026-04-24T21:40:00",
+      "category": "film sensacyjny",
+      "year": 2025
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Porzucona Ameryka 3. ",
-      "start_time": "2026-04-18T15:55:00",
-      "end_time": "2026-04-18T16:50:00",
-      "category": "serial dokumentalny",
-      "year": 2023
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Believer. ",
+      "start_time": "2026-04-24T21:40:00",
+      "end_time": "2026-04-24T23:25:00",
+      "category": "horror",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 807172,
+        "title": "Egzorcysta: Wyznawca",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/n326AZPYtZC6lCssG2S6QoU7qbt.jpg",
+        "rating": 5.8,
+        "overview": "Sequel filmu z 1973 roku o 12-letniej dziewczynce opętanej przez tajemniczą demoniczną istotę, która zmusza matkę do szukania pomocy u dwóch księży, aby ją uratować."
+      }
     },
     {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Wykrywacz historii 4. ",
-      "start_time": "2026-04-18T16:50:00",
-      "end_time": "2026-04-18T18:00:00",
-      "category": "serial dokumentalny",
-      "year": 2021
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Grip - w świecie supersamochodów. ",
-      "start_time": "2026-04-18T18:00:00",
-      "end_time": "2026-04-18T19:00:00",
-      "category": "serial dokumentalny",
-      "year": 2022
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Hot Roads - Najniebezpieczniejsze drogi świata. ",
-      "start_time": "2026-04-18T19:00:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "serial dokumentalny",
-      "year": 2011
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Wolne duchy. Starcie z żywiołami. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T20:50:00",
-      "category": "serial dokumentalny",
-      "year": 2022
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Lotniskowce na wojnie. ",
-      "start_time": "2026-04-18T20:50:00",
-      "end_time": "2026-04-18T21:55:00",
-      "category": "film dokumentalny",
-      "year": 2018
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Porzucone konstrukcje. ",
-      "start_time": "2026-04-18T21:55:00",
-      "end_time": "2026-04-18T23:00:00",
-      "category": "serial dokumentalny",
-      "year": 2018
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Wykrywacz historii 4. ",
-      "start_time": "2026-04-18T23:00:00",
-      "end_time": "2026-04-18T23:55:00",
-      "category": "serial dokumentalny",
-      "year": 2021
-    },
-    {
-      "channel_id": "Canal+ Family",
-      "channel_name": "Canal+ Family",
-      "title": "Co poszło nie tak 3. ",
-      "start_time": "2026-04-18T23:55:00",
-      "end_time": "2026-04-19T01:00:00",
-      "category": "serial dokumentalny",
-      "year": 2022
+      "channel_id": "Canal+ Film",
+      "channel_name": "Canal+ Film",
+      "title": "Strefa wroga. ",
+      "start_time": "2026-04-24T23:25:00",
+      "end_time": "2026-04-25T01:15:00",
+      "category": "thriller",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 969492,
+        "title": "Strefa wroga",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/68pfDmHnxcrbUYSpwxU6yKjT2Jh.jpg",
+        "rating": 7.253,
+        "overview": "Kiedy drużyna Delta Force wpada w zasadzkę na terytorium wroga, niedoświadczony oficer (Liam Hemsworth) odmawia opuszczenia ich. Ich jedyną nadzieją jest pilot drona Sił Powietrznych (Russell Crowe), który staje się ich oczami w niebie podczas brutalnej 48-godzinnej bitwy o przetrwanie."
+      }
     },
     {
       "channel_id": "Canal+ Family",
@@ -8226,259 +7999,220 @@
       "year": 2021
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Life. ",
-      "start_time": "2026-04-18T01:30:00",
-      "end_time": "2026-04-18T03:10:00",
-      "category": "horror SF",
-      "year": 2017,
-      "tmdb": {
-        "tmdb_id": 395992,
-        "title": "Life",
-        "year": "2017",
-        "poster": "https://image.tmdb.org/t/p/w500/qpDah81ku6TENGgIt86JUTF9KJD.jpg",
-        "rating": 6.452,
-        "overview": "Historia sześcioosobowej grupy astronautów przebywających na Międzynarodowej Stacji Komicznej. Udaje im się dokonać przełomowego w dziejach świata odkrycia: udowodniają, że na Marsie – bez żadnych wątpliwości – jest życie. Mają na to dowód. Ale poszukiwania życia doprowadzają do poważnych konsekwencji, ponieważ „żywy dowód” jest bardziej inteligentny niż ktokolwiek przypuszczał..."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Widzew. Razem tworzymy siłę. ",
+      "start_time": "2026-04-24T00:10:00",
+      "end_time": "2026-04-24T01:00:00",
+      "category": "serial dokumentalny",
+      "year": 2023
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Raz, dwa, trzy... Wchodzisz do gry. ",
-      "start_time": "2026-04-18T03:10:00",
-      "end_time": "2026-04-18T04:25:00",
-      "category": "horror",
-      "year": 2023,
-      "tmdb": {
-        "tmdb_id": 926599,
-        "title": "Raz, dwa, trzy... wchodzisz do gry!",
-        "year": "2023",
-        "poster": "https://image.tmdb.org/t/p/w500/10UoQu0d2yUyLeBhEV3W3B2A9ro.jpg",
-        "rating": 5.557,
-        "overview": "Grupa nastolatków z miasteczka Salem odkrywa przeklęty nóż z prowokującym zaklęciem. Uwolniony demon zmusza ich do grania w makabryczne, śmiercionośne wersje gier z dzieciństwa, stawiając przerażające ultimatum: grasz lub giniesz."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Przykrywkowcy. Podwójna gra. ",
+      "start_time": "2026-04-24T01:00:00",
+      "end_time": "2026-04-24T02:05:00",
+      "category": "serial dokumentalny",
+      "year": 2019
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Zombieland: Kulki w łeb. ",
-      "start_time": "2026-04-18T04:25:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "horror komediowy",
-      "year": 2019,
-      "tmdb": {
-        "tmdb_id": 338967,
-        "title": "Zombieland: Kulki w Łeb",
-        "year": "2019",
-        "poster": "https://image.tmdb.org/t/p/w500/jG7lxVQxGTjzmAgpIJKsEbibKno.jpg",
-        "rating": 6.9,
-        "overview": "Nadszedł czas, by ponownie rozprawić się z zombie. Tym razem spotkamy się w okolicach Białego Domu. Od czasu powstania pierwszego filmu, na świecie pojawiło się mnóstwo nowych zombie, a te, które przetrwały – ewoluowały. I choć z zombie walczyć niełatwo, czasem najtrudniej stawić czoła… rodzinie, zwłaszcza tak złośliwej i nieprzebierającej w środkach rodzinie."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Polska z góry: Stadiony. Wrocław. ",
+      "start_time": "2026-04-24T02:05:00",
+      "end_time": "2026-04-24T02:40:00",
+      "category": "serial dokumentalny",
+      "year": 2024
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Spider-Man: Uniwersum. ",
-      "start_time": "2026-04-18T06:00:00",
-      "end_time": "2026-04-18T07:55:00",
-      "category": "film animowany",
-      "year": 2018,
-      "tmdb": {
-        "tmdb_id": 324857,
-        "title": "Spider-Man Uniwersum",
-        "year": "2018",
-        "poster": "https://image.tmdb.org/t/p/w500/grU91DJPDzJv0sqDyEhzOEgwWEH.jpg",
-        "rating": 8.394,
-        "overview": "Miles Morales jest nastolatkiem, który odkrywa w sobie moce podobne do tych, jakimi posługuje się Spider-Man, podobnie zresztą jak on, jest superbohaterem; nazywany jest często Ultimate Spider-Man, działa w uniwersum zwanym Ziemia-1610. Jest nadzwyczajnie silny, potrafi wdrapywać się po ścianach, ma pajęczy zmysł i umiejętność paraliżowania wroga."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Złota Dekada. Historia Lecha Poznań 1983-1993. ",
+      "start_time": "2026-04-24T02:40:00",
+      "end_time": "2026-04-24T03:45:00",
+      "category": "serial dokumentalny",
+      "year": 2022
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Ciągnie świnki do... wilkołaka. ",
-      "start_time": "2026-04-18T07:55:00",
-      "end_time": "2026-04-18T08:10:00",
-      "category": "film animowany",
-      "year": 2011,
-      "tmdb": {
-        "tmdb_id": 82530,
-        "title": "Ciągnie świnki do... wilkołaka",
-        "year": "2011",
-        "poster": "https://image.tmdb.org/t/p/w500/bNJbWSWDRWsXjz1gi1J2lxsWZFK.jpg",
-        "rating": 6.1,
-        "overview": "Trzy świnki, Heimlich, Dieter i Chef, mieszkają w małym domku. Niebawem w sąsiedztwie zamieszkuje duży zły wilk. Pewnego dnia Heimlich zauważa, jak nowemu lokatorowi przypadkowo wypadają noże z torby. Przerażony, zaczyna śledzić wilka. Ze zdumieniem odkrywa, że sąsiad przemienia się za sprawą księżycowego światła w kobietę, która ma obsesję na punkcie łapania świnek."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Survivalowa rodzina. ",
+      "start_time": "2026-04-24T03:45:00",
+      "end_time": "2026-04-24T04:20:00",
+      "category": "serial dokumentalny",
+      "year": 2019
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Ben nie ma lekko. ",
-      "start_time": "2026-04-18T08:10:00",
-      "end_time": "2026-04-18T09:30:00",
-      "category": "film animowany",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 947512,
-        "title": "Ben nie ma lekko",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/vp1tIeyfkb01Za7BLOmuC6ztAAU.jpg",
-        "rating": 6.733,
-        "overview": ""
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Survivalowa rodzina. ",
+      "start_time": "2026-04-24T04:20:00",
+      "end_time": "2026-04-24T04:55:00",
+      "category": "serial dokumentalny",
+      "year": 2019
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Grinch. ",
-      "start_time": "2026-04-18T09:30:00",
-      "end_time": "2026-04-18T10:55:00",
-      "category": "film animowany",
-      "year": 2018,
-      "tmdb": {
-        "tmdb_id": 360920,
-        "title": "Grinch",
-        "year": "2018",
-        "poster": "https://image.tmdb.org/t/p/w500/3YZVXqtyAF2L25LoyClRAslpC5g.jpg",
-        "rating": 6.868,
-        "overview": "Grinch znów powraca, by zepsuć wszystkim ten szczególny świąteczny czas. Mieszkańcy Ktosiowa z niecierpliwością oczekują Białego Bożego Narodzenia, najpiękniejszego czasu w roku. I tylko on, zielony stwór Grinch, nie znosi świąt i zrobi wszystko, by je zepsuć."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Zwierzęta Wajraka 2. Węże na Zakrzówku. ",
+      "start_time": "2026-04-24T04:55:00",
+      "end_time": "2026-04-24T05:30:00",
+      "category": "serial dokumentalny",
+      "year": 2021
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Focus. ",
-      "start_time": "2026-04-18T10:55:00",
-      "end_time": "2026-04-18T12:40:00",
-      "category": "komedia kryminalna",
-      "year": 2015,
-      "tmdb": {
-        "tmdb_id": 256591,
-        "title": "Focus",
-        "year": "2015",
-        "poster": "https://image.tmdb.org/t/p/w500/5aoIMBMGmfXKT9VRyTJEyy3qIIo.jpg",
-        "rating": 6.868,
-        "overview": "Will Smith wciela się w postać Nicky'ego, doświadczonego mistrza podstępu, który wdaje się w romans z początkującą oszustką o imieniu Jess (Margot Robbie). Nicky przekazuje podopiecznej tajniki swojego fachu, ale gdy ta zbliża się do niego za bardzo, nagle postanawia zerwać znajomość. Trzy lata później, już jako zawodowa femme fatale, Jess pojawia się w Buenos Aires na wyścigach samochodowych, podczas których gra toczy się o wysoką stawkę. Właśnie tam Nicky stara się wykonać swój najnowszy i bardzo niebezpieczny numer, ale ona zupełnie zbija go z pantałyku i na drodze wytrawnego oszusta zaczynają pojawiać się problemy."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Zwierzęta Wajraka 2. Pójdźka w kominie. ",
+      "start_time": "2026-04-24T05:30:00",
+      "end_time": "2026-04-24T06:00:00",
+      "category": "serial dokumentalny",
+      "year": 2021
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Tajemnica złotnika. ",
-      "start_time": "2026-04-18T12:40:00",
-      "end_time": "2026-04-18T14:20:00",
-      "category": "dramat obyczajowy",
-      "year": 2025,
-      "tmdb": {
-        "tmdb_id": 1310861,
-        "title": "Tajemnica złotnika",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/sPW9fszYL0EG7YJW4NwvnAZbfuq.jpg",
-        "rating": 7.2,
-        "overview": "Młody mężczyzna i dojrzała kobieta tworzą tajemniczą więź, w której splatają się miłość, pamięć i podróże w czasie."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "W rytmie wolności. Stevie Wonder. ",
+      "start_time": "2026-04-24T06:00:00",
+      "end_time": "2026-04-24T07:00:00",
+      "category": "serial dokumentalny",
+      "year": 2020
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Alita: Battle Angel. ",
-      "start_time": "2026-04-18T14:20:00",
-      "end_time": "2026-04-18T16:20:00",
-      "category": "film SF",
-      "year": 2019,
-      "tmdb": {
-        "tmdb_id": 399579,
-        "title": "Alita: Battle Angel",
-        "year": "2019",
-        "poster": "https://image.tmdb.org/t/p/w500/8g2vEhCsFDm16dfCgLmUwhtOojV.jpg",
-        "rating": 7.244,
-        "overview": "Alita budzi się bez pamięci w świecie przyszłości, którego nie poznaje. Opiekę nad nią roztacza Ido, sympatyczny doktor, który uświadamia sobie, że w ciele porzuconego cyborga kryje się serce i dusza młodej kobiety o niezwykłej przeszłości. Alita uczy się nowego życia na ulicach zdradliwego Miasta Złomu. Podczas gdy Ido stara się chronić ją przed jej własną tajemniczą historią, nowy przyjaciel Ality, Hugo, twierdzi, że zna sposób, by przywrócić jej pamięć. Dopiero, gdy potężne, śmiertelnie niebezpieczne i skorumpowane siły, które rządzą miastem, rzucają jej wyzwanie, Alita odkrywa klucz do swej przeszłości – posiada niezwykłe zdolności bojowe, a ci, którzy stoją u władzy, nie cofną się przed niczym, by przejąć nad nimi kontrolę. Jeśli Alicie uda się stawić im czoło, może ocalić swych przyjaciół, rodzinę i świat, który zdążyła pokochać."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Chwila prawdy. ",
+      "start_time": "2026-04-24T07:00:00",
+      "end_time": "2026-04-24T08:00:00",
+      "category": "serial dokumentalny",
+      "year": 2022
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Na rauszu. ",
-      "start_time": "2026-04-18T16:20:00",
-      "end_time": "2026-04-18T18:15:00",
-      "category": "komediodramat",
-      "year": 2020,
-      "tmdb": {
-        "tmdb_id": 580175,
-        "title": "Na rauszu",
-        "year": "2020",
-        "poster": "https://image.tmdb.org/t/p/w500/z3tbX5boxl9gQKgiOgrm1S0cfEn.jpg",
-        "rating": 7.629,
-        "overview": "Czterej mężczyźni pracujący w tej samej szkole jako nauczyciele spotykają się z okazji urodzin jednego z nich. W pewnym momencie zaczyna się dyskusja o teorii, według której utrzymywanie określonego poziomu alkoholu we krwi pozwala człowiekowi lepiej funkcjonować i otworzyć się na świat. Panowie postanawiają sprawdzić teorię w praktyce."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Rekruci. Ja, żołnierz. ",
+      "start_time": "2026-04-24T08:00:00",
+      "end_time": "2026-04-24T09:00:00",
+      "category": "serial dokumentalny",
+      "year": 2019
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Happy Feet: Tupot małych stóp. ",
-      "start_time": "2026-04-18T18:15:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "film animowany",
-      "year": 2006,
-      "tmdb": {
-        "tmdb_id": 9836,
-        "title": "Happy Feet: Tupot małych stóp",
-        "year": "2006",
-        "poster": "https://image.tmdb.org/t/p/w500/hxzYeirpNdDdMhfdqWuB5MwjFbb.jpg",
-        "rating": 6.2,
-        "overview": "W Imperium Pingwinów, wszystkie te ptaki uprzyjemniają sobie czas śpiewaniem. Jest to ich naturalny dar, który wykorzystują z wielkim zapałem. Jednak któregoś dnia rodzi się jeden maluszek, który nie potrafi śpiewać. Na szczęście malec wyjątkowo dobrze stepuje i po wielu perypetiach zdobywa upragnioną akceptację."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Wykrywacz historii 3. ",
+      "start_time": "2026-04-24T09:00:00",
+      "end_time": "2026-04-24T10:00:00",
+      "category": "serial dokumentalny",
+      "year": 2021
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "W ogniu pasji. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T21:50:00",
-      "category": "dramat obyczajowy",
-      "year": 2025,
-      "tmdb": {
-        "tmdb_id": 1196791,
-        "title": "W ogniu pasji",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/iUMmG3Q0JyAuSx9QpIiMFhI5zDo.jpg",
-        "rating": 7.328,
-        "overview": "Po strasznym wypadku, w którym jego ciało zostało oszpecone, młody chłopak stara się żyć i pokazać wszystkim, co jest możliwe. Dzięki pomocy rodziny, wiary, społeczności, życzliwości swojego wieloletniego idola i całego miasta St. Louis."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Klopp: transfer stulecia. ",
+      "start_time": "2026-04-24T10:00:00",
+      "end_time": "2026-04-24T11:00:00",
+      "category": "film dokumentalny",
+      "year": 2020
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Vinci 2. ",
-      "start_time": "2026-04-18T21:50:00",
-      "end_time": "2026-04-18T23:45:00",
-      "category": "komedia kryminalna",
-      "year": 2025,
-      "tmdb": {
-        "tmdb_id": 1339552,
-        "title": "Vinci 2",
-        "year": "2025",
-        "poster": "https://image.tmdb.org/t/p/w500/w1g09C1ftgtqJRnMENgNftPtZ0Q.jpg",
-        "rating": 6.0,
-        "overview": "Cuma, emerytowany mistrz złodziejskiego fachu, wraca do Krakowa, aby dokonać ostatniego skoku. Na drodze do celu stają mu jednak dawni rywale, niesolidni wspólnicy i gorliwi stróże prawa."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Niepokonany: droga na Denali. ",
+      "start_time": "2026-04-24T13:10:00",
+      "end_time": "2026-04-24T15:00:00",
+      "category": "film dokumentalny",
+      "year": 2024
     },
     {
-      "channel_id": "HBO",
-      "channel_name": "HBO",
-      "title": "Road House. ",
-      "start_time": "2026-04-18T23:45:00",
-      "end_time": "2026-04-19T01:45:00",
-      "category": "film sensacyjny",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 359410,
-        "title": "Road House",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/fDEdtS4P0gJsxHDIt8dG8TR5dx1.jpg",
-        "rating": 6.924,
-        "overview": "W tej pełnej adrenaliny adaptacji kultowego klasyka z lat 80, były zawodnik UFC Dalton podejmuje pracę jako ochroniarz w zajeździe na Florydzie Keys, tylko po to, by odkryć, że ten raj nie jest tym, czym się wydaje."
-      }
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Wykrywacz historii 3. ",
+      "start_time": "2026-04-24T15:00:00",
+      "end_time": "2026-04-24T16:00:00",
+      "category": "serial dokumentalny",
+      "year": 2021
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Grip - w świecie supersamochodów. ",
+      "start_time": "2026-04-24T16:00:00",
+      "end_time": "2026-04-24T17:05:00",
+      "category": "serial dokumentalny",
+      "year": 2022
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Supersamoloty bojowe. ",
+      "start_time": "2026-04-24T17:05:00",
+      "end_time": "2026-04-24T18:05:00",
+      "category": "serial dokumentalny",
+      "year": 2020
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Sędziowie 2. Karol i Marek Arys. ",
+      "start_time": "2026-04-24T18:05:00",
+      "end_time": "2026-04-24T18:45:00",
+      "category": "serial dokumentalny",
+      "year": 2023
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Co poszło nie tak 4. ",
+      "start_time": "2026-04-24T18:45:00",
+      "end_time": "2026-04-24T19:50:00",
+      "category": "serial dokumentalny",
+      "year": 2024
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Supersamoloty bojowe. ",
+      "start_time": "2026-04-24T19:50:00",
+      "end_time": "2026-04-24T20:50:00",
+      "category": "serial dokumentalny",
+      "year": 2020
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Porzucona Ameryka 4. ",
+      "start_time": "2026-04-24T20:50:00",
+      "end_time": "2026-04-24T21:55:00",
+      "category": "serial dokumentalny",
+      "year": 2024
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Montana: na dzikiej północy. ",
+      "start_time": "2026-04-24T21:55:00",
+      "end_time": "2026-04-24T23:00:00",
+      "category": "serial dokumentalny",
+      "year": 2018
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Luis Enrique: Nie macie k**** pojęcia. ",
+      "start_time": "2026-04-24T23:00:00",
+      "end_time": "2026-04-24T23:45:00",
+      "category": "serial dokumentalny",
+      "year": 2024
+    },
+    {
+      "channel_id": "Canal+ Family",
+      "channel_name": "Canal+ Family",
+      "title": "Widzew. Razem tworzymy siłę. ",
+      "start_time": "2026-04-24T23:45:00",
+      "end_time": "2026-04-25T00:25:00",
+      "category": "serial dokumentalny",
+      "year": 2023
     },
     {
       "channel_id": "HBO",
@@ -9487,250 +9221,217 @@
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Bad Boys for Life. ",
-      "start_time": "2026-04-18T01:35:00",
-      "end_time": "2026-04-18T03:40:00",
-      "category": "komedia sensacyjna",
-      "year": 2020,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Nie. ",
+      "start_time": "2026-04-24T00:05:00",
+      "end_time": "2026-04-24T02:15:00",
+      "category": "thriller",
+      "year": 2022,
       "tmdb": {
-        "tmdb_id": 38700,
-        "title": "Bad Boys for Life",
-        "year": "2020",
-        "poster": "https://image.tmdb.org/t/p/w500/ipMOvseh2BNpaggoCUc7ATpiKqI.jpg",
-        "rating": 7.118,
-        "overview": "Funkcjonariusze Mike Lowery (Will Smith) i Marcus Burnett (Martin Lawrence) ponownie ruszają do akcji! Gdy z więzienia ucieka pałająca żądzą zemsty baronowa narkotykowego kartelu, bohaterowie stają przed największym wyzwaniem w swojej dotychczasowej karierze. W akcji pomoże specjalna jednostka AMMO - nowe pokolenie policyjnych twardzieli."
+        "tmdb_id": 1001344,
+        "title": "Nie ma spokoju",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w500/3TbrCU3cwoO5MQm7RKAhNxWSStl.jpg",
+        "rating": 0.0,
+        "overview": "Jacek – mężczyzna w średnim wieku, korzysta z usługi firmy zajmującej się przemianą ludzi w drzewa. Proces jego transformacji nadzorują Doktor Buk i terapeutka Melisa, którzy upewniają się, czy ma on pełną świadomość konsekwencji i czy jego decyzja nie jest przypadkowa."
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Good bye, Lenin. ",
-      "start_time": "2026-04-18T03:40:00",
-      "end_time": "2026-04-18T05:40:00",
-      "category": "komediodramat",
-      "year": 2003,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Queer. ",
+      "start_time": "2026-04-24T02:15:00",
+      "end_time": "2026-04-24T04:35:00",
+      "category": "dramat obyczajowy",
+      "year": 2024,
       "tmdb": {
-        "tmdb_id": 338,
-        "title": "Good Bye, Lenin!",
-        "year": "2003",
-        "poster": "https://image.tmdb.org/t/p/w500/nxKe04OP2GOpVsGneqFiBg7h0bS.jpg",
-        "rating": 7.54,
-        "overview": "Jest jesień roku 1989. Christine jest wielką zwolenniczką komunizmu. Podczas obchodów 40-lecia NRD, dochodzi do wielkich manifestacji. Christin widzi na nich swojego syna, krzyczącego \" wolność prasy!', za co jest pałowany przez milicję. Na skutek wstrząsu tym spowodowanego, Christine traci przytomność i zapada na kilkumiesięczną śpiączkę. Kiedy się z niej wybudza NRD już nie ma. Lekarze ostrzegają jej syna, że kolejny wstrząs może skończyć się tragicznie. Alex postanawia nie informować matki o radykalnych zmianach jakie zaszły. W tym celu stwarza świat, który jeszcze kilka miesięcy temu był rzeczywistością."
+        "tmdb_id": 1059128,
+        "title": "Queer",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/zByLzbY1mrrtQneE8aIT1Yd2tYX.jpg",
+        "rating": 6.591,
+        "overview": "Jest rok 1950. William Lee jest amerykańskim emigrantem po pięćdziesiątce w Mexico City. Dni spędza prawie całkowicie sam, z wyjątkiem nielicznych relacji z innymi członkami małej amerykańskiej społeczności. Spotkanie z Eugene Allertonem, młodym studentem, który właśnie przybył do miasta, po raz pierwszy pokazuje mu możliwość nawiązania w końcu intymnej relacji z kimś"
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Sprzątaczka. ",
-      "start_time": "2026-04-18T05:40:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "film krótkometrażowy",
-      "year": 2021
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "50 pierwszych randek. ",
-      "start_time": "2026-04-18T06:00:00",
-      "end_time": "2026-04-18T07:40:00",
-      "category": "komedia romantyczna",
-      "year": 2004,
-      "tmdb": {
-        "tmdb_id": 1824,
-        "title": "50 pierwszych randek",
-        "year": "2004",
-        "poster": "https://image.tmdb.org/t/p/w500/sTN1k9XIz2g5D8thswXVPOtNDA3.jpg",
-        "rating": 6.871,
-        "overview": "Henry Roth jest weterynarzem, mieszkającym na Hawajach, który spędza miło czas w towarzystwie odpoczywających na wyspie kobiet. Kiedy poznaje Lucy po raz pierwszy w życiu naprawdę się zakochuje i porzuca życie playboya. Jest tylko jedna przeszkoda stojąca na drodze do pełnego szczęścia. Lucy cierpi na częste utraty pamięci i nie pamięta poprzednich dni. Henry'emu pozostaje tylko jedno - postanawia spotykać się z Lucy codziennie, mając nadzieję, że pewnego dnia dziewczyna przypomni go sobie i odwzajemni jego uczucie."
-      }
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Legalna blondynka. ",
-      "start_time": "2026-04-18T07:40:00",
-      "end_time": "2026-04-18T09:15:00",
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "The Doll. ",
+      "start_time": "2026-04-24T04:35:00",
+      "end_time": "2026-04-24T06:00:00",
       "category": "komedia",
-      "year": 2001,
+      "year": 2025,
       "tmdb": {
-        "tmdb_id": 8835,
-        "title": "Legalna blondynka",
-        "year": "2001",
-        "poster": "https://image.tmdb.org/t/p/w500/cwPiZJx0L8MlK4qHl6gq8f212Yk.jpg",
-        "rating": 6.808,
-        "overview": "Elle Woods jest stuprocentową blondynką - najpopularniejszą dziewczyną w szkole i finalistką konkursu piękności. W przyszłość patrzy z optymizmem, widząc siebie u boku bogatego narzeczonego, Warnera Huntingtona. Chłopak jednak, zamiast się oświadczyć, zrywa z nią. Twierdzi, że jako student Harvardu, przyszły prawnik i polityk musi znaleźć sobie mniej frywolną dziewczynę. Elle nie zamierza się poddawać - rzuca szkołę mody i podejmuje studia prawnicze na Harvardzie."
-      }
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Hafekasi. ",
-      "start_time": "2026-04-18T09:15:00",
-      "end_time": "2026-04-18T09:35:00",
-      "category": "film krótkometrażowy",
-      "year": 2023,
-      "tmdb": {
-        "tmdb_id": 1132593,
-        "title": "Hafekasi",
-        "year": "2023",
-        "poster": "https://image.tmdb.org/t/p/w500/kvnbtZvHA8ofrZX9FekjwsZHgoQ.jpg",
+        "tmdb_id": 1480614,
+        "title": "The Doll Kiln",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/3NO3R1CU1uU10jcRICvwB2N0WBN.jpg",
         "rating": 0.0,
         "overview": ""
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Lekcje Błagi. ",
-      "start_time": "2026-04-18T09:35:00",
-      "end_time": "2026-04-18T11:25:00",
-      "category": "dramat obyczajowy",
-      "year": 2023,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Everest. ",
+      "start_time": "2026-04-24T06:00:00",
+      "end_time": "2026-04-24T08:00:00",
+      "category": "film katastroficzny",
+      "year": 2015,
       "tmdb": {
-        "tmdb_id": 1137196,
-        "title": "Lekcje Błagi",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/lv1AUDPf3B3nFwtp7iZQwPfGKx6.jpg",
-        "rating": 6.6,
-        "overview": "Blaga (Eli Skorcheva) to siedemdziesięcioletnia, niedawno owdowiała była nauczycielka i kobieta o silnych zasadach moralnych. Kiedy oszuści telefoniczni oszukują ją i wyłudzają pieniądze, które zaoszczędziła na grób męża, jej kompas moralny powoli zaczyna się łamać…"
+        "tmdb_id": 253412,
+        "title": "Everest",
+        "year": "2015",
+        "poster": "https://image.tmdb.org/t/p/w500/2jKOu2bjpLP6NXJcm7Ep14bDGtA.jpg",
+        "rating": 6.828,
+        "overview": "Doświadczeni himalaiści Rob Hall (Jason Clarke) i Scott Fischer (Jake Gyllenhaal) prowadzą dwie rywalizujące ekspedycje na Mount Everest, najwyższy szczyt świata. Wyprawa staje się niebezpieczna, kiedy wspinacze muszą stawić czoło jednej z najbardziej gwałtownych zamieci w dziejach góry. W obliczu wyjątkowo trudnych warunków, w stanie skrajnego wyczerpania sił i ducha, zostają poddani najtrudniejszemu testowi w walce o przetrwanie w tym mrożącym krew w żyłach, emocjonującym thrillerze opartym na prawdziwej historii."
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Eina. ",
-      "start_time": "2026-04-18T11:25:00",
-      "end_time": "2026-04-18T11:50:00",
-      "category": "film krótkometrażowy",
-      "year": 2023,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Po prostu uwierz. ",
+      "start_time": "2026-04-24T08:00:00",
+      "end_time": "2026-04-24T09:45:00",
+      "category": "dramat obyczajowy",
+      "year": 2024
+    },
+    {
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Saga Zmierzch: Przed świtem. Część 2. ",
+      "start_time": "2026-04-24T09:45:00",
+      "end_time": "2026-04-24T11:40:00",
+      "category": "film fantasy",
+      "year": 2012,
       "tmdb": {
-        "tmdb_id": 1238670,
-        "title": "Eina",
-        "year": "2023",
-        "poster": "https://image.tmdb.org/t/p/w500/oWQW57ddx7tPR3bvvdt5gOqD7py.jpg",
-        "rating": 7.5,
+        "tmdb_id": 50620,
+        "title": "Saga \"Zmierzch\": Przed świtem. Część 2",
+        "year": "2012",
+        "poster": "https://image.tmdb.org/t/p/w500/7jsgvsmD7UyJjIjh2J1nAZJYOX0.jpg",
+        "rating": 6.456,
+        "overview": "Bella i Edward są wreszcie naprawdę szczęśliwi. Ona należy już w pełni do świata swego ukochanego. Jest istotą nieśmiertelną, obdarzoną niezwykłą mocą. On ma przy sobie dwie ukochane kobiety – żonę i córeczkę Renesmee. Wydaje się, że nic już nie może zmącić ich szczęścia. A jednak rodzina Cullenów staje w obliczu nowego, ogromnego zagrożenia. Gniew Volturi jeszcze nigdy nie był tak wielki. Edward zwołuje wampiry z różnych zakątków świata, aby przeciwstawić się nieuniknionemu atakowi. Dojdzie do walki, która raz na zawsze rozstrzygnie los nieśmiertelnych mieszkańców Forks i podda próbie miłość, która przecież miała trwać wiecznie."
+      }
+    },
+    {
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Na planie 23. ",
+      "start_time": "2026-04-24T11:40:00",
+      "end_time": "2026-04-24T12:10:00",
+      "category": "magazyn filmowy",
+      "year": 2026
+    },
+    {
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Oszukana przez męża: Historia Morgan Metzer. ",
+      "start_time": "2026-04-24T12:10:00",
+      "end_time": "2026-04-24T13:40:00",
+      "category": "dramat obyczajowy",
+      "year": 2024
+    },
+    {
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Władca Pierścieni: Dwie wieże. ",
+      "start_time": "2026-04-24T13:40:00",
+      "end_time": "2026-04-24T16:35:00",
+      "category": "film fantasy",
+      "year": 2002,
+      "tmdb": {
+        "tmdb_id": 121,
+        "title": "Władca Pierścieni: Dwie wieże",
+        "year": "2002",
+        "poster": "https://image.tmdb.org/t/p/w500/4oDm6P1FUAegMFfQBVhWIkNcaqk.jpg",
+        "rating": 8.416,
+        "overview": "Mrok gęstnieje nad światem. Po rozpadzie drużyny cel misji staje się coraz bardziej odległy. Frodo i Sam wędrują samotnie do Mordoru. Na ich drodze staje jednak Gollum, dawny właściciel pierścienia. Gandalf zwycięża Barloga, ale to dopiero początek jego zmagań z siłami zła. Pozostała część drużyny idąc tropem orków trafia do Fangornu, gdzie spotykają Gandalfa. Nadszedł czas, aby rozprawić się Sarumanem, który opętał władcę Rohanu, królestwa ludzi. Frodo i Sam prowadzeni przez Golluma, któremu Frodo darował życie, docierają do Czarnej Bramy. Tymczasem Merry i Pippin uciekają orkom i trafiają na Drzewca, starego Enta. Kiedy wszystko zaczyna się układać, Saruman, który stworzył potężną armię, postanawia zaatakować Rohańczyków. Rozpoczyna się bitwa, która może zadecydować o losie wyprawy - bitwa o Helmowy Jar."
+      }
+    },
+    {
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Azyl. ",
+      "start_time": "2026-04-24T16:35:00",
+      "end_time": "2026-04-24T18:10:00",
+      "category": "thriller",
+      "year": 2022,
+      "tmdb": {
+        "tmdb_id": 852063,
+        "title": "Azyl",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w500/gcMymRgPXmAQ0SBT3zCBBhkaLr9.jpg",
+        "rating": 0.0,
         "overview": ""
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Byłyśmy niebezpieczne. ",
-      "start_time": "2026-04-18T11:50:00",
-      "end_time": "2026-04-18T13:10:00",
-      "category": "film obyczajowy",
-      "year": 2024,
-      "tmdb": {
-        "tmdb_id": 1229266,
-        "title": "Byłyśmy niebezpieczne",
-        "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/iJLF8swW5PhWkWHwb82SPmQcCQO.jpg",
-        "rating": 7.111,
-        "overview": "Nellie, Daisy i Lou uczęszczają do placówki dla przestępczych dziewcząt na odizolowanej wyspie w 1954 roku. Trio buntuje się przeciwko systemowi, znajdując siłę w przyjaźni, ale zostaje ona zakwestionowana, gdy matrona szkoły rozdziela je."
-      }
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Ella i John. ",
-      "start_time": "2026-04-18T13:10:00",
-      "end_time": "2026-04-18T15:00:00",
-      "category": "komedia przygodowa",
-      "year": 2017,
-      "tmdb": {
-        "tmdb_id": 449749,
-        "title": "Ella i John",
-        "year": "2018",
-        "poster": "https://image.tmdb.org/t/p/w500/1IOnJzgbgVj85vDEIf1fPmCQ7KP.jpg",
-        "rating": 7.065,
-        "overview": "Film opowiada historię starszego małżeństwa, które wyrusza w niezaplanowaną podróż, aby odwiedzić dom Ernesta Hemingwaya, mieszczącego się w Key West, w stanie Floryda. Podróż jest jednocześnie ucieczką od dorosłych, nadopiekuńczych dzieci i lekarzy. John cierpi na alzheimera, a jego żona, Ella, chora na raka, postanawia wykorzystać wspólny czas, jaki im pozostał, na próbach przypomnienia swojemu mężowi, jakim kiedyś był człowiekiem."
-      }
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Nomadland. ",
-      "start_time": "2026-04-18T15:00:00",
-      "end_time": "2026-04-18T16:45:00",
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Makbet. ",
+      "start_time": "2026-04-24T18:10:00",
+      "end_time": "2026-04-24T20:00:00",
       "category": "dramat obyczajowy",
-      "year": 2020,
+      "year": 2015,
       "tmdb": {
-        "tmdb_id": 581734,
-        "title": "Nomadland",
-        "year": "2021",
-        "poster": "https://image.tmdb.org/t/p/w500/q3b8RNOw8blBajvtZX2I7ybDq2x.jpg",
-        "rating": 7.175,
-        "overview": "Fern pakuje swojego vana i wyrusza w drogę jako współczesna nomadka, po tym jak w wyniku recesji straciła właściwie cały swój dotychczasowy dobytek. \"Nomadland\", trzeci film fabularny reżyserki Chloé Zhao, przedstawia historię Lindy May, Swankie i Boba Wellsa, prawdziwych nomadów, którzy stają się mentorami i towarzyszami Fern podczas jej podróży po rozległym amerykańskim Zachodzie."
+        "tmdb_id": 225728,
+        "title": "Makbet",
+        "year": "2015",
+        "poster": "https://image.tmdb.org/t/p/w500/aTGGU4nVa4u7ghfxvoQhsJnI4DX.jpg",
+        "rating": 6.44,
+        "overview": "\"Makbet\" to szekspirowska opowieść o ambicjach, żądzy władzy, pasji i przekraczaniu granic. Krwawy dramat rozgrywający się XI-wiecznej Szkocji, w którym jedno morderstwo pociąga za sobą kolejne, napędzając błędne koło zbrodni. Tragedia jest nieunikniona – zemsta, zdrada, strach i obłęd zamykają bohaterów w pułapce ich własnych emocji."
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Legalna blondynka. ",
-      "start_time": "2026-04-18T16:45:00",
-      "end_time": "2026-04-18T18:20:00",
-      "category": "komedia",
-      "year": 2001,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Eileen. ",
+      "start_time": "2026-04-24T20:00:00",
+      "end_time": "2026-04-24T21:35:00",
+      "category": "thriller",
+      "year": 2023,
       "tmdb": {
-        "tmdb_id": 8835,
-        "title": "Legalna blondynka",
-        "year": "2001",
-        "poster": "https://image.tmdb.org/t/p/w500/cwPiZJx0L8MlK4qHl6gq8f212Yk.jpg",
-        "rating": 6.808,
-        "overview": "Elle Woods jest stuprocentową blondynką - najpopularniejszą dziewczyną w szkole i finalistką konkursu piękności. W przyszłość patrzy z optymizmem, widząc siebie u boku bogatego narzeczonego, Warnera Huntingtona. Chłopak jednak, zamiast się oświadczyć, zrywa z nią. Twierdzi, że jako student Harvardu, przyszły prawnik i polityk musi znaleźć sobie mniej frywolną dziewczynę. Elle nie zamierza się poddawać - rzuca szkołę mody i podejmuje studia prawnicze na Harvardzie."
+        "tmdb_id": 664341,
+        "title": "Eileen",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/x6kedRqcj8jH0cik9p1jzkDwZvM.jpg",
+        "rating": 5.825,
+        "overview": "W filmie Anne Hathaway wciela się w piękną nową psycholożkę więzienną, zafascynowaną tytułową bohaterką - młodą sekretarką, graną przez Thomasin McKenzie. Jednak szybko ich przyjaźń obiera mroczny kierunek, ponieważ jedna z nich skrywa sekret."
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "50 pierwszych randek. ",
-      "start_time": "2026-04-18T18:20:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "komedia romantyczna",
-      "year": 2004,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Holland. ",
+      "start_time": "2026-04-24T21:35:00",
+      "end_time": "2026-04-24T23:20:00",
+      "category": "thriller",
+      "year": 2025,
       "tmdb": {
-        "tmdb_id": 1824,
-        "title": "50 pierwszych randek",
-        "year": "2004",
-        "poster": "https://image.tmdb.org/t/p/w500/sTN1k9XIz2g5D8thswXVPOtNDA3.jpg",
-        "rating": 6.871,
-        "overview": "Henry Roth jest weterynarzem, mieszkającym na Hawajach, który spędza miło czas w towarzystwie odpoczywających na wyspie kobiet. Kiedy poznaje Lucy po raz pierwszy w życiu naprawdę się zakochuje i porzuca życie playboya. Jest tylko jedna przeszkoda stojąca na drodze do pełnego szczęścia. Lucy cierpi na częste utraty pamięci i nie pamięta poprzednich dni. Henry'emu pozostaje tylko jedno - postanawia spotykać się z Lucy codziennie, mając nadzieję, że pewnego dnia dziewczyna przypomni go sobie i odwzajemni jego uczucie."
+        "tmdb_id": 257094,
+        "title": "Holland",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/39jIr3A4ScUeGxFdMeARYKNxTgU.jpg",
+        "rating": 5.381,
+        "overview": "W tym nieprzewidywalnym thrillerze Nicole Kidman wciela się w rolę skrupulatnej Nancy Vandergroot, nauczycielki i gospodyni domowej, której idealne życie z mężem i synem w wypełnionym tulipanami Holland w stanie Michigan zmienia się w pokręconą opowieść. Nancy i jej przyjaciel zaczynają podejrzewać, że w ich życiu kryje się tajemnica, po czym odkrywają, że nic nie jest tym, czym się wydaje."
       }
     },
     {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "CJ7. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T21:30:00",
-      "category": "komedia",
-      "year": 2008,
+      "channel_id": "HBO",
+      "channel_name": "HBO",
+      "title": "Mroczny fajter. ",
+      "start_time": "2026-04-24T23:20:00",
+      "end_time": "2026-04-25T01:15:00",
+      "category": "film sensacyjny",
+      "year": 2023,
       "tmdb": {
-        "tmdb_id": 13688,
-        "title": "CJ7",
-        "year": "2008",
-        "poster": "https://image.tmdb.org/t/p/w500/fUnzMEhXWTNPVdV59KQL2YCxPUS.jpg",
-        "rating": 7.3,
-        "overview": "Chow Ti jest biednym robotnikiem budowlanym żyjącym w slumsach. Po śmierci żony samotnie wychowuje syna Dicky'ego. Chcąc, aby jego dziecko zaszło w życiu znacznie wyżej niż on sam, niemal wszystkie pieniądze przeznacza na czesne syna w elitarnej, prywatnej szkole. Kolegami Dicky'ego są tam dzieci z zamożnych rodzin, które wyśmiewają jego brudne ubrania i rozwalające się buty. Bawią się najdroższymi zabawkami, o których Dicky może tylko pomarzyć. Pewnego dnia, przeszukując jak zwykle wysypisko śmieci w poszukaniu czegoś wartościowego, Chow Ti znajduje coś wyglądającego jak piłka. Zabiera ją dla syna. Wkrótce okazuje się, że jest to kosmiczna zabawka, pozostawiona na Ziemi przez przybyszów z innej planety."
-      }
-    },
-    {
-      "channel_id": "Cinemax",
-      "channel_name": "Cinemax",
-      "title": "Gangi Nowego Jorku. ",
-      "start_time": "2026-04-18T21:30:00",
-      "end_time": "2026-04-19T00:15:00",
-      "category": "dramat sensacyjny",
-      "year": 2002,
-      "tmdb": {
-        "tmdb_id": 3131,
-        "title": "Gangi Nowego Jorku",
-        "year": "2002",
-        "poster": "https://image.tmdb.org/t/p/w500/uMcROA58iZcLwVMyfNvDTBarImV.jpg",
-        "rating": 7.315,
-        "overview": "XIX-wieczny Nowy Jork. Po szesnastu latach spędzonych w sierocińcu Amsterdam, syn zamordowanego przywódcy gangu irlandzkich imigrantów, wraca do Five Points, by pomścić śmierć ojca. Jego zabójca, William Cutting zwany Billem Rzeźnikiem, sprawuje rządy w dzielnicy. Chłopak postanawia zabić Rzeźnika w czasie dorocznej uroczystości, gdy Bill będzie święcił zwycięstwo nad jego ojcem. By zrealizować plan, przenika w szeregi bandy. Rzeźnik traktuje Amsterdama jak syna. A on wbrew sobie zaczyna darzyć go szacunkiem i zakochuje się w jego wychowanicy."
+        "tmdb_id": 844416,
+        "title": "Mroczny fajter",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/oz0ELid5Vg9VJxgFfwA93STzj40.jpg",
+        "rating": 6.3,
+        "overview": "W mrocznym krajobrazie delty Missisipi, walczący na gołe pięści zawodnik stara się spłacić swoje długi w ostatniej, desperackiej próbie uratowania domu rodzinnego swojej umierającej matki zastępczej."
       }
     },
     {
@@ -10834,262 +10535,258 @@
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Dzień świra. ",
-      "start_time": "2026-04-18T00:25:00",
-      "end_time": "2026-04-18T02:30:00",
-      "category": "komediodramat",
-      "year": 2002,
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Fargo. ",
+      "start_time": "2026-04-24T01:35:00",
+      "end_time": "2026-04-24T02:25:00",
+      "category": "serial kryminalny",
+      "year": 2014,
       "tmdb": {
-        "tmdb_id": 20719,
-        "title": "Dzień świra",
-        "year": "2002",
-        "poster": "https://image.tmdb.org/t/p/w500/izejDxfO2AxLNDzNHyNsq0hkWn6.jpg",
-        "rating": 7.622,
-        "overview": "Adaś Miauczyński, sfrustrowany inteligent-polonista niczym współczesna inkarnacja bohatera romantycznego cierpi za kraj i przeżywa jego absurdy. Dobija go chwila obecna, nieznośna powtarzalność codziennych czynności oraz nienawistny mu kontakt z drugim człowiekiem."
+        "tmdb_id": 275,
+        "title": "Fargo",
+        "year": "1996",
+        "poster": "https://image.tmdb.org/t/p/w500/xHUmkLOGxbnfoQ2PG0SDs4BJ1C2.jpg",
+        "rating": 7.849,
+        "overview": "Bankrutujący, tonący w długach sprzedawca samochodów z Minneapolis Jerry Lundergaard ma nadzieję, że upozorowane porwanie żony pozwoli mu wyjść z kłopotów finansowych. Jest przekonany, że jego zamożny teść zrobi wszystko, by uratować córkę. Jerry decyduje, że to zadanie na jego zlecenie wykonają dwaj niewydarzeni bandyci. Plan porwania przedstawia gadatliwemu Carlowi i milczącemu Gaerowi. Z pozoru niewinny zamiar przeradza się niebezpieczną, brutalną i zagadkową sprawę. Rozwikłaniem tej historii zajmuje się inteligentna i odważna Marge, policjantka w ciąży."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Przepraszam, czy tu biją. ",
-      "start_time": "2026-04-18T02:30:00",
-      "end_time": "2026-04-18T04:10:00",
-      "category": "film sensacyjny",
-      "year": 1976,
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Fargo. ",
+      "start_time": "2026-04-24T02:25:00",
+      "end_time": "2026-04-24T03:20:00",
+      "category": "serial kryminalny",
+      "year": 2014,
       "tmdb": {
-        "tmdb_id": 318545,
-        "title": "Przepraszam, czy tu biją?",
-        "year": "1976",
-        "poster": "https://image.tmdb.org/t/p/w500/y5B5qzRGn3K8zFxHuNezdhPuM94.jpg",
-        "rating": 6.0,
-        "overview": "Przywódca przestępczej grupy, Belus, chcąc sprawdzić lojalność jej członków, organizuje fikcyjny napad. Sam powiadamia milicję i z ukrycia obserwuje, który z kolegów zdradzi. Zdrajcą okazuje się Bimber. Po jego zeznaniach milicja dowiaduje się, że napad był pozorowany, a prawdziwy skok dopiero się szykuje. Inspektorzy Milde i Górny usiłują namówić chłopaka zwanego Studentem do współpracy i uczynić wszystko, aby tym razem złapać sprytnego Belusa."
+        "tmdb_id": 275,
+        "title": "Fargo",
+        "year": "1996",
+        "poster": "https://image.tmdb.org/t/p/w500/xHUmkLOGxbnfoQ2PG0SDs4BJ1C2.jpg",
+        "rating": 7.849,
+        "overview": "Bankrutujący, tonący w długach sprzedawca samochodów z Minneapolis Jerry Lundergaard ma nadzieję, że upozorowane porwanie żony pozwoli mu wyjść z kłopotów finansowych. Jest przekonany, że jego zamożny teść zrobi wszystko, by uratować córkę. Jerry decyduje, że to zadanie na jego zlecenie wykonają dwaj niewydarzeni bandyci. Plan porwania przedstawia gadatliwemu Carlowi i milczącemu Gaerowi. Z pozoru niewinny zamiar przeradza się niebezpieczną, brutalną i zagadkową sprawę. Rozwikłaniem tej historii zajmuje się inteligentna i odważna Marge, policjantka w ciąży."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Jesteśmy razem. ",
-      "start_time": "2026-04-18T04:10:00",
-      "end_time": "2026-04-18T05:35:00",
-      "category": "film dokumentalny",
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Dla dobra Adama. ",
+      "start_time": "2026-04-24T03:20:00",
+      "end_time": "2026-04-24T04:40:00",
+      "category": "film obyczajowy",
       "year": 2025,
       "tmdb": {
-        "tmdb_id": 1548900,
-        "title": "Jesteśmy razem. Tu mieszka dobro",
+        "tmdb_id": 1293858,
+        "title": "Dla dobra Adama",
         "year": "2025",
-        "poster": null,
-        "rating": 0.0,
-        "overview": "Wyjątkowy dokument, który zabiera widzów do małego miasteczka na północy Polski, do ośrodka pomocowego Centrum Barka, by pokazać, jak wzajemna troska i solidarność potrafią odmienić ludzkie życie."
+        "poster": "https://image.tmdb.org/t/p/w500/iECTrYSSa1AilRsXFOPxn7oxOI9.jpg",
+        "rating": 6.8,
+        "overview": "Lucy pracuje w szpitalu na oddziale pediatrycznym, gdzie brakuje personelu. Pod jej opiekę zostaje oddany 4-letni Adam, który trafił do szpitala z powodu niedożywienia. Pojawia się jednak problem – . pomimo wydanego sądownego nakazu, dziecka w szpitalu nie chce zostawić jego matka, Rebeka. Dla dobra Adama Lucy zrobi wszystko, co w jej mocy, aby pomóc zarówno dziecku, jak i matce."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Martwe małżeństwo. ",
-      "start_time": "2026-04-18T05:35:00",
-      "end_time": "2026-04-18T06:00:00",
-      "category": "film krótkometrażowy",
-      "year": 2022,
-      "tmdb": {
-        "tmdb_id": 999597,
-        "title": "Martwe małżeństwo",
-        "year": "2022",
-        "poster": "https://image.tmdb.org/t/p/w500/cGiFGJaa4YmkrSWRidgQhxVwYZP.jpg",
-        "rating": 7.8,
-        "overview": "Filip jest mężczyzną w średnim wieku. Pracuje jako zawodowy statysta filmowy, a jego specjalnością są role martwych ciał. Na planie filmu historycznego poznaje Łucję, która wciela się w rolę martwej kobiety."
-      }
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Złoty interes. Produkcja trumien. ",
-      "start_time": "2026-04-18T06:00:00",
-      "end_time": "2026-04-18T06:45:00",
-      "category": "program rozrywkowy",
-      "year": 2022
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Złoty interes. Hodowla ślimaków. ",
-      "start_time": "2026-04-18T06:45:00",
-      "end_time": "2026-04-18T07:35:00",
-      "category": "program rozrywkowy",
-      "year": 2022
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Reksio. Reksio dentysta. ",
-      "start_time": "2026-04-18T08:00:00",
-      "end_time": "2026-04-18T08:10:00",
-      "category": "serial animowany",
-      "year": 1972
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Reksio. Reksio medalista. ",
-      "start_time": "2026-04-18T08:10:00",
-      "end_time": "2026-04-18T08:20:00",
-      "category": "serial animowany",
-      "year": 1974
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Bolek i Lolek na wakacjach. Skarb. ",
-      "start_time": "2026-04-18T08:20:00",
-      "end_time": "2026-04-18T08:40:00",
-      "category": "serial animowany",
-      "year": 1966
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Bolek i Lolek na wakacjach. Autostopowicze. ",
-      "start_time": "2026-04-18T08:40:00",
-      "end_time": "2026-04-18T08:50:00",
-      "category": "serial animowany",
-      "year": 1966
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Czarne Stopy. ",
-      "start_time": "2026-04-18T08:50:00",
-      "end_time": "2026-04-18T11:00:00",
-      "category": "film przygodowy",
-      "year": 1986
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Mała matura 1947. ",
-      "start_time": "2026-04-18T11:00:00",
-      "end_time": "2026-04-18T13:20:00",
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Samotność. ",
+      "start_time": "2026-04-24T04:40:00",
+      "end_time": "2026-04-24T06:00:00",
       "category": "dramat obyczajowy",
-      "year": 2010,
+      "year": 2023,
       "tmdb": {
-        "tmdb_id": 74313,
-        "title": "Mała matura 1947",
-        "year": "2010",
-        "poster": "https://image.tmdb.org/t/p/w500/kcdz5ofoa9XcCia2CbqoB51Hhcs.jpg",
-        "rating": 5.8,
-        "overview": "Ludwik wraz z rodzicami przeprowadza się do Krakowa i rozpoczyna naukę w jednym z najlepszych gimnazjów w mieście. Jako „nowy” musi szybko zyskać uznanie kolegów. Jego idolem staje się starszy o dwa lata Marek – chłopak o którym mówi się, że brał udział w walkach Powstania Warszawskiego 1944 roku. W Ludwiku rośnie burza sprzecznych emocji. Oprócz pierwszych, miłosnych zauroczeń i kontaktów ... seksualnych do głosu dochodzi również bunt przeciw niesprawiedliwej władzy oraz chęć naśladowania niepokornego idola ze starszego rocznika. W życiu Ludwika pojawiają się pościgi, aresztowania i strzelaniny na ulicy, które stają się wydarzeniami wyznaczającymi okres dojrzewania chłopaka."
+        "tmdb_id": 1053947,
+        "title": "Samotność",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/vbodTEtvoeqCUgY9F74GlWclEBN.jpg",
+        "rating": 7.2,
+        "overview": "Starzejący się rolnik przeprowadza się do miasta i wkrótce poznaje 10-letniego chłopca dostarczającego gazety. Ich przyjaźń zmienia ich życie."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Szumy i fonie. ",
-      "start_time": "2026-04-18T13:20:00",
-      "end_time": "2026-04-18T13:50:00",
-      "category": "film krótkometrażowy",
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Duma i uprzedzenie. ",
+      "start_time": "2026-04-24T06:00:00",
+      "end_time": "2026-04-24T07:50:00",
+      "category": "musical",
+      "year": 2004,
+      "tmdb": {
+        "tmdb_id": 57825,
+        "title": "Duma i uprzedzenie",
+        "year": "2004",
+        "poster": "https://image.tmdb.org/t/p/w500/v0f9m4u235f5dNhBRCf2ES9GW4i.jpg",
+        "rating": 6.4,
+        "overview": "Współczesne Indie. Hinduska matrona, pani Bakshi, ma w życiu jeden cel - chce jak najkorzystniej wydać za mąż cztery córki. Znakomitą okazją do polowania na zięciów jest zbliżająca się uroczystość zaślubin. Na przyjęciu pojawiają się przybyły z Ameryki drużba, Balraj Bingley, i jego przyjaciel, amerykański biznesmen William Darcy. Uwagę Balraja przyciąga Jaya, Darcy'emu w oko wpada Lalita. Po weselu Lalita i Will spotykają się kilkakrotnie, ale za każdym razem dochodzi do kłótni. Niebawem staje między nimi przystojny Anglik, Johnny Wickham."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Łacina dla wszystkich. ",
+      "start_time": "2026-04-24T07:50:00",
+      "end_time": "2026-04-24T09:20:00",
+      "category": "komedia",
       "year": 2024,
       "tmdb": {
-        "tmdb_id": 1468722,
-        "title": "Szumy i fonie",
+        "tmdb_id": 1018728,
+        "title": "Łacina dla wszystkich",
         "year": "2024",
-        "poster": "https://image.tmdb.org/t/p/w500/j9lMtjZHZaWHoZtpCj8zCNgKmHx.jpg",
-        "rating": 0.0,
-        "overview": "Ośmioletni Kacper towarzyszy swojej Głuchej mamie w drodze do lekarza. Lekarz wykorzystuje obecność Kacpra do komunikacji z pacjentką - chłopiec po raz pierwszy staje się tłumaczem."
+        "poster": "https://image.tmdb.org/t/p/w500/h4yrJsQGhxDTjFBbVPLfi4W20rT.jpg",
+        "rating": 5.1,
+        "overview": "Delphine, pozbawiona złudzeń nauczycielka literatury, zawiera układ ze swoimi uczniami: dają jej spokój, a ona im w zamian wysokie oceny. Przynosi to jednak odwrotny efekt, ponieważ wskutek tych not jej klasa zostaje zakwalifikowana na mistrzostwa świata w łacinie."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "C.K. Dezerterzy. ",
-      "start_time": "2026-04-18T13:50:00",
-      "end_time": "2026-04-18T15:50:00",
-      "category": "komedia",
-      "year": 1985
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Strażniczka. ",
+      "start_time": "2026-04-24T09:20:00",
+      "end_time": "2026-04-24T11:15:00",
+      "category": "dramat kryminalny",
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 989474,
+        "title": "Strażniczka",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/48xwJpo5tecapOAEq0Gio1LQ3Q1.jpg",
+        "rating": 6.8,
+        "overview": "32-letnia Melissa (Hafsia Herzi), doświadczona strażniczka więzienna, przeprowadza się na Korsykę z dwójką małych dzieci i mężem. Szansa na nowy początek. Dołącza do zespołów ośrodka penitencjarnego innego niż pozostałe. Tutaj mówi się, że nad strażnikami czuwają więźniowie. Integrację Melissy ułatwia Saveriu (Louis Memmi), młody więzień, który wydaje się wpływowy i oddaje ją pod swoją opiekę. Ale po uwolnieniu Saveriu ponownie nawiązuje kontakt z Melissą. Ma do poproszenia o przysługę… Zostaje uruchomiony zgubny mechanizm."
+      }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Wielka majówka. ",
-      "start_time": "2026-04-18T15:50:00",
-      "end_time": "2026-04-18T17:55:00",
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Człowiek magnes. ",
+      "start_time": "2026-04-24T11:15:00",
+      "end_time": "2026-04-24T12:45:00",
+      "category": "komediodramat",
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1191004,
+        "title": "Człowiek magnes",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/3wWLBBIY9vZHK8MAfrUQZ7oyc0m.jpg",
+        "rating": 3.0,
+        "overview": "Lucien to człowiek-magnes - wszystko, co wykonane z żelaza, przykleja się do jego ciała. Bohater zostaje przyczepiony do pociągu i rusza w podróż pełną niespodziewanych zwrotów akcji."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Slumdog. Milioner z ulicy. ",
+      "start_time": "2026-04-24T12:45:00",
+      "end_time": "2026-04-24T14:45:00",
+      "category": "komediodramat",
+      "year": 2008,
+      "tmdb": {
+        "tmdb_id": 12405,
+        "title": "Slumdog. Milioner z ulicy",
+        "year": "2008",
+        "poster": "https://image.tmdb.org/t/p/w500/xd1oJeEv6lXRPpvBBLgjGzEfDQt.jpg",
+        "rating": 7.731,
+        "overview": "Jamal, mieszkaniec slumsów Bombaju, w wieku 18 lat bierze udział w hinduskiej wersji \"Milionerów\". Od finałowej wygranej dzieli go ostatnie pytanie, jednak zanim zdąży na nie odpowiedzieć, aresztuje go policja. Funkcjonariusze chcą się dowiedzieć jak chłopak może wiedzieć tak dużo. Jamal opowiada prawdziwą historię dzieciństwa, przemocy i miłości swojego życia. To ulica była jego szkołą. Szkołą przetrwania..."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Wszystkie piosenki, których nigdy nie śpiewaliśmy. ",
+      "start_time": "2026-04-24T14:45:00",
+      "end_time": "2026-04-24T16:40:00",
       "category": "film obyczajowy",
-      "year": 1981,
+      "year": 2023,
       "tmdb": {
-        "tmdb_id": 363902,
-        "title": "Wielka majówka",
-        "year": "1981",
-        "poster": "https://image.tmdb.org/t/p/w500/281xLWbT2N3i8LiHXteBevyKCUS.jpg",
-        "rating": 6.7,
-        "overview": "Kilkunastoletni Rysiek ucieka z zakładu opiekuńczego. W poszukiwaniu jedzenia zakrada się do pewnej willi, gdzie w lodówce znajduje torbę pełną pieniędzy. Ze zdobyczą wyrusza do Warszawy. Spotyka tam o kilka lat starszego Julka. Postanawiają razem zabawić się za ukradzione pieniądze. Kupują samochód, wynajmują luksusowy apartament w \"Victorii\", przez kilka dni cieszą się pełnią życia, bawiąc się bez opamiętania. Zostają aresztowani podczas wyklejania banknotami szyb zaparkowanych na ulicy aut."
+        "tmdb_id": 1178675,
+        "title": "Wszystkie piosenki, których nigdy nie śpiewaliśmy",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/cncsp24uzOeavtjE8ghoO8tHcNe.jpg",
+        "rating": 8.0,
+        "overview": "Zbuntowana nastolatka Natsumi przybywa z Tokio na małą prowincjonalną wyspę w poszukiwaniu skarbu pozostawionego przez jej zmarłą matkę. Jest w szoku, gdy dowiaduje się, że Reiko – jej ciotka – jest Ama-San, czyli nurkiem – poławiaczką pereł. Reiko jest identyczną siostrą bliźniaczką jej matki. Z powodu wieloletniego konfliktu między siostrami, ciocia i dziewczynka do tej pory się nie spotkały ani nawet o sobie nie słyszały. Ciotka niechętnie wita dziewczynę, która przypomina jej gorzką przeszłość i chce się jej pozbyć. Natsumi musi znaleźć sposób na rozwiązanie starego konfliktu i zjednoczenie rodziny, aby znaleźć podwodny skarb i uratować się przed wielkimi kłopotami, w jakie się wpakowała. Japońskie popowe piosenki z lat 90., z młodości ciotki, będą nieoczekiwanym sprzymierzeńcem."
       }
     },
     {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Brunet wieczorową porą. ",
-      "start_time": "2026-04-18T17:55:00",
-      "end_time": "2026-04-18T20:00:00",
-      "category": "komedia obyczajowa",
-      "year": 1976,
-      "tmdb": {
-        "tmdb_id": 81223,
-        "title": "Brunet wieczorową porą",
-        "year": "1976",
-        "poster": "https://image.tmdb.org/t/p/w500/elxvBSf3Vg5gvFxmQUgBCU2FNW9.jpg",
-        "rating": 6.9,
-        "overview": "Cyganka przepowiada Michałowi Romanowi niezwykłe przeżycia, jednak on nie bierze poważnie tych proroctw. Gdy jego rodzina wyjeżdża na weekend, Michał zabiera się do zaległej pracy. Wtedy zaczynają się spełniać proroctwa Cyganki - Michał znajduje zaginiony zegarek, a w totolotku wylosowane zostają przepowiedziane liczby. Bohater zaczyna oczekiwać najgroźniejszej części przepowiedni - zapowiada ona zabicie bruneta, który zjawi się w jego mieszkaniu wieczorową porą..."
-      }
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Sztos. ",
-      "start_time": "2026-04-18T20:00:00",
-      "end_time": "2026-04-18T21:55:00",
-      "category": "komedia sensacyjna",
-      "year": 1997,
-      "tmdb": {
-        "tmdb_id": 52257,
-        "title": "Sztos",
-        "year": "1997",
-        "poster": "https://image.tmdb.org/t/p/w500/sBpGmiY2I7LFSUoN0mPHo9MhFw2.jpg",
-        "rating": 6.6,
-        "overview": "Na początku lat siedemdziesiątych, w scenerii polskiego Wybrzeża, splatają się losy dwóch takich, co nie jeden księżyc ukradli. \"Synek\" wyszedł z kicia i za wszelką cenę chce się dobrze w życiu urządzić. Starszy Eryk, wytrawny hochsztapler, musi się odegrać na kumplu, który go wykiwał w pokerze. Ale do tego jest potrzebna duża kasa. Obaj więc wyruszają w Polskę siejąc spustoszenie... w portfelach dewizowych turystów. Jeszcze tylko rozprawa z \"Gruchą\" czyli finałowy Sztos, a potem żyć nie umierać, trwoniąc łatwo zarobiony szmal. Plan jest przedni tyle,że na każdym planie można się przejechać."
-      }
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Sługi boże. ",
-      "start_time": "2026-04-18T21:55:00",
-      "end_time": "2026-04-18T23:50:00",
-      "category": "film kryminalny",
-      "year": 2016,
-      "tmdb": {
-        "tmdb_id": 389373,
-        "title": "Sługi boże",
-        "year": "2016",
-        "poster": "https://image.tmdb.org/t/p/w500/qSieMAJpYsKCDAOejEGa1dPyEkD.jpg",
-        "rating": 5.441,
-        "overview": "Z wieży wrocławskiego kościoła rzuca się młoda Niemka – należała do żeńskiego chóru gregoriańskiego prowadzonego przez kantora Jana. Schola żeńska jest złamaniem tabu, które budzi w kościelnych kręgach oburzenie. Wśród osób, które reprezentują takie myślenie, jest… sam kantor. Śledztwo w sprawie tej zagadkowej śmierci prowadzi doświadczony i bezkompromisowy komisarz Warski, dla którego ważniejsze niż procedury jest ratowanie ludzkiego życia. Po kolejnej akcji, w której znowu przekroczył granicę bezpieczeństwa, zostaje skierowany do psychologa. Mało który mężczyzna potrafi się oprzeć seksapilowi pięknej kobiety w typie pozornie zimnej blondynki…"
-      }
-    },
-    {
-      "channel_id": "Kino Polska",
-      "channel_name": "Kino Polska",
-      "title": "Ajlawju. ",
-      "start_time": "2026-04-18T23:50:00",
-      "end_time": "2026-04-19T02:10:00",
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Łacina dla wszystkich. ",
+      "start_time": "2026-04-24T16:40:00",
+      "end_time": "2026-04-24T18:10:00",
       "category": "komedia",
-      "year": 1999,
+      "year": 2024,
       "tmdb": {
-        "tmdb_id": 74921,
-        "title": "Ajlawju",
-        "year": "1999",
-        "poster": "https://image.tmdb.org/t/p/w500/pekjzaIbzdPhMjdrbKzRkL6U1CU.jpg",
-        "rating": 5.667,
-        "overview": "Adam przeżył w życiu niejedno, ale wciąż czeka na wielką miłość. Marzy mu się namiętna kochanka, która spełni jego wszystkie pragnienia. Jego była żona zawsze uważała, że łóżko służy tylko do spania. Adam ma nadzieję,że jest gdzieś kobieta, która odmieni jego życie. I nie myli się: Oto na horyzoncie zjawia się piękna Małgorzata - tygrysica w skórze skromnej nauczycielki, która otwiera przed nim świat prawdziwej namiętności. Zaślepieni miłością zapominają o całym świecie. Ale ich uczucie czekają też trudne chwile - charakterami pasują do siebie jak pięść do nosa, a polskie realia wystawiają ich miłość na wiele prób. Czy więc romans może przetrwać?"
+        "tmdb_id": 1018728,
+        "title": "Łacina dla wszystkich",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/h4yrJsQGhxDTjFBbVPLfi4W20rT.jpg",
+        "rating": 5.1,
+        "overview": "Delphine, pozbawiona złudzeń nauczycielka literatury, zawiera układ ze swoimi uczniami: dają jej spokój, a ona im w zamian wysokie oceny. Przynosi to jednak odwrotny efekt, ponieważ wskutek tych not jej klasa zostaje zakwalifikowana na mistrzostwa świata w łacinie."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Imię. ",
+      "start_time": "2026-04-24T18:10:00",
+      "end_time": "2026-04-24T20:00:00",
+      "category": "komedia",
+      "year": 2012,
+      "tmdb": {
+        "tmdb_id": 192,
+        "title": "Imię róży",
+        "year": "1986",
+        "poster": "https://image.tmdb.org/t/p/w500/wTcND9vyvdU2aHqaz5dZHMZZV9l.jpg",
+        "rating": 7.494,
+        "overview": "Rzecz dzieje się w 1327 roku w jednym z opactw benedyktyńskich w północnych Włoszech. Do opactwa przybywa angielski franciszkanin Wilhelm z Baskerville ze swym sekretarzem i uczniem, nowicjuszem benedyktyńskim Adsem. W starym, bogatym i szanowanym w Europie opactwie odbywa się ważne spotkanie o charakterze polityczno-religijnym, dotyczącym konwersacji na temat ubóstwa Jezusa Chrystusa. Równolegle z tym wątkiem rozwija się wątek kryminalny. Tuż przed przybyciem Wilhelma w opactwie ginie w tajemniczych okolicznościach jeden z mnichów. Uczony i inteligentny Anglik prowadzi śledztwo, ale morderstwa się mnożą, co komplikuje sprawę."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Na złej drodze. ",
+      "start_time": "2026-04-24T20:00:00",
+      "end_time": "2026-04-24T21:35:00",
+      "category": "dramat kryminalny",
+      "year": 2022,
+      "tmdb": {
+        "tmdb_id": 862965,
+        "title": "Na złej drodze",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w500/31WaI4eLZjS5PubVIWvxBgNLWlJ.jpg",
+        "rating": 6.674,
+        "overview": "Obarczona długami Emily wikła się w oszustwo związane z kartami kredytowymi, które wciąga ją w kryminalny półświatek Los Angeles."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Ministerstwo Niebezpiecznych Drani. ",
+      "start_time": "2026-04-24T21:35:00",
+      "end_time": "2026-04-24T23:35:00",
+      "category": "komedia wojenna",
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 799583,
+        "title": "Ministerstwo Niebezpiecznych Drani",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/mdcFSB0jblvSs92LQdTe4CHiK3A.jpg",
+        "rating": 7.017,
+        "overview": "Podczas II wojny światowej armia brytyjska przydziela grupę kompetentnych żołnierzy do wykonania misji przeciwko siłom nazistowskim za liniami wroga... Historia z przymrużeniem oka o tajnej brytyjskiej organizacji z czasów II wojny światowej – Special Operations Executive, utworzonej przez Winstona Churchilla. Ich nieregularna wojna przeciwko Niemcom pomogła zmienić bieg wojny i dała początek nowoczesnym czarnym operacjom."
+      }
+    },
+    {
+      "channel_id": "Cinemax",
+      "channel_name": "Cinemax",
+      "title": "Zulu. ",
+      "start_time": "2026-04-24T23:35:00",
+      "end_time": "2026-04-25T01:20:00",
+      "category": "dramat kryminalny",
+      "year": 2013,
+      "tmdb": {
+        "tmdb_id": 185567,
+        "title": "Zulu",
+        "year": "2013",
+        "poster": "https://image.tmdb.org/t/p/w500/h5OZD7pVkIKR5jf4lGFzQQrLmLc.jpg",
+        "rating": 6.688,
+        "overview": "Jako dziecko Ali Sokhela (Forest Whitaker) cudem uniknął śmierci z rąk bojowników partii Inkatha. Tylko on i jego matka przetrwali tę rzeź. Dziś Ali jest szefem wydziału zabójstw w południowoafrykańskiej policji w Kapsztadzie. Jednym z jego pracowników jest Brian Epkeen (Orlando Bloom), biały funkcjonariusz, którego rodzina pierwotnie była zaangażowana w tworzenie apartheidu. Mężczyźni razem stawiają czoła zbrodni, w którą zamieszane są gangi, zarówno te lokalne, jak i z innych obszarów Afryki. Zadanie policjantów komplikuje się jeszcze bardziej, gdy zostają znalezione ciała dwóch młodych kobiet."
       }
     },
     {
@@ -12057,6 +11754,197 @@
       "end_time": "2026-04-23T14:55:00",
       "category": "komedia obyczajowa",
       "year": 1991
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Konsul. ",
+      "start_time": "2026-04-23T14:55:00",
+      "end_time": "2026-04-23T17:10:00",
+      "category": "komedia kryminalna",
+      "year": 1989,
+      "tmdb": {
+        "tmdb_id": 222653,
+        "title": "Konsul",
+        "year": "1989",
+        "poster": "https://image.tmdb.org/t/p/w500/wn06dTkkO1oElcr8YiTFQmvRYnG.jpg",
+        "rating": 7.2,
+        "overview": "Czesław Wiśniak wychodzi z więzienia. Chce się odkuć, naciągając na pieniądze kolejne osoby. Z powodzeniem wyłudza coraz większe sumy. Wreszcie jako Jacek Ben Silberstein udaje austriackiego dyplomatę, który otwiera konsulat we Wrocławiu."
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Pogranicze w ogniu. ",
+      "start_time": "2026-04-23T17:10:00",
+      "end_time": "2026-04-23T18:45:00",
+      "category": "serial sensacyjny",
+      "year": 1991
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Pogranicze w ogniu. ",
+      "start_time": "2026-04-23T18:45:00",
+      "end_time": "2026-04-23T20:00:00",
+      "category": "serial sensacyjny",
+      "year": 1991
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Czerwony kapitan. ",
+      "start_time": "2026-04-23T20:00:00",
+      "end_time": "2026-04-23T22:10:00",
+      "category": "film kryminalny",
+      "year": 2016,
+      "tmdb": {
+        "tmdb_id": 386805,
+        "title": "Czerwony kapitan",
+        "year": "2016",
+        "poster": "https://image.tmdb.org/t/p/w500/eyTllADwCYdHcIGPaUcXTSkU1kO.jpg",
+        "rating": 5.292,
+        "overview": "Rok 1992. Po upadku komunizmu pozostało wiele nierozwiązanych spraw kryminalnych, których sprawcy nigdy nie ponieśli kary. W ręce Krauza - ambitnego, młodego detektywa z Wydziału Zabójstw, wpada jedna z nich. Na miejskim cmentarzu odnalezione zostają zwłoki z licznymi śladami tortur. Świadomi niebezpieczeństwa, Krauz wraz ze swoim partnerem, postanawiają rozwiązać zagadkę. Wszystkie tropy prowadzą do \"Czerwonego Kapitana\" - owianego złą sławą specjalisty od \"ostatecznych\" przesłuchań z czasów minionej władzy. Niewielu przeżyło spotkanie z nim. Z każdą minutą śledztwa wychodzi na jaw coraz więcej faktów, a podejrzenia padają na najwyższych decydentów policji i Kościoła."
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Sługi boże. ",
+      "start_time": "2026-04-23T22:10:00",
+      "end_time": "2026-04-24T00:10:00",
+      "category": "film kryminalny",
+      "year": 2016,
+      "tmdb": {
+        "tmdb_id": 389373,
+        "title": "Sługi boże",
+        "year": "2016",
+        "poster": "https://image.tmdb.org/t/p/w500/qSieMAJpYsKCDAOejEGa1dPyEkD.jpg",
+        "rating": 5.441,
+        "overview": "Z wieży wrocławskiego kościoła rzuca się młoda Niemka – należała do żeńskiego chóru gregoriańskiego prowadzonego przez kantora Jana. Schola żeńska jest złamaniem tabu, które budzi w kościelnych kręgach oburzenie. Wśród osób, które reprezentują takie myślenie, jest… sam kantor. Śledztwo w sprawie tej zagadkowej śmierci prowadzi doświadczony i bezkompromisowy komisarz Warski, dla którego ważniejsze niż procedury jest ratowanie ludzkiego życia. Po kolejnej akcji, w której znowu przekroczył granicę bezpieczeństwa, zostaje skierowany do psychologa. Mało który mężczyzna potrafi się oprzeć seksapilowi pięknej kobiety w typie pozornie zimnej blondynki…"
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Hiacynt. ",
+      "start_time": "2026-04-24T00:10:00",
+      "end_time": "2026-04-24T02:45:00",
+      "category": "dramat obyczajowy",
+      "year": 2021,
+      "tmdb": {
+        "tmdb_id": 809970,
+        "title": "Hiacynt",
+        "year": "2021",
+        "poster": "https://image.tmdb.org/t/p/w500/pXwRtzeYMi7cw6ed13FfCVAWZKI.jpg",
+        "rating": 6.811,
+        "overview": "Thriller osadzony w latach 80., który opowie kryminalną historię śledztwa prowadzonego w sprawie seryjnego mordercy gejów. Jego głównym bohaterem będzie Robert, młody milicjant \"z zasadami\", który wpada na trop groźnego przestępcy. W toku śledztwa poznaje Arka i postanawia wykorzystać go jako informatora. Nie zdaje sobie jednak sprawy, jak relacja z nowopoznanym mężczyzną wpłynie zarówno na jego pracę, jak i życie osobiste."
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Przepraszam, czy tu biją. ",
+      "start_time": "2026-04-24T02:45:00",
+      "end_time": "2026-04-24T04:40:00",
+      "category": "film sensacyjny",
+      "year": 1976,
+      "tmdb": {
+        "tmdb_id": 318545,
+        "title": "Przepraszam, czy tu biją?",
+        "year": "1976",
+        "poster": "https://image.tmdb.org/t/p/w500/y5B5qzRGn3K8zFxHuNezdhPuM94.jpg",
+        "rating": 6.0,
+        "overview": "Przywódca przestępczej grupy, Belus, chcąc sprawdzić lojalność jej członków, organizuje fikcyjny napad. Sam powiadamia milicję i z ukrycia obserwuje, który z kolegów zdradzi. Zdrajcą okazuje się Bimber. Po jego zeznaniach milicja dowiaduje się, że napad był pozorowany, a prawdziwy skok dopiero się szykuje. Inspektorzy Milde i Górny usiłują namówić chłopaka zwanego Studentem do współpracy i uczynić wszystko, aby tym razem złapać sprytnego Belusa."
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Obłoki śmierci. Bolimów 1915. ",
+      "start_time": "2026-04-24T04:40:00",
+      "end_time": "2026-04-24T06:00:00",
+      "category": "dokument fabularyzowany",
+      "year": 2020,
+      "tmdb": {
+        "tmdb_id": 942487,
+        "title": "Obłoki śmierci - Bolimów 1915",
+        "year": "2020",
+        "poster": "https://image.tmdb.org/t/p/w500/nmkjDgHM6nTqibIEc4yl1h97E8c.jpg",
+        "rating": 6.0,
+        "overview": "Pełnometrażowy, fabularyzowany film dokumentalny opowiadający o narodzinach broni chemicznej z polskiej perspektywy. Film relacjonuje przebieg jednych z pierwszych ataków gazowych w dziejach, do których doszło w trakcie I Wojny Światowej, w samym sercu współczesnej Polski - pod Bolimowem."
+      }
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Zwierzęta Wajraka 3. Bocianie gniazdo. ",
+      "start_time": "2026-04-24T06:00:00",
+      "end_time": "2026-04-24T06:25:00",
+      "category": "serial dokumentalny",
+      "year": 2022
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Och! Kabaret. ",
+      "start_time": "2026-04-24T06:25:00",
+      "end_time": "2026-04-24T07:15:00",
+      "category": "program rozrywkowy",
+      "year": 2023
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Och! Kabaret. ",
+      "start_time": "2026-04-24T07:15:00",
+      "end_time": "2026-04-24T08:05:00",
+      "category": "program rozrywkowy",
+      "year": 2023
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Zwierzęta Wajraka 3. Mądre kruki. ",
+      "start_time": "2026-04-24T08:05:00",
+      "end_time": "2026-04-24T08:40:00",
+      "category": "serial dokumentalny",
+      "year": 2022
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Krzyż Walecznych. ",
+      "start_time": "2026-04-24T08:50:00",
+      "end_time": "2026-04-24T10:25:00",
+      "category": "film wojenny",
+      "year": 1958
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Komedia małżeńska. ",
+      "start_time": "2026-04-24T10:25:00",
+      "end_time": "2026-04-24T12:50:00",
+      "category": "komedia obyczajowa",
+      "year": 1993
+    },
+    {
+      "channel_id": "Kino Polska",
+      "channel_name": "Kino Polska",
+      "title": "Podróż za jeden uśmiech. ",
+      "start_time": "2026-04-24T12:50:00",
+      "end_time": "2026-04-24T14:50:00",
+      "category": "film przygodowy",
+      "year": 1972,
+      "tmdb": {
+        "tmdb_id": 588264,
+        "title": "Podróż za jeden uśmiech",
+        "year": "1972",
+        "poster": "https://image.tmdb.org/t/p/w500/nHjwjlp2DgCINkknPknMAnszcND.jpg",
+        "rating": 7.8,
+        "overview": "Dwójka chłopców wybiera się pociągiem nad morze. W wyniku zamieszania gubią gdzieś przeznaczone na podróż pieniądze. To ich jednak nie załamuje i rozpoczynają podróż z Krakowa (z Warszawy w książce) nad morze - podróż wszystkimi możliwymi środkami transportu - podróż za jeden uśmiech. Poldek i Duduś, główni bohaterowie podróżują autostopem, poznają przy tym nowych, ciekawych ludzi i przeżywają niesamowite przygody. Rozpieszczony przez rodziców Duduś przeżywa wewnętrzną przemianę, podróżując przez Polskę z cygańskim taborem. Ich nietuzinkowa determinacja dojazdu do matek na Hel (Międzywodzie na wyspie Wolin w książce) bez pieniędzy zostaje nagrodzona. Chłopcy docierają na miejsce cali i zdrowi (choć każdy w inny sposób)."
+      }
     }
   ]
 }
