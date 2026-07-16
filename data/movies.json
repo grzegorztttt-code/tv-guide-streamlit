@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-16T08:20:38.249857",
+  "updated_at": "2026-07-16T13:49:01.938589",
   "count": 1000,
   "movies": [
     {
@@ -300,7 +300,15 @@
       "start_time": "2026-07-17T01:15:00",
       "end_time": "2026-07-17T03:10:00",
       "category": "komedia muzyczna",
-      "year": 2017
+      "year": 2017,
+      "tmdb": {
+        "tmdb_id": 353616,
+        "title": "Pitch Perfect 3",
+        "year": "2017",
+        "poster": "https://image.tmdb.org/t/p/w500/xYeXKPnPo6tkGXxiu2j56mFdFrj.jpg",
+        "rating": 6.507,
+        "overview": "Teraz, kiedy opuściły już mury college'u i dopadły je problemy dorosłości, trzeba czegoś więcej, by wróciły. Ale wracają: dziewczyny z uwielbianej na całym świecie serii \"Pitch Perfect\"! Po sukcesie podczas Mistrzostw Świata dziewczyny z The Barden Bellas odkrywają, że niełatwo będzie żyć z muzyki. Co więcej, każda z nich idzie w swoją stronę. Ot, życie. Kiedy jednak otrzymują szansę na ponowne połączenie sił podczas międzynarodowego tournée, nie wahają się."
+      }
     },
     {
       "channel_id": "Polsat",
@@ -469,7 +477,15 @@
       "start_time": "2026-07-18T12:45:00",
       "end_time": "2026-07-18T14:35:00",
       "category": "film familijny",
-      "year": 2004
+      "year": 2004,
+      "tmdb": {
+        "tmdb_id": 8920,
+        "title": "Garfield",
+        "year": "2004",
+        "poster": "https://image.tmdb.org/t/p/w500/mtSMCzs91a6rtnh4vSa78KC2cHr.jpg",
+        "rating": 5.732,
+        "overview": "Życie Garfielda jest wspaniałe. Tylko je, śpi, i to wszystko. Jego właściciel, Jon Arbuckle, pewnego dnia kupuję szczeniaka wabiącego się Odie, i tym samym życie Garfielda wymyka się spod jego kontroli. Od tej chwili pragnie tylko jednego: wykurzyć Odiego z domu i tym samym ze swojego życia. Jednej nocy szczeniak zostaje porwany, a Garfield, chyba po raz pierwszy w życiu, czuję się choć trochę odpowiedzialny za to co się stało"
+      }
     },
     {
       "channel_id": "Polsat",
@@ -484,7 +500,7 @@
         "title": "Małolaty u taty",
         "year": "2003",
         "poster": "https://image.tmdb.org/t/p/w500/oIIwZXLrVKhNVIYvJG3hcLEu5Vi.jpg",
-        "rating": 5.925,
+        "rating": 5.922,
         "overview": "Dwóch mężczyzn traci pracę w reklamie. Teraz nie potrafią zająć się własnymi pociechami. Kłopoty zaczynają się, gdy okazuje się, że trudno też znaleźć przedszkole \"przyjazne\" dla dziecka. Zniechęceni próbami rozwiązania problemu przez podrzucenie dzieciaka innym - postanawiają stworzyć konkurencję. I tu zaczynają się schody - udana akcja reklamowa o mało nie spaliła na panewce. Żadna mama nie chce powierzyć im swoich rozkapryszonych, ale też i zestresowanych dzieciaków. Po wielu zabawnych perypetiach ze swoimi podopiecznymi, udaje im się jednak nawiązać z nimi więź. Ze stada rozbrykanych brzdący tworzą wzorowe przedszkole. Na tyle wzorowe, że staje się solą w oku bardzo poważnego i szacownego przedszkola prowadzonego przez doświadczoną i bardzo ważną osobę - panią dyrektor. Zaczynają się intrygi, wizytacje z kuratorium i wojna podjazdowa..."
       }
     },
@@ -731,7 +747,15 @@
       "start_time": "2026-07-20T20:00:00",
       "end_time": "2026-07-20T23:05:00",
       "category": "film sensacyjny",
-      "year": 2021
+      "year": 2021,
+      "tmdb": {
+        "tmdb_id": 385128,
+        "title": "Szybcy i wściekli 9",
+        "year": "2021",
+        "poster": "https://image.tmdb.org/t/p/w500/sgttWqsflnfM41v0ghxbHIfEE2R.jpg",
+        "rating": 6.994,
+        "overview": "Dominic prowadzi spokojne życie z Letty i ze swoim synem Brianem. Jednak nadal czyhają na niego różne niebezpieczeństwa. Tym razem Dominic będzie musiał zmierzyć się z duchami własnej przeszłości. Jego ekipa znów połączy siły, żeby pokonać wroga - doskonałego kierowcę Jacoba Toretto, który jest bratem Dominica skłóconym z nim od wielu lat."
+      }
     },
     {
       "channel_id": "Polsat",
@@ -740,7 +764,15 @@
       "start_time": "2026-07-20T23:05:00",
       "end_time": "2026-07-21T01:35:00",
       "category": "dramat SF",
-      "year": 2013
+      "year": 2013,
+      "tmdb": {
+        "tmdb_id": 68724,
+        "title": "Elizjum",
+        "year": "2013",
+        "poster": "https://image.tmdb.org/t/p/w500/t8rDW5F0o42i9u2JmIqclQpb7wc.jpg",
+        "rating": 6.524,
+        "overview": "Jest rok 2154. Ludzie podzieleni są na dwie klasy społeczne: bogaczy żyjących w Elizjum, luksusowej stacji kosmicznej i pozostałych, walczących o przetrwanie na przeludnionej, zrujnowanej Ziemi. Sekretarz obrony Delacourt nie cofnie się przed niczym, by chronić beztroską egzystencję obywateli Elizjum - lecz także ludzi na Ziemi nic nie powstrzyma przed dostaniem się do Elizjum wszelkimi możliwymi sposobami. Max podejmuje śmiertelnie niebezpieczną misję, której celem jest zrównanie statusu tych dwóch światów."
+      }
     },
     {
       "channel_id": "TVN",
@@ -878,7 +910,7 @@
         "title": "Tarzan: Legenda",
         "year": "2016",
         "poster": "https://image.tmdb.org/t/p/w500/ub6LgGsYvRevA0AjKlAtEmwzk7m.jpg",
-        "rating": 5.921,
+        "rating": 5.922,
         "overview": "Mijają lata, od kiedy Tarzan, opuścił afrykańską dżunglę na rzecz cywilizowanego życia w Londynie. Jako John Clayton III, Lord Greystoke decyduje się wrócić do Konga, gdzie ma pełnić funkcję emisariusza rządu z misją handlową. Nie zdaje sobie jednak sprawy z tego, że jest pionkiem w śmiertelnie niebezpiecznej grze targanego wolą zemsty, chciwego kapitana Leona Roma z Belgii. Okazuje się, że osoby stojące za zabójczym spiskiem nie mają pojęcia, co rozpęta się za ich sprawą."
       }
     },
@@ -1194,7 +1226,7 @@
         "title": "Tarzan: Legenda",
         "year": "2016",
         "poster": "https://image.tmdb.org/t/p/w500/ub6LgGsYvRevA0AjKlAtEmwzk7m.jpg",
-        "rating": 5.921,
+        "rating": 5.922,
         "overview": "Mijają lata, od kiedy Tarzan, opuścił afrykańską dżunglę na rzecz cywilizowanego życia w Londynie. Jako John Clayton III, Lord Greystoke decyduje się wrócić do Konga, gdzie ma pełnić funkcję emisariusza rządu z misją handlową. Nie zdaje sobie jednak sprawy z tego, że jest pionkiem w śmiertelnie niebezpiecznej grze targanego wolą zemsty, chciwego kapitana Leona Roma z Belgii. Okazuje się, że osoby stojące za zabójczym spiskiem nie mają pojęcia, co rozpęta się za ich sprawą."
       }
     },
@@ -1292,7 +1324,15 @@
       "start_time": "2026-07-18T20:00:00",
       "end_time": "2026-07-18T22:20:00",
       "category": "komedia romantyczna",
-      "year": 2015
+      "year": 2015,
+      "tmdb": {
+        "tmdb_id": 222936,
+        "title": "Witamy na Hawajach",
+        "year": "2015",
+        "poster": "https://image.tmdb.org/t/p/w500/roxkurO0Zqh3owewrePt3QH4Un8.jpg",
+        "rating": 5.511,
+        "overview": "Pracujący dla armii Stanów Zjednoczonych specjalista od broni i uzbrojenia - w życiu prywatnym nielubiany przez otoczenie samotnik - wysłany zostaje do niewielkiej bazy wojskowej na Hawajach, by dopilnować przygotowań do wysłania w kosmos najnowszego satelity szpiegowskiego. Na miejscu spotyka swą dawną miłość, obecnie mężatkę z dwójką dzieci, a sam zakochuje się w oschłej i zasadniczej pani major, którą przełożeni przydzielili mu do pomocy."
+      }
     },
     {
       "channel_id": "TVN",
@@ -1414,7 +1454,15 @@
       "start_time": "2026-07-19T13:55:00",
       "end_time": "2026-07-19T16:10:00",
       "category": "film przygodowy",
-      "year": 2014
+      "year": 2014,
+      "tmdb": {
+        "tmdb_id": 98566,
+        "title": "Wojownicze Żółwie Ninja",
+        "year": "2014",
+        "poster": "https://image.tmdb.org/t/p/w500/mWAK5vtjMKaKQB9c3iHiCQbVxVd.jpg",
+        "rating": 5.9,
+        "overview": "Ciemność zapanowała w Nowym Jorku, bo Shredder i jego Klan Stopy trzymają wszystkich w ryzach - od policji po polityków. Przyszłość wygląda ponuro, gdy nagle spod ziemi wyrastają czterej niezwykli bracia - Wojownicze Żółwie Ninja. Muszą współpracować z dziennikarką April O'Neil (Megan Fox) i jej kamerzystą Vernem Fenwickiem (Will Arnettt), aby uratować miasto i powstrzymać diaboliczny plan Shreddera."
+      }
     },
     {
       "channel_id": "TVN",
@@ -1441,7 +1489,15 @@
       "start_time": "2026-07-19T19:45:00",
       "end_time": "2026-07-19T23:05:00",
       "category": "film SF",
-      "year": 2011
+      "year": 2011,
+      "tmdb": {
+        "tmdb_id": 38356,
+        "title": "Transformers: Po ciemnej stronie Księżyca",
+        "year": "2011",
+        "poster": "https://image.tmdb.org/t/p/w500/dJWfBROVkU216AK7xVAKUN5JCxZ.jpg",
+        "rating": 6.235,
+        "overview": "rzeszłość kryję tajemnice, a wydarzenia sprzed lat mają wpływy na to, co się dzieje teraz. Być może wrak statku kosmicznego znaleziony na Księżycu przyczyni się do tego, że Ziemia stanie na krawędzi wojny. Wojny tak wielkiej, że siła Transformersów będzie zbyt mała, by nas ocalić. Autoboty kontra Decepticony, dobro przeciw złu. I wcale nie jest powiedziane, że dobro zwycięży."
+      }
     },
     {
       "channel_id": "TVN",
@@ -1467,7 +1523,15 @@
       "start_time": "2026-07-20T01:30:00",
       "end_time": "2026-07-20T03:45:00",
       "category": "dramat obyczajowy",
-      "year": 2022
+      "year": 2022,
+      "tmdb": {
+        "tmdb_id": 577874,
+        "title": "Głupcy",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w500/rcteBePazitSbPPUJCN8PMEMlaz.jpg",
+        "rating": 0.0,
+        "overview": "Niekonwencjonalne małżeństwo (Marlena ma 62 lata, Tomasz jest o dwie dekady młodszy) wiedzie ustabilizowane życie w nadmorskiej miejscowości. Ich związek przeżywa wstrząs, gdy Marlena postanawia zaopiekować się chorym synem, ale już od początku staje się jasne, że zwyczajność tej relacji jest tylko pozorna. Wszak Marlena i Tomasz funkcjonują w odkształconym, odrealnionym, momentami wręcz surrealnym świecie. Do ich domu położonego na wydmie niemal wdziera się woda – zresztą natura „atakuje” bohaterów ze wszystkich stron. W tej opowieści o biologiczności, więzach krwi, pierwotnych impulsach i ich czołowym zderzeniu z konstruktem zwanym rodziną; wybujałe rośliny przejmują władzę nad wnętrzami, wzburzone morze huczy, w pokoju przekrzykują się ludzie i ptaki."
+      }
     },
     {
       "channel_id": "TVN",
@@ -1574,7 +1638,15 @@
       "start_time": "2026-07-20T22:00:00",
       "end_time": "2026-07-21T00:25:00",
       "category": "film fantasy",
-      "year": 2011
+      "year": 2011,
+      "tmdb": {
+        "tmdb_id": 50619,
+        "title": "Saga \"Zmierzch\": Przed świtem. Część 1",
+        "year": "2011",
+        "poster": "https://image.tmdb.org/t/p/w500/7GYxvpRdzMT4OwzQeRGZxAE6n1y.jpg",
+        "rating": 6.188,
+        "overview": "Po pięknym ślubie i hucznym weselu, Bella i Edward wyjeżdżają na miesiąc miodowy do Rio de Janeiro. W tym gorącym mieście karnawału, młodzi mogą wreszcie w pełni cieszyć się sobą i oddawać namiętności. Wkrótce Bella odkrywa, że jest w ciąży. Pełne dramatyzmu narodziny dziecka rozpoczynają łańcuch nieodwracalnych zdarzeń - Edward decyduje się podarować Belli nieśmiertelność. Pojawienie się nowego członka w rodzinie budzi niepokój Volturi – przywódców świata wampirów. Czy Edwardowi uda się ocalić to co kocha najbardziej?"
+      }
     },
     {
       "channel_id": "Comedy Central",
@@ -4326,7 +4398,15 @@
       "start_time": "2026-07-15T16:15:00",
       "end_time": "2026-07-15T18:00:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1171634,
+        "title": "Kiedy nadchodzi jesień",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/zEhKOyBjwIVAulYMBge09p7zIFy.jpg",
+        "rating": 6.6,
+        "overview": "Michelle, pod każdym względem dobra babcia, wiedzie spokojną emeryturę w małej wiosce w Burgundii, niedaleko swojej najlepszej przyjaciółki Marie-Claude. W Dzień Wszystkich Świętych odwiedza ją jej córka Valérie i przywozi syna Lucasa na tygodniowe wakacje. Ale nic nie idzie zgodnie z planem."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -4618,7 +4698,7 @@
         "title": "Dźwięk śmierci",
         "year": "2026",
         "poster": "https://image.tmdb.org/t/p/w500/532YF8e9pvEjHVF7h3AOhoygRMG.jpg",
-        "rating": 6.332,
+        "rating": 6.331,
         "overview": "Grupa wyrzutków z liceum przypadkowo natrafia na przeklęty przedmiot – starożytny aztecki gwizdek śmierci. Bohaterowie odkrywają, że wydobywający się z niego przerażający dźwięk przywołuje ich własną śmierć z przyszłości, która zaczyna na nich polować."
       }
     },
@@ -4652,7 +4732,7 @@
         "title": "Najpierw Strzelaj, Potem Zwiedzaj",
         "year": "2008",
         "poster": "https://image.tmdb.org/t/p/w500/es5Ur2OHMrA1gWyFrU2HpGnHX5U.jpg",
-        "rating": 7.5,
+        "rating": 7.498,
         "overview": "Para płatnych morderców udaje się do Brugii by wykonać kolejne zlecenie. Przed nadejściem kolejnych dyspozycji mężczyźni mają zwiedzać miasto. Belgijskie miasto nie przypada do gustu Rayowi, zaś fascynuje Kena. Pobyt w mieście powoduje szereg niespodziewanych wydarzeń, które zmieniają wszystko w życiu głównych bohaterów."
       }
     },
@@ -4741,7 +4821,15 @@
       "start_time": "2026-07-17T08:45:00",
       "end_time": "2026-07-17T10:15:00",
       "category": "film familijny",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1361623,
+        "title": "O psie, który jeździł koleją 2",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/u6wf4AQkBE5peN6ze1EDnlmyvqx.jpg",
+        "rating": 6.1,
+        "overview": "Zuzia dochodzi do siebie po operacji, którą przeszła w USA. Na czas jej nieobecności pies Lampo pozostaje pod opiekę dyrektora stacji kolejowej. Niestety, pewnego dnia Lampo zostaje porwany. Gdy Zuzia wraca do Polski, razem z Antkiem i przygarniętą ze schroniska Luną szuka swego czworonożnego druha."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -4750,7 +4838,15 @@
       "start_time": "2026-07-17T10:15:00",
       "end_time": "2026-07-17T12:15:00",
       "category": "film fantasy",
-      "year": 2008
+      "year": 2008,
+      "tmdb": {
+        "tmdb_id": 8966,
+        "title": "Zmierzch",
+        "year": "2008",
+        "poster": "https://image.tmdb.org/t/p/w500/4F1VuNijOZsY4sGjWSdianHYcOQ.jpg",
+        "rating": 6.281,
+        "overview": "Ekranizacja bestsellerowej powieści Stephenie Meyer. 17-letnia Bella Swan (Kristen Stewart), przeprowadza się do Forks, miasteczka w deszczowym stanie Waszyngton, by zamieszkać ze swoim ojcem (Billy Burke). Kiedy poznaje tajemniczego i niezwykle ponętnego Edwarda Cullena (Robert Pattinson), jej przeciętne dotychczas życie zupełnie się odmienia. Zachwycona jego złotymi oczami, hipnotyzującym głosem i nadprzyrodzonymi umiejętnościami, kompletnie traci dla niego głowę. Nie mogąc mu się oprzeć, nie zdaje sobie sprawy, na jakie niebezpieczeństwo naraża siebie i swoich najbliższych..."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -4932,7 +5028,15 @@
       "start_time": "2026-07-18T04:30:00",
       "end_time": "2026-07-18T05:55:00",
       "category": "film dokumentalny",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1276503,
+        "title": "Gdy powieje harmattan",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/krYJBCX2auTIvdwiwFIurSWNVg6.jpg",
+        "rating": 0.0,
+        "overview": "Historia mieszkanki Ghany, która mimo złych doświadczeń stara się odnowić więź z rodzicami."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5198,7 +5302,15 @@
       "start_time": "2026-07-19T07:35:00",
       "end_time": "2026-07-19T09:15:00",
       "category": "film animowany",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1184918,
+        "title": "Dziki robot",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/FTd11HGc8FfkBChRCrFAxtjJJm.jpg",
+        "rating": 8.316,
+        "overview": "ROZZUM jest robotem, jednostką 7134. Rozbija się na niezamieszkanej wyspie i musi nauczyć dostosowywać do surowego otoczenia. Stopniowo zaczyna budować relacje z tamtejszymi zwierzętami i staje się również przybranym rodzicem osieroconej gęsi. Animacja oparta jest na bestsellerowej książce dla dzieci o tym samym tytule i opowiada o odkrywaniu siebie oraz bada, co to znaczy być żywym i połączonym ze wszystkimi istotami."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5241,7 +5353,15 @@
       "start_time": "2026-07-19T13:00:00",
       "end_time": "2026-07-19T15:45:00",
       "category": "musical",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 402431,
+        "title": "Wicked",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/xDGbZ0JJ3mYaGKy4Nzd9Kph6M9L.jpg",
+        "rating": 6.91,
+        "overview": "Elphaba i Glinda są studentkami Uniwersytetu Shiz w fantastycznej Krainie Oz i nawiązują głęboką przyjaźń. Jednak po spotkaniu z Czarnoksiężnikiem z Krainy Oz ich przyjaźń stanie na rozdrożu, a ich życie obierze zupełnie inne ścieżki. Glinda, pragnie popularności, marzy o władzy, podczas gdy Elphaba pozostanie wierna sobie i tym, którzy ją otaczają. Jej postawa będzie miała jednak nieoczekiwane konsekwencje dla jej przyszłości. Niezwykłe przygody w krainie Oz sprawią, że ostatecznie wypełnią swoje przeznaczenie jako Dobra Czarownica z Południa i Zła Czarownica z Zachodu."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5267,7 +5387,15 @@
       "start_time": "2026-07-19T17:50:00",
       "end_time": "2026-07-19T20:00:00",
       "category": "film SF",
-      "year": 2012
+      "year": 2012,
+      "tmdb": {
+        "tmdb_id": 44833,
+        "title": "Battleship: Bitwa o Ziemię",
+        "year": "2012",
+        "poster": "https://image.tmdb.org/t/p/w500/er5lnWGPQkUa63SLavBZmNTxMDX.jpg",
+        "rating": 5.919,
+        "overview": "NASA odkrywa planetę, na której są warunki zbliżone do tych na Ziemi. Wysyłają tam sygnał. Pięć niezidentyfikowanych obiektów rozpoczyna ataki, gdzie cztery lądują na Hawajach, a ostatni w Hongkongu niszcząc miasto. Admirał Shane wysyła patrol składający się z dwóch amerykańskich i jednego japońskiego niszczyciela. Dwa okręty zamykają się w polu siłowych. Trzeci statek dowodzony przez Alexa Hoppera zostaje uszkodzony. Od tej chwili mężczyzna musi sam podjąć walkę z wrogiem i powstrzymać go od wezwania posiłków."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5282,7 +5410,7 @@
         "title": "Smashing Machine",
         "year": "2025",
         "poster": "https://image.tmdb.org/t/p/w500/7Ws1LenBwDkIx70sDZ2mQaZQEQA.jpg",
-        "rating": 6.382,
+        "rating": 6.4,
         "overview": "Mark Kerr jest sensacją mieszanych sztuk walki. W ringu jest uosobieniem siły i determinacji, ale poza nim zmaga się ze słabościami i wewnętrznymi demonami, wspomagając się końskimi dawkami środków przeciwbólowych. Gdy po przedawkowaniu trafia do szpitala, zdaje sobie sprawę, że uzależnienie może zniszczyć jego karierę. Mark musi wziąć się w garść, by rozpocząć mordercze treningi przed zbliżającym się turniejem w Japonii, który może dać mu wymarzone trofeum. Czy uda mu się zerwać z nałogiem i uratować rozpadające się małżeństwo, a jednocześnie wypracować życiową formę? Czasu jest niewiele, a wyniszczony organizm stawia opór."
       }
     },
@@ -5327,7 +5455,15 @@
       "start_time": "2026-07-20T01:55:00",
       "end_time": "2026-07-20T03:20:00",
       "category": "horror",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 946215,
+        "title": "Opętany",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/rS6GBWRgKkvmcPvtKNuhGkQggjz.jpg",
+        "rating": 4.636,
+        "overview": "Psychiatra trafia do odległej wioski, by pomóc chłopcu uznawanemu za opętanego. Pełen napięcia thriller z elementami horroru, osadzony w XIX-wiecznej Sycylii."
+      }
     },
     {
       "channel_id": "Canal+ Premium",
@@ -5524,7 +5660,7 @@
         "title": "Dźwięk śmierci",
         "year": "2026",
         "poster": "https://image.tmdb.org/t/p/w500/532YF8e9pvEjHVF7h3AOhoygRMG.jpg",
-        "rating": 6.332,
+        "rating": 6.331,
         "overview": "Grupa wyrzutków z liceum przypadkowo natrafia na przeklęty przedmiot – starożytny aztecki gwizdek śmierci. Bohaterowie odkrywają, że wydobywający się z niego przerażający dźwięk przywołuje ich własną śmierć z przyszłości, która zaczyna na nich polować."
       }
     },
@@ -5620,7 +5756,15 @@
       "start_time": "2026-07-15T09:15:00",
       "end_time": "2026-07-15T10:45:00",
       "category": "film familijny",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1361623,
+        "title": "O psie, który jeździł koleją 2",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/u6wf4AQkBE5peN6ze1EDnlmyvqx.jpg",
+        "rating": 6.1,
+        "overview": "Zuzia dochodzi do siebie po operacji, którą przeszła w USA. Na czas jej nieobecności pies Lampo pozostaje pod opiekę dyrektora stacji kolejowej. Niestety, pewnego dnia Lampo zostaje porwany. Gdy Zuzia wraca do Polski, razem z Antkiem i przygarniętą ze schroniska Luną szuka swego czworonożnego druha."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -5754,7 +5898,7 @@
         "title": "Kruk",
         "year": "1994",
         "poster": "https://image.tmdb.org/t/p/w500/rMMB3v6jYHjsvXRNJYESacoTD7j.jpg",
-        "rating": 7.527,
+        "rating": 7.5,
         "overview": "W wigilię Halloween, w przeddzień swego ślubu, ginie dwoje młodych ludzi. Shelly Webster (Sofia Shinas) zostaje brutalnie zgwałcona i zamordowana, a jej narzeczony, muzyk Erick Draven (Brandon Lee), postrzelony - wypada przez okno i umiera na miejscu. Jego dusza jednak poprzysięga mordercom zemstę. Dokładnie rok później, również w wigilię Halloween Erick powraca. Nie jest żywy, ale też nie jest martwy. Towarzyszy mu kruk, jego łącznik ze światem żywych. Po kolei odszukuje odpowiedzialnych za swą tragedię. Morduje ich spłacając dług, a być może jego dusza znajdzie wreszcie ukojenie...  [opis dystrybutora dvd]"
       }
     },
@@ -5893,7 +6037,15 @@
       "start_time": "2026-07-16T09:20:00",
       "end_time": "2026-07-16T11:00:00",
       "category": "film animowany",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1184918,
+        "title": "Dziki robot",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/FTd11HGc8FfkBChRCrFAxtjJJm.jpg",
+        "rating": 8.316,
+        "overview": "ROZZUM jest robotem, jednostką 7134. Rozbija się na niezamieszkanej wyspie i musi nauczyć dostosowywać do surowego otoczenia. Stopniowo zaczyna budować relacje z tamtejszymi zwierzętami i staje się również przybranym rodzicem osieroconej gęsi. Animacja oparta jest na bestsellerowej książce dla dzieci o tym samym tytule i opowiada o odkrywaniu siebie oraz bada, co to znaczy być żywym i połączonym ze wszystkimi istotami."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -5937,7 +6089,15 @@
       "start_time": "2026-07-16T12:05:00",
       "end_time": "2026-07-16T13:35:00",
       "category": "film dokumentalny",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1018694,
+        "title": "Charlie Chaplin: Duch włóczęgi",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/vmgNCVLk2J0Ica8Rl2PQG3xaUAn.jpg",
+        "rating": 10.0,
+        "overview": ""
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -5946,7 +6106,15 @@
       "start_time": "2026-07-16T13:35:00",
       "end_time": "2026-07-16T15:35:00",
       "category": "film fantasy",
-      "year": 2008
+      "year": 2008,
+      "tmdb": {
+        "tmdb_id": 8966,
+        "title": "Zmierzch",
+        "year": "2008",
+        "poster": "https://image.tmdb.org/t/p/w500/4F1VuNijOZsY4sGjWSdianHYcOQ.jpg",
+        "rating": 6.281,
+        "overview": "Ekranizacja bestsellerowej powieści Stephenie Meyer. 17-letnia Bella Swan (Kristen Stewart), przeprowadza się do Forks, miasteczka w deszczowym stanie Waszyngton, by zamieszkać ze swoim ojcem (Billy Burke). Kiedy poznaje tajemniczego i niezwykle ponętnego Edwarda Cullena (Robert Pattinson), jej przeciętne dotychczas życie zupełnie się odmienia. Zachwycona jego złotymi oczami, hipnotyzującym głosem i nadprzyrodzonymi umiejętnościami, kompletnie traci dla niego głowę. Nie mogąc mu się oprzeć, nie zdaje sobie sprawy, na jakie niebezpieczeństwo naraża siebie i swoich najbliższych..."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -5981,7 +6149,15 @@
       "start_time": "2026-07-16T17:45:00",
       "end_time": "2026-07-16T19:55:00",
       "category": "film SF",
-      "year": 2012
+      "year": 2012,
+      "tmdb": {
+        "tmdb_id": 44833,
+        "title": "Battleship: Bitwa o Ziemię",
+        "year": "2012",
+        "poster": "https://image.tmdb.org/t/p/w500/er5lnWGPQkUa63SLavBZmNTxMDX.jpg",
+        "rating": 5.919,
+        "overview": "NASA odkrywa planetę, na której są warunki zbliżone do tych na Ziemi. Wysyłają tam sygnał. Pięć niezidentyfikowanych obiektów rozpoczyna ataki, gdzie cztery lądują na Hawajach, a ostatni w Hongkongu niszcząc miasto. Admirał Shane wysyła patrol składający się z dwóch amerykańskich i jednego japońskiego niszczyciela. Dwa okręty zamykają się w polu siłowych. Trzeci statek dowodzony przez Alexa Hoppera zostaje uszkodzony. Od tej chwili mężczyzna musi sam podjąć walkę z wrogiem i powstrzymać go od wezwania posiłków."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -6236,7 +6412,7 @@
         "title": "Odnaleźć córkę",
         "year": "2026",
         "poster": "https://image.tmdb.org/t/p/w500/icOZpnGuH9YrEaW3wrw5GJaXGih.jpg",
-        "rating": 8.522,
+        "rating": 8.52,
         "overview": "Spokojne życie byłej bohaterki wojennej Nikki zostaje zburzone, gdy jej córka zostaje porwana. Wciągnięta w przestępczy półświatek, ścigana przez policję i wojsko, musi walczyć o uratowanie swojego dziecka."
       }
     },
@@ -6775,7 +6951,15 @@
       "start_time": "2026-07-20T01:30:00",
       "end_time": "2026-07-20T03:45:00",
       "category": "dramat przygodowy",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1536001,
+        "title": "Dziki",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w500/lvj4tpWXgdmtErNca5DgBSvPjax.jpg",
+        "rating": 5.625,
+        "overview": "Karpaty, XVII wiek. Los półdzikiego, niemego wojownika – wychowanego zarówno przez zwierzęta, jak i ludzi gór - splata się z brutalną misją cesarskiego inkwizytora, który pod pretekstem odzyskania skradzionych papieskich insygniów rozpętuje krwawą zemstę. Na tle monumentalnych gór rodzi się pojedynek dwóch światów – natury i cywilizacji, wolności i fanatyzmu, instynktu i władzy."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -6904,7 +7088,15 @@
       "start_time": "2026-07-20T15:20:00",
       "end_time": "2026-07-20T16:40:00",
       "category": "dramat obyczajowy",
-      "year": 2013
+      "year": 2013,
+      "tmdb": {
+        "tmdb_id": 209274,
+        "title": "Ida",
+        "year": "2013",
+        "poster": "https://image.tmdb.org/t/p/w500/duBCjRYvx4qxwWR930C18F1wNyL.jpg",
+        "rating": 7.212,
+        "overview": "Polska, 1962 rok. Anna jest w nowicjacie, została umieszczona w klasztorze jako sierota. Zanim przyjmie święcenia musi odwiedzić Wandę, jej jedyną krewną. Wanda mówi Annie, że jest Żydówką. Obie kobiety zaczynają podróż, która nie tylko ma pomóc odnaleźć tragiczną historię ich rodziny, ale i prawdę o tym, kim są."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -6947,7 +7139,15 @@
       "start_time": "2026-07-20T20:00:00",
       "end_time": "2026-07-20T21:40:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1082900,
+        "title": "Być kochaną",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/4DHpXjhMwfwpaldge4OcISjQTX7.jpg",
+        "rating": 7.041,
+        "overview": "Podczas gdy Sigmund jest w ciągłym ruchu, Maria łączy karierę z opieką nad dziećmi i domem. Podobnie jak wiele innych związków, ich początek był miłością i harmonią, ale lata życia małżeńskiego przyniosły nieporozumienia. Ostatecznie to Sigmund składa pozew o rozwód, a Maria zmuszona jest stawić czoła swoim największym lękom."
+      }
     },
     {
       "channel_id": "Canal+ Film",
@@ -8093,7 +8293,15 @@
       "start_time": "2026-07-20T00:15:00",
       "end_time": "2026-07-20T01:10:00",
       "category": "serial sensacyjny",
-      "year": 2021
+      "year": 2021,
+      "tmdb": {
+        "tmdb_id": 851976,
+        "title": "Small World",
+        "year": "2021",
+        "poster": "https://image.tmdb.org/t/p/w500/ykgqDzMNiXfPgGBrLSNdGfzMEZR.jpg",
+        "rating": 7.6,
+        "overview": "W tajemniczych okolicznościach, sprzed rodzinnego domu, zostaje uprowadzona dziewczynka. Jedynym śladem zajścia pozostaje widziana w okolicy rosyjska ciężarówka. Matka dziewczynki, wspierana przez policjanta Roberta, wyrusza w pościg, ale nie jest w stanie zatrzymać porywaczy. Po latach wciąż gnębiony wyrzutami sumienia Robert wpada na trop, który pozwala mu wrócić do sprawy. Odkryte na miejscu eksplozji rosyjskiej kamienicy dowody naprowadzają go na ślad międzynarodowej szajki przestępczej. Tymczasem w Bangkoku nastolatka Ola jest zmuszana spełniać wszystkie zachcianki bogatego biznesmena. Co stanie się, gdy los zetknie dziewczynę z polskim stróżem prawa?"
+      }
     },
     {
       "channel_id": "Canal+ Family",
@@ -8361,7 +8569,15 @@
       "start_time": "2026-07-15T04:10:00",
       "end_time": "2026-07-15T06:00:00",
       "category": "horror psychologiczny",
-      "year": 2019
+      "year": 2019,
+      "tmdb": {
+        "tmdb_id": 503919,
+        "title": "Lighthouse",
+        "year": "2019",
+        "poster": "https://image.tmdb.org/t/p/w500/yQMPmUEcgFACRiwIkKI0bNWR7SS.jpg",
+        "rating": 7.468,
+        "overview": "Robert Eggers, wizjonerski reżyser arcydzielnego horroru \"The Witch\", powraca z hipnotyzującą, halucynującą opowieścią o dwóch latarnikach, pracujących na tajemniczej, odległej wyspie w Nowej Anglii, w latach dziewięćdziesiątych XIX wieku. Obaj latarnicy (Willem Dafoe i Robert Pattinson) mierzą się z samotnością i odosobnieniem podczas wielkiego sztormu, który wydaje się nie mieć końca. Są skazani na walkę z własną silną wolą, potrzebami oraz – przede wszystkim – z tajemniczą siłą, która nad nimi krąży, ale której istnienie może im się tylko wydawać… Film jest przerażającą, pełną tajemnic podróżą w nieznane."
+      }
     },
     {
       "channel_id": "HBO",
@@ -8387,7 +8603,15 @@
       "start_time": "2026-07-15T07:50:00",
       "end_time": "2026-07-15T10:05:00",
       "category": "film przygodowy",
-      "year": 2007
+      "year": 2007,
+      "tmdb": {
+        "tmdb_id": 675,
+        "title": "Harry Potter i Zakon Feniksa",
+        "year": "2007",
+        "poster": "https://image.tmdb.org/t/p/w500/7SusRCFTH01GtGVlKjFY0xZWCx5.jpg",
+        "rating": 7.673,
+        "overview": "Harry Potter tym razem nie może mieć spokojnych wakacji. Lord Voldemort powrócił, a prasa czarodziejska milczy na ten temat. Na mugolskim osiedlu Little Whinging pojawiają się Dementorzy, a zbzikowana sąsiadka Dursley'ów pani Figg jest charłakiem! W dodatku Harry staje przed całym Wizengamotem za użycie czarów przez nieletniego, a Straż Przednia zabiera go do kwatery głównej Zakonu Feniksa - organizacji powołanej przez Dumbledora do walki z Sam-Wiesz-Kim. Tymczasem w Hogwarcie rządy przejmuje sprzymierzeniec Korneliusza Knota i nauczycielka obrony przed czarną magią profesor Umbridge. Wygląda na to, że nikt nie wierzy Harry'emu i Dumbledorowi, że Lord Voldemort odrodził się na nowo. Kiedy zaatakuje wszystko wyjdzie na jaw, ale czy wtedy nie będzie już za późno?"
+      }
     },
     {
       "channel_id": "HBO",
@@ -8555,7 +8779,7 @@
         "title": "Spider-Man 3",
         "year": "2007",
         "poster": "https://image.tmdb.org/t/p/w500/q9seDtjnWP9Qdsx6ps3wXft639z.jpg",
-        "rating": 6.464,
+        "rating": 6.5,
         "overview": "W filmie \"Spider-Man 3\", Peter Parker (Tobey Maguire) ostatecznie odnalazł równowagę pomiędzy swoimi uczuciami do M.J. (Kirsten Dunst), a obowiązkami super bohatera. Na horyzoncie gromadzą się jednak czarne chmury. Kiedy kostium Parkera nagle zmienia kolor na czarny, a jego moc staje się jeszcze większa, metamorfozie ulega również sam człowiek-pająk. Ujawnia się mroczna osobowość Spider-Mana. Na skutek nieujarzmionej pychy, Peter zaczyna zaniedbywać ludzi, na których zależy mu najbardziej. Co gorsza, nie ma czasu na namysły, bowiem miastu i jego najbliższym zagraża nie jeden, a dwa wyjątkowo złośliwe czarne charaktery, Sandman (Thomas Haden Church) i Venom (Topher Grace). Zmuszony do dokonania wyboru między kuszącą mocą nowego kostiumu, a dawnym życiem, Parker musi odnaleźć w sobie prawdziwego bohatera, pokonać wrogów i własne demony."
       }
     },
@@ -8634,7 +8858,15 @@
       "start_time": "2026-07-16T16:00:00",
       "end_time": "2026-07-16T18:05:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1141163,
+        "title": "Diva Futura",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/qLfdMy5LmUlkqgm3jvgVvIbvQWO.jpg",
+        "rating": 6.478,
+        "overview": "Włochy, lata 80. i 90. XX wieku. Dzięki swojej agencji Diva Futura Riccardo Schicchi rewolucjonizuje kulturę masową, przekształcając hippisowską utopię wolnej miłości w nowe zjawisko: porno. Pod jej przewodnictwem „dziewczyny z sąsiedztwa”, takie jak Ilona Staller, Moana Pozzi, Eva Henger i wiele innych, nagle stają się divami światowej sławy i wchodzą do włoskich domów dzięki boomowi na prywatne telewizory i magnetowidy VHS. Ukute wówczas wyrażenie „gwiazda porno” wyznacza początek nowej ery. Wpływ mediów był tak przytłaczający, że zaowocował wyborem do parlamentu Ilony Staller, zwanej „Ciccioliną”, narodzinami Partii Miłości i kandydaturą Moany Pozzi na burmistrza Rzymu. Przygoda tej dużej „rodziny” – w której eksplodują zazdrości, udręki i sprzeczności, których skutki generują wymykającą się spod kontroli sytuację w branży pornograficznej – opowiedziana jest oczami Debory, młodej sekretarki agencji..."
+      }
     },
     {
       "channel_id": "HBO",
@@ -8746,7 +8978,15 @@
       "start_time": "2026-07-17T06:00:00",
       "end_time": "2026-07-17T08:05:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1141163,
+        "title": "Diva Futura",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/qLfdMy5LmUlkqgm3jvgVvIbvQWO.jpg",
+        "rating": 6.478,
+        "overview": "Włochy, lata 80. i 90. XX wieku. Dzięki swojej agencji Diva Futura Riccardo Schicchi rewolucjonizuje kulturę masową, przekształcając hippisowską utopię wolnej miłości w nowe zjawisko: porno. Pod jej przewodnictwem „dziewczyny z sąsiedztwa”, takie jak Ilona Staller, Moana Pozzi, Eva Henger i wiele innych, nagle stają się divami światowej sławy i wchodzą do włoskich domów dzięki boomowi na prywatne telewizory i magnetowidy VHS. Ukute wówczas wyrażenie „gwiazda porno” wyznacza początek nowej ery. Wpływ mediów był tak przytłaczający, że zaowocował wyborem do parlamentu Ilony Staller, zwanej „Ciccioliną”, narodzinami Partii Miłości i kandydaturą Moany Pozzi na burmistrza Rzymu. Przygoda tej dużej „rodziny” – w której eksplodują zazdrości, udręki i sprzeczności, których skutki generują wymykającą się spod kontroli sytuację w branży pornograficznej – opowiedziana jest oczami Debory, młodej sekretarki agencji..."
+      }
     },
     {
       "channel_id": "HBO",
@@ -8755,7 +8995,15 @@
       "start_time": "2026-07-17T08:05:00",
       "end_time": "2026-07-17T08:30:00",
       "category": "film dokumentalny",
-      "year": 2026
+      "year": 2026,
+      "tmdb": {
+        "tmdb_id": 1662432,
+        "title": "Harry Potter: Kulisy magii",
+        "year": "2026",
+        "poster": "https://image.tmdb.org/t/p/w500/9PKT6rz3f3GnatG29ICCOZqx2sl.jpg",
+        "rating": 7.77,
+        "overview": "Ciekawe spojrzenie na serial HBO o Harrym Potterze oczami twórców, którzy nadają historii nowe życie."
+      }
     },
     {
       "channel_id": "HBO",
@@ -8856,7 +9104,7 @@
         "title": "Batman - Początek",
         "year": "2005",
         "poster": "https://image.tmdb.org/t/p/w500/cub46jQ4bLQYYbpbSL9Q24wofS2.jpg",
-        "rating": 7.7,
+        "rating": 7.728,
         "overview": "\"Batman Początek\", dzieło cenionego reżysera Christophera Nolana, odkrywa tajemnicę narodzin legendarnego Mrocznego Rycerza. Po tragicznej śmierci rodziców, rozczarowany życiem spadkobierca fortuny Wayne'ów, Bruce (Christian Bale), podróżuje po świecie szukając środków do walki z niesprawiedliwością po to, aby obrócić strach przeciw tym, którzy go sieją. Z pomocą zaufanego lokaja Alfreda (Michael Caine), detektywa Jima Gordona (Gary Oldman), oraz swego sprzymierzeńca Luciusa Foxa (Morgan Freeman), Wayne powraca do Gotham, aby powołać do życia swoje alter-ego: Batmana, zamaskowanego wojownika, który posługuje się siłą, intelektem i zaawansowaną bronią, aby zwalczać złowrogie siły, które zagrażają miastu."
       }
     },
@@ -8867,7 +9115,15 @@
       "start_time": "2026-07-17T20:00:00",
       "end_time": "2026-07-17T21:40:00",
       "category": "horror SF",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 762441,
+        "title": "Ciche miejsce: Dzień pierwszy",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/7vVU8y7HbKVvY1TGH5th3LDv9VG.jpg",
+        "rating": 6.6,
+        "overview": "Kiedy Sam wraca do miasta, w którym się urodziła, jedyne czego pragnie to kawałek ulubionej pizzy. Zamiast tego zostaje uwięziona w koszmarze na jawie, który może być jej ostatnim dniem na Ziemi. W towarzystwie nieznajomego o imieniu Eric i jej kota Frodo wyrusza w przerażającą podróż przez zniszczony Nowy Jork, w którym niebezpieczeństwo czai się wszędzie"
+      }
     },
     {
       "channel_id": "HBO",
@@ -8936,7 +9192,15 @@
       "start_time": "2026-07-18T04:20:00",
       "end_time": "2026-07-18T06:00:00",
       "category": "horror SF",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 762441,
+        "title": "Ciche miejsce: Dzień pierwszy",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/7vVU8y7HbKVvY1TGH5th3LDv9VG.jpg",
+        "rating": 6.6,
+        "overview": "Kiedy Sam wraca do miasta, w którym się urodziła, jedyne czego pragnie to kawałek ulubionej pizzy. Zamiast tego zostaje uwięziona w koszmarze na jawie, który może być jej ostatnim dniem na Ziemi. W towarzystwie nieznajomego o imieniu Eric i jej kota Frodo wyrusza w przerażającą podróż przez zniszczony Nowy Jork, w którym niebezpieczeństwo czai się wszędzie"
+      }
     },
     {
       "channel_id": "HBO",
@@ -8979,7 +9243,15 @@
       "start_time": "2026-07-18T09:55:00",
       "end_time": "2026-07-18T11:40:00",
       "category": "film animowany",
-      "year": 2019
+      "year": 2019,
+      "tmdb": {
+        "tmdb_id": 82702,
+        "title": "Jak wytresować smoka 2",
+        "year": "2014",
+        "poster": "https://image.tmdb.org/t/p/w500/7wtG5mCra9HoNu8PWb9cAukQ03f.jpg",
+        "rating": 7.686,
+        "overview": "W drugim rozdziale porywającej trylogii JAK WYTRESOWAĆ SMOKA powracamy do fantastycznego świata Czkawki i Szczerbatka w pięć lat po tym, jak udało im się zjednoczyć smoki i wikingów na wyspie Berk. Podczas gdy Astrid i pozostali biorą udział w wyścigach smoków (nowy najpopularniejszy sport zespołowy na wyspie), nierozłączna para Czkawka i Szczerbatek przemierza niebo, odkrywając nieznane ziemie i nowe światy. Gdy podczas jednej z wypraw natrafiają na tajemną lodową jaskinię, a w niej setki nowych dzikich smoków i tajemniczego Jeźdźca Smoków, dostają się w sam środek wojny o pokój. Czkawka i Szczerbatek zrobią wszystko, by stawić czoła wyzwaniu i odkryją, że tylko wspólnymi siłami mogą zmienić przyszłość zarówno ludzi, jak i smoków."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9011,7 +9283,7 @@
         "title": "Kurier Francuski z Liberty, Kansas Evening Sun",
         "year": "2021",
         "poster": "https://image.tmdb.org/t/p/w500/6JXR3KJH5roiBCjWFt09xfgxHZc.jpg",
-        "rating": 7.01,
+        "rating": 7.0,
         "overview": "The French Dispatch prezentuje zbiór opowiadań z ostatniego numeru amerykańskiego magazynu opublikowanego w fikcyjnym francuskim mieście XX wieku."
       }
     },
@@ -9045,7 +9317,7 @@
         "title": "Superman",
         "year": "2025",
         "poster": "https://image.tmdb.org/t/p/w500/g2e0gcSTFcyPkBqs3vKK1YpqBsy.jpg",
-        "rating": 7.332,
+        "rating": 7.333,
         "overview": "Superman, dziennikarz z Metropolis, wyrusza w podróż, aby pogodzić swoje kryptońskie dziedzictwo z ludzkim wychowaniem jako Clark Kent."
       }
     },
@@ -9107,7 +9379,15 @@
       "start_time": "2026-07-19T02:55:00",
       "end_time": "2026-07-19T04:10:00",
       "category": "horror",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 926599,
+        "title": "Raz, dwa, trzy... wchodzisz do gry!",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/10UoQu0d2yUyLeBhEV3W3B2A9ro.jpg",
+        "rating": 5.492,
+        "overview": "Grupa nastolatków z miasteczka Salem odkrywa przeklęty nóż z prowokującym zaklęciem. Uwolniony demon zmusza ich do grania w makabryczne, śmiercionośne wersje gier z dzieciństwa, stawiając przerażające ultimatum: grasz lub giniesz."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9184,7 +9464,15 @@
       "start_time": "2026-07-19T11:25:00",
       "end_time": "2026-07-19T13:10:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1143508,
+        "title": "Po prostu uwierz",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/l4X9SeMFCv414BCt97IBgzYX7JC.jpg",
+        "rating": 7.2,
+        "overview": "Drużyna baseballowa Little League składająca się z outsiderów poświęca swój sezon umierającemu ojcu gracza. W międzyczasie osiągają niemożliwe, docierając do finałów World Series w grze, która stała się natychmiastowym klasykiem ESPN."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9287,7 +9575,15 @@
       "start_time": "2026-07-20T00:35:00",
       "end_time": "2026-07-20T03:00:00",
       "category": "dramat psychologiczny",
-      "year": 2021
+      "year": 2021,
+      "tmdb": {
+        "tmdb_id": 597208,
+        "title": "Zaułek koszmarów",
+        "year": "2021",
+        "poster": "https://image.tmdb.org/t/p/w500/axXoaUV1liRYTbQa5sRsJJ5lL2w.jpg",
+        "rating": 6.9,
+        "overview": "Gdy charyzmatyczny Stanton Carlisle  spotyka na swej drodze niezwykłe małżeństwo: widzącą przyszłość Zeenę  i jej męża, byłego telepatę, Pete’a , postanawia odmienić swoje dotychczas pechowe życie. Wraz z lojalną i szlachetną Molly  zaczyna wykorzystywać naiwność nowojorskich elit by się wzbogacić, a nowo nabyta wiedza szybko okazuje się przepustką do sukcesu. Wkrótce jednak Stanton posunie się o krok za daleko, gdy pod wpływem tajemniczej psychiatry  zdecyduje się oszukać groźnego finansowego potentata ."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9330,7 +9626,15 @@
       "start_time": "2026-07-20T07:35:00",
       "end_time": "2026-07-20T10:50:00",
       "category": "film fantasy",
-      "year": 2003
+      "year": 2003,
+      "tmdb": {
+        "tmdb_id": 122,
+        "title": "Władca Pierścieni: Powrót króla",
+        "year": "2003",
+        "poster": "https://image.tmdb.org/t/p/w500/75KNIheWdy7eLe4RWsbJmVjvJPU.jpg",
+        "rating": 8.501,
+        "overview": "Ostateczna bitwa o Śródziemie rozpoczęła się. Frodo i Sam, prowadzeni przez Golluma, kontynuują swą niebezpieczną wyprawę w kierunku Góry Przeznaczenia, w celu zniszczenia Pierścienia Władzy. Aragorn walczy, aby wypełnić przepowiednię i poprowadzić swoich zwolenników przeciw rosnącej sile Władcy Ciemności Saurona, aby Powiernik Pierścienia mógł zakończyć swoją misję."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9356,7 +9660,15 @@
       "start_time": "2026-07-20T13:10:00",
       "end_time": "2026-07-20T14:45:00",
       "category": "komedia",
-      "year": 2011
+      "year": 2011,
+      "tmdb": {
+        "tmdb_id": 58224,
+        "title": "Pan Popper i jego pingwiny",
+        "year": "2011",
+        "poster": "https://image.tmdb.org/t/p/w500/34Ab2NY7NRo5xIL6L0awflOuog8.jpg",
+        "rating": 5.982,
+        "overview": "Mały Tommy Popper wychowywał się na Brooklynie i kiedy tylko mógł rozmawiał z tatą-podróżnikiem. Dorosły pan Popper to majętny agent nieruchomości mieszkający na Manhattanie. Rozwiódł się z Amandą, z którą ma dwójkę dzieci i żyje w luksusowym apartamencie na Park Avenue. Jego życie się zmienia, kiedy kurier dostarcza dziwną paczkę z Antarktyki..."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9365,7 +9677,15 @@
       "start_time": "2026-07-20T14:45:00",
       "end_time": "2026-07-20T16:45:00",
       "category": "dramat obyczajowy",
-      "year": 2019
+      "year": 2019,
+      "tmdb": {
+        "tmdb_id": 502033,
+        "title": "Sound of Metal",
+        "year": "2020",
+        "poster": "https://image.tmdb.org/t/p/w500/8FwTsMsHC542hiC9Wi4Ld5B7JFR.jpg",
+        "rating": 7.7,
+        "overview": "Mają tylko siebie i muzykę. Ruben jest pełnym pasji perkusistą, a Lu przebojową wokalistką. Gdy ruszają w trasę koncertową, a marzenie o wydaniu debiutanckiej płyty jest na wyciągnięcie ręki, Ruben z dnia na dzień zaczyna tracić słuch. W jednej chwili życie, które dotąd znał i kochał, lega w gruzach, a przyszłość staje się wielką niewiadomą. Jego dziewczyna Lu nie daje jednak za wygraną i postanawia zrobić wszystko, by uratować Rubena i to, co ich dotąd łączyło."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9391,7 +9711,15 @@
       "start_time": "2026-07-20T18:20:00",
       "end_time": "2026-07-20T20:00:00",
       "category": "komediodramat",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 728949,
+        "title": "Nocna suka",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/gU3wcVI56UMmGaReNSAL4JuBNa1.jpg",
+        "rating": 5.72,
+        "overview": "Kobieta przerywa karierę, by zostać mamą na pełen etat, jednak wkrótce jej bycie w domu przybiera nieoczekiwanie surrealistyczny obrót."
+      }
     },
     {
       "channel_id": "HBO",
@@ -9417,7 +9745,15 @@
       "start_time": "2026-07-20T23:15:00",
       "end_time": "2026-07-21T01:55:00",
       "category": "film SF",
-      "year": 2017
+      "year": 2017,
+      "tmdb": {
+        "tmdb_id": 335984,
+        "title": "Blade Runner 2049",
+        "year": "2017",
+        "poster": "https://image.tmdb.org/t/p/w500/g3YrbSqzRXVEM74AaY8rK5OqY9u.jpg",
+        "rating": 7.6,
+        "overview": "Minęło 30 lat od wydarzeń przedstawionych w filmie \"Łowca androidów\" Ridleya Scotta. Wtedy w 2019 roku agent Rick Deckard ścigał w Los Angeles zbuntowane androidy z serii Nexus 6. Teraz w 2049 roku do akcji wkracza nowy Blade Runner, czyli łowca - oficer K . Niespodziewanie funkcjonariusz odkrywa spisek, który może zniszczyć pozostałości dawnego porządku i społeczeństwa. Żeby uratować i tak już zrujnowany świat, K musi poprosić o pomoc Deckarda. Problem w tym, że Rick ukrywa się od czasu, gdy w 2019 roku uciekł z Los Angeles..."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10025,7 +10361,15 @@
       "start_time": "2026-07-17T14:35:00",
       "end_time": "2026-07-17T16:30:00",
       "category": "komedia",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1252849,
+        "title": "Pysznie",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/oOTkLihwObOrBizMGA87wsgXo2Q.jpg",
+        "rating": 7.5,
+        "overview": "Znudzone pracą w stołówce przyjaciółki trafiają do telewizyjnego konkursu kulinarnego, gdzie ich więź zostaje wystawiona na próbę."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10074,7 +10418,7 @@
         "title": "CJ7",
         "year": "2008",
         "poster": "https://image.tmdb.org/t/p/w500/fUnzMEhXWTNPVdV59KQL2YCxPUS.jpg",
-        "rating": 7.319,
+        "rating": 7.318,
         "overview": "Chow Ti jest biednym robotnikiem budowlanym żyjącym w slumsach. Po śmierci żony samotnie wychowuje syna Dicky'ego. Chcąc, aby jego dziecko zaszło w życiu znacznie wyżej niż on sam, niemal wszystkie pieniądze przeznacza na czesne syna w elitarnej, prywatnej szkole. Kolegami Dicky'ego są tam dzieci z zamożnych rodzin, które wyśmiewają jego brudne ubrania i rozwalające się buty. Bawią się najdroższymi zabawkami, o których Dicky może tylko pomarzyć. Pewnego dnia, przeszukując jak zwykle wysypisko śmieci w poszukaniu czegoś wartościowego, Chow Ti znajduje coś wyglądającego jak piłka. Zabiera ją dla syna. Wkrótce okazuje się, że jest to kosmiczna zabawka, pozostawiona na Ziemi przez przybyszów z innej planety."
       }
     },
@@ -10128,7 +10472,15 @@
       "start_time": "2026-07-18T02:50:00",
       "end_time": "2026-07-18T04:05:00",
       "category": "horror",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1105736,
+        "title": "Mrok lasu",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/8PduYaILMsUxHhE74f4uAWC5DzO.jpg",
+        "rating": 5.625,
+        "overview": "Młody mężczyzna walczy o życie, gdy ojciec jego zmarłego przyjaciela obwinia go za śmierć syna i szuka zemsty."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10137,7 +10489,15 @@
       "start_time": "2026-07-18T04:05:00",
       "end_time": "2026-07-18T06:00:00",
       "category": "thriller",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1440144,
+        "title": "Spłata",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/3HW6AI665AMtqEVBVIKNfaUcrHm.jpg",
+        "rating": 6.328,
+        "overview": "Lucas, 47-letni chłopak, i Antonia, starsza kobieta, mieszkają razem w mieszkaniu w centrum miasta. Ich życie toczy się normalnie, dopóki fundusz inwestycyjny nie przejmuje budynku i nie przekształca go w apartamenty turystyczne. Lucas stara się zdobyć niezbędne pieniądze, aby uniknąć utraty domu, ale błędna decyzja zmieni resztę ich życia."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10169,7 +10529,7 @@
         "title": "Wyścig z czasem",
         "year": "2011",
         "poster": "https://image.tmdb.org/t/p/w500/yUiCqJNf5ufPXbHfX0ac6QdybE9.jpg",
-        "rating": 6.97,
+        "rating": 6.971,
         "overview": "Niedaleka przyszłość. Za sprawą inżynierii genetycznej ludzkości udało się powstrzymać proces starzenia, ale jednocześnie zaprogramowano ciała tak, by umierały po dwudziestu sześciu latach. By przesunąć datę śmierci, należy za to zapłacić. Najzamożniejsi są praktycznie nieśmiertelni, biedota żebrze o każdą godzinę. Dobiegający krytycznego wieku Will Salas zostaje niesłusznie oskarżony o morderstwo. Aby zapewnić sobie bezpieczeństwo, bierze zakładniczkę."
       }
     },
@@ -10203,7 +10563,7 @@
         "title": "CJ7",
         "year": "2008",
         "poster": "https://image.tmdb.org/t/p/w500/fUnzMEhXWTNPVdV59KQL2YCxPUS.jpg",
-        "rating": 7.319,
+        "rating": 7.318,
         "overview": "Chow Ti jest biednym robotnikiem budowlanym żyjącym w slumsach. Po śmierci żony samotnie wychowuje syna Dicky'ego. Chcąc, aby jego dziecko zaszło w życiu znacznie wyżej niż on sam, niemal wszystkie pieniądze przeznacza na czesne syna w elitarnej, prywatnej szkole. Kolegami Dicky'ego są tam dzieci z zamożnych rodzin, które wyśmiewają jego brudne ubrania i rozwalające się buty. Bawią się najdroższymi zabawkami, o których Dicky może tylko pomarzyć. Pewnego dnia, przeszukując jak zwykle wysypisko śmieci w poszukaniu czegoś wartościowego, Chow Ti znajduje coś wyglądającego jak piłka. Zabiera ją dla syna. Wkrótce okazuje się, że jest to kosmiczna zabawka, pozostawiona na Ziemi przez przybyszów z innej planety."
       }
     },
@@ -10237,7 +10597,7 @@
         "title": "Wyścig z czasem",
         "year": "2011",
         "poster": "https://image.tmdb.org/t/p/w500/yUiCqJNf5ufPXbHfX0ac6QdybE9.jpg",
-        "rating": 6.97,
+        "rating": 6.971,
         "overview": "Niedaleka przyszłość. Za sprawą inżynierii genetycznej ludzkości udało się powstrzymać proces starzenia, ale jednocześnie zaprogramowano ciała tak, by umierały po dwudziestu sześciu latach. By przesunąć datę śmierci, należy za to zapłacić. Najzamożniejsi są praktycznie nieśmiertelni, biedota żebrze o każdą godzinę. Dobiegający krytycznego wieku Will Salas zostaje niesłusznie oskarżony o morderstwo. Aby zapewnić sobie bezpieczeństwo, bierze zakładniczkę."
       }
     },
@@ -10271,7 +10631,7 @@
         "title": "Anioły i demony",
         "year": "2009",
         "poster": "https://image.tmdb.org/t/p/w500/bMY0imOwh00GeZkRaDE5qXZtRie.jpg",
-        "rating": 6.722,
+        "rating": 6.723,
         "overview": "Robert Langdon trafia na trop wielowiekowego bractwa znanego pod nazwą Iluminaci - najbardziej wpływowej organizacji podziemnej w historii ludzkości - którego odwiecznym wrogiem jest Kościół Katolicki. Zegar na ustawionej przez Iluminatów bombie zaczyna już tykać. Mając na to niezbite dowody i chcąc zapobiec katastrofie Langdon udaje się do Rzymu, gdzie zagadkę pomaga mu rozwiązać Vittoria Vetra, piękna i tajemnicza włoska badaczka pracująca dla instytutu CERN. Rozpoczyna się zapierająca dech w piersiach podróż, wiodąca przez krypty wiecznego miasta, tajemnicze katakumby Watykanu, opuszczone katedry, aż do najbardziej tajemniczego na świecie grobowca. Langdon i Vetra będą podążać śladami liczącej sobie 400 lat organizacji Iluminatów, a ich działania mogą okazać się jedyną szansą Watykanu na przetrwanie."
       }
     },
@@ -10367,7 +10727,15 @@
       "start_time": "2026-07-19T08:40:00",
       "end_time": "2026-07-19T10:05:00",
       "category": "komedia SF",
-      "year": 2002
+      "year": 2002,
+      "tmdb": {
+        "tmdb_id": 608,
+        "title": "Faceci w czerni 2",
+        "year": "2002",
+        "poster": "https://image.tmdb.org/t/p/w500/dfOTcClGU5p8lH9sulRXGm4dVFx.jpg",
+        "rating": 6.388,
+        "overview": "Faceci w Czerni powracają! Tommy Lee Jones i Will Smith ponownie stawiają czoła szumowinom z kosmosu, które nawiedzają naszą planetę. Ich najnowsza misja: ocalić świat przed ostateczną zagładą! Kiedy przebiegła kylothiańska kosmitka przybiera postać seksownej modelki, a zamiast reklamować elegancką bieliznę wypowiada wojnę rodzajowi ludzkiemu, agenci Kay i Jay wkraczają do akcji. Gdy kosmiczne szumowiny zajmą ich kwaterę główną, Faceci w Czerni zwrócą się o pomoc do Franka Mopsa i oddziału walecznych Robali. Wspólnie dadzą wycisk bezczelnym najeźdźcom, bo jeszcze się taki nie narodził, który by im dorównał."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10399,7 +10767,7 @@
         "title": "Anioły i demony",
         "year": "2009",
         "poster": "https://image.tmdb.org/t/p/w500/bMY0imOwh00GeZkRaDE5qXZtRie.jpg",
-        "rating": 6.722,
+        "rating": 6.723,
         "overview": "Robert Langdon trafia na trop wielowiekowego bractwa znanego pod nazwą Iluminaci - najbardziej wpływowej organizacji podziemnej w historii ludzkości - którego odwiecznym wrogiem jest Kościół Katolicki. Zegar na ustawionej przez Iluminatów bombie zaczyna już tykać. Mając na to niezbite dowody i chcąc zapobiec katastrofie Langdon udaje się do Rzymu, gdzie zagadkę pomaga mu rozwiązać Vittoria Vetra, piękna i tajemnicza włoska badaczka pracująca dla instytutu CERN. Rozpoczyna się zapierająca dech w piersiach podróż, wiodąca przez krypty wiecznego miasta, tajemnicze katakumby Watykanu, opuszczone katedry, aż do najbardziej tajemniczego na świecie grobowca. Langdon i Vetra będą podążać śladami liczącej sobie 400 lat organizacji Iluminatów, a ich działania mogą okazać się jedyną szansą Watykanu na przetrwanie."
       }
     },
@@ -10427,7 +10795,15 @@
       "start_time": "2026-07-19T15:50:00",
       "end_time": "2026-07-19T17:15:00",
       "category": "komedia SF",
-      "year": 2002
+      "year": 2002,
+      "tmdb": {
+        "tmdb_id": 608,
+        "title": "Faceci w czerni 2",
+        "year": "2002",
+        "poster": "https://image.tmdb.org/t/p/w500/dfOTcClGU5p8lH9sulRXGm4dVFx.jpg",
+        "rating": 6.388,
+        "overview": "Faceci w Czerni powracają! Tommy Lee Jones i Will Smith ponownie stawiają czoła szumowinom z kosmosu, które nawiedzają naszą planetę. Ich najnowsza misja: ocalić świat przed ostateczną zagładą! Kiedy przebiegła kylothiańska kosmitka przybiera postać seksownej modelki, a zamiast reklamować elegancką bieliznę wypowiada wojnę rodzajowi ludzkiemu, agenci Kay i Jay wkraczają do akcji. Gdy kosmiczne szumowiny zajmą ich kwaterę główną, Faceci w Czerni zwrócą się o pomoc do Franka Mopsa i oddziału walecznych Robali. Wspólnie dadzą wycisk bezczelnym najeźdźcom, bo jeszcze się taki nie narodził, który by im dorównał."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10505,7 +10881,15 @@
       "start_time": "2026-07-20T02:25:00",
       "end_time": "2026-07-20T04:00:00",
       "category": "dramat sensacyjny",
-      "year": 1996
+      "year": 1996,
+      "tmdb": {
+        "tmdb_id": 275,
+        "title": "Fargo",
+        "year": "1996",
+        "poster": "https://image.tmdb.org/t/p/w500/xHUmkLOGxbnfoQ2PG0SDs4BJ1C2.jpg",
+        "rating": 7.85,
+        "overview": "Bankrutujący, tonący w długach sprzedawca samochodów z Minneapolis Jerry Lundergaard ma nadzieję, że upozorowane porwanie żony pozwoli mu wyjść z kłopotów finansowych. Jest przekonany, że jego zamożny teść zrobi wszystko, by uratować córkę. Jerry decyduje, że to zadanie na jego zlecenie wykonają dwaj niewydarzeni bandyci. Plan porwania przedstawia gadatliwemu Carlowi i milczącemu Gaerowi. Z pozoru niewinny zamiar przeradza się niebezpieczną, brutalną i zagadkową sprawę. Rozwikłaniem tej historii zajmuje się inteligentna i odważna Marge, policjantka w ciąży."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10523,7 +10907,15 @@
       "start_time": "2026-07-20T04:20:00",
       "end_time": "2026-07-20T06:00:00",
       "category": "film obyczajowy",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1383592,
+        "title": "Delikatne liście",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/pL1WwbSgMrkVI0NwWhsh81gok8E.jpg",
+        "rating": 8.0,
+        "overview": "Świat 11‑letniej Yuny wywraca się do góry nogami, gdy jej tata trafia do szpitala."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10549,7 +10941,15 @@
       "start_time": "2026-07-20T07:30:00",
       "end_time": "2026-07-20T09:10:00",
       "category": "film obyczajowy",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1373976,
+        "title": "Jak być normalną",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/9i6J9nfFPcnXL6cDiwVa1kAahx2.jpg",
+        "rating": 4.3,
+        "overview": "Pia, świeżo po wyjściu ze szpitala psychiatrycznego, wraca do rodziców, by ułożyć sobie życie. Rozdarta między nową pracą, chorobą miłosną, lekami psychotropowymi i stygmatyzacją społeczną, wkracza w świat, w którym wszystko wydaje się wymykać spod kontroli."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10575,7 +10975,15 @@
       "start_time": "2026-07-20T12:00:00",
       "end_time": "2026-07-20T13:30:00",
       "category": "komedia",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 958855,
+        "title": "Ostatni Żyd na osiedlu",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/1oKF4pZzQUuKSeRCPFeqfD6Ego.jpg",
+        "rating": 5.7,
+        "overview": "27-letni Bellisha mieszka z matką, która rzadko opuszcza dom. Pewnego dnia kobieta odkrywa, że są ostatnimi Żydami w okolicy. Syn nie chce wyjeżdżać. Tylko udaje, że angażuje się w przeprowadzkę."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10584,7 +10992,15 @@
       "start_time": "2026-07-20T13:30:00",
       "end_time": "2026-07-20T15:05:00",
       "category": "komedia",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1018728,
+        "title": "Łacina dla wszystkich",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/h4yrJsQGhxDTjFBbVPLfi4W20rT.jpg",
+        "rating": 5.114,
+        "overview": "Delphine, pozbawiona złudzeń nauczycielka literatury, zawiera układ ze swoimi uczniami: dają jej spokój, a ona im w zamian wysokie oceny. Przynosi to jednak odwrotny efekt, ponieważ wskutek tych not jej klasa zostaje zakwalifikowana na mistrzostwa świata w łacinie."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10593,7 +11009,15 @@
       "start_time": "2026-07-20T15:05:00",
       "end_time": "2026-07-20T16:40:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1099985,
+        "title": "Mikado",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/ziJZqVEFueNEbHyPXs3i4EwrWKu.jpg",
+        "rating": 6.848,
+        "overview": "Mikado (Félix Moati) i Laetitia (Vimala Pons) mieszkają z dziećmi w trasie. Awaria silnika zmusza ich do spędzenia wakacji u Vincenta (Ramzy Bedia), nauczyciela mieszkającego samotnie z córką. To początek magicznej historii, która może zachwiać równowagą całej rodziny, gdyż Nuage (Patience Munchenbach), ich najstarsza córka, zaczyna marzyć o normalnym życiu."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10602,7 +11026,15 @@
       "start_time": "2026-07-20T16:40:00",
       "end_time": "2026-07-20T18:20:00",
       "category": "film obyczajowy",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1373976,
+        "title": "Jak być normalną",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/9i6J9nfFPcnXL6cDiwVa1kAahx2.jpg",
+        "rating": 4.3,
+        "overview": "Pia, świeżo po wyjściu ze szpitala psychiatrycznego, wraca do rodziców, by ułożyć sobie życie. Rozdarta między nową pracą, chorobą miłosną, lekami psychotropowymi i stygmatyzacją społeczną, wkracza w świat, w którym wszystko wydaje się wymykać spod kontroli."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10611,7 +11043,15 @@
       "start_time": "2026-07-20T18:20:00",
       "end_time": "2026-07-20T20:00:00",
       "category": "komedia",
-      "year": 1993
+      "year": 1993,
+      "tmdb": {
+        "tmdb_id": 137,
+        "title": "Dzień świstaka",
+        "year": "1993",
+        "poster": "https://image.tmdb.org/t/p/w500/xUdHk8kAX6Qyb12Yrg3Cs6lA3gV.jpg",
+        "rating": 7.633,
+        "overview": "Phil Connors, pyszałkowaty i cyniczny prezenter pogody, wybiera się wraz z ekipą telewizyjną do prowincjonalnego Punxsutawney na doroczny \"Dzień Świstaka\". Idiotyczna ceremonia przepowiadania nadejścia wiosny przepełnia go odrazą. Jedynym jaśniejszym punktem wyprawy jest śliczna producentka, Rita. Phil ma nadzieję poderwać Ritę, jednak los szykuje mu przykrą niespodziankę. Z niewiadomych przyczyn dzień świstaka zaczyna się bez końca powtarzać. Żeby wyrwać się z pętli czasu, Phil będzie musiał wiele zrozumieć i wiele w sobie zmienić."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10620,7 +11060,15 @@
       "start_time": "2026-07-20T20:00:00",
       "end_time": "2026-07-20T21:30:00",
       "category": "komediodramat",
-      "year": 2025
+      "year": 2025,
+      "tmdb": {
+        "tmdb_id": 1312312,
+        "title": "Mężczyzna, który widział niedźwiedzia",
+        "year": "2025",
+        "poster": "https://image.tmdb.org/t/p/w500/nVtJKQ034b3blVitW3DIClf2r83.jpg",
+        "rating": 4.9,
+        "overview": "Grégoire i Michel nie należą do tego samego pokolenia, ale łączy ich przyjaźń, miłość do natury i wielka sympatia do niedźwiedzia, który uciekł z cyrku."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10629,7 +11077,15 @@
       "start_time": "2026-07-20T21:30:00",
       "end_time": "2026-07-20T23:05:00",
       "category": "dramat kryminalny",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1075813,
+        "title": "Zielona noc",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/cbUiAVMvSN5BYSpl3d6iza65zT6.jpg",
+        "rating": 6.2,
+        "overview": "Dwie samotne wojowniczki, które nauczyły się polegać tylko na sobie, zapuszczają się do podziemnego świata Seulu. W poszukiwaniu wielkiej szansy, która mogłaby oznaczać wyzwolenie od bezużytecznych mężów, te zupełnie różne kobiety zbliżają się do siebie."
+      }
     },
     {
       "channel_id": "Cinemax",
@@ -10638,7 +11094,15 @@
       "start_time": "2026-07-20T23:05:00",
       "end_time": "2026-07-21T00:55:00",
       "category": "dramat kryminalny",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1181011,
+        "title": "Amal",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/7Rb7Ymbe6GOoHWMUth84GDcnQEH.jpg",
+        "rating": 7.8,
+        "overview": "Amal (Lubna Azabal), nauczycielka w liceum w Brukseli, zachęca swoich uczniów do swobodnej wypowiedzi. Dzięki swoim odważnym metodom nauczania i entuzjazmowi wywróci ich życie do góry nogami. Do tego stopnia, że ​​niektórych to szokuje. Stopniowo Amal będzie czuła się nękana, zagrożona..."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -10656,7 +11120,15 @@
       "start_time": "2026-07-15T04:20:00",
       "end_time": "2026-07-15T06:00:00",
       "category": "dramat obyczajowy",
-      "year": 1989
+      "year": 1989,
+      "tmdb": {
+        "tmdb_id": 389854,
+        "title": "Ostatni prom",
+        "year": "1989",
+        "poster": "https://image.tmdb.org/t/p/w500/in48UHZqo29A6tFG3j4xaiqqXfO.jpg",
+        "rating": 7.571,
+        "overview": "Akcja filmu toczy się w przededniu stanu wojennego na promie płynącym do Hamburga. Większość pasażerów wyjeżdża do Niemiec z zamiarem pozostania tam na zawsze. Podczas rejsu kapitan promu dowiaduje się o ogłoszeniu stanu wojennego i zgodnie z rozkazem zawraca statek do Polski. Pasażerowie zaczynają domyślać się, że dzieje się coś niedobrego. Postanawiają skorzystać z tego, że w okolicy pojawiły się kutry niemieckie i uciekają z promu."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -10852,7 +11324,15 @@
       "start_time": "2026-07-16T03:50:00",
       "end_time": "2026-07-16T05:50:00",
       "category": "dramat obyczajowy",
-      "year": 2021
+      "year": 2021,
+      "tmdb": {
+        "tmdb_id": 879361,
+        "title": "Po miłość / Pour l'amour",
+        "year": "2022",
+        "poster": "https://image.tmdb.org/t/p/w500/sEikfwfO0JsqSurR5NueoUoznrZ.jpg",
+        "rating": 3.8,
+        "overview": "Marlena zmaga się z poważnym kryzysem małżeńskim wywołanym przez alkoholizm jej męża Zbigniewa. Za pośrednictwem Internetu poznaje Senegalczyka Bruna, który przywraca Marlenie poczucie własnej wartości i kobiecości. Okazuje się jednak, że mężczyzna ma wobec niej nieco inne zamiary niż stworzenie z nią związku…"
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11098,7 +11578,15 @@
       "start_time": "2026-07-17T02:10:00",
       "end_time": "2026-07-17T04:20:00",
       "category": "komediodramat",
-      "year": 1993
+      "year": 1993,
+      "tmdb": {
+        "tmdb_id": 574852,
+        "title": "Obcy musi fruwać",
+        "year": "1993",
+        "poster": "https://image.tmdb.org/t/p/w500/x735OVXEx6qlvgeMnLglyQhLwYt.jpg",
+        "rating": 8.0,
+        "overview": "Berlin, rok 1990. Właśnie zburzono mur berliński, panuje atmosfera zbliżającego się zjednoczenia Niemiec. Na zaproszenie swych przyjaciół - aktorów, którzy od wielu już lat mieszkają za granicą, do Berlina przyjeżdża Max, polski reżyser teatralny. Zaczynają razem pracować. Usiłują zrealizować swoje marzenie: wystawić sztukę, której inscenizację uniemożliwiło wprowadzenie stanu wojennego dziesięć lat wcześniej. Sposób, w jaki gromadzą fundusze (sprzedawanie kawałków \"historycznego\" muru) i zmagają się z bezduszną machiną biurokracji, stanowi oś filmu. W swych wysiłkach czwórka bohaterów wspomagana jest przez Reginę, tłumaczkę obeznaną z miejscowymi zwyczajami i praktykami."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11311,7 +11799,15 @@
       "start_time": "2026-07-17T20:05:00",
       "end_time": "2026-07-17T22:05:00",
       "category": "komedia obyczajowa",
-      "year": 1985
+      "year": 1985,
+      "tmdb": {
+        "tmdb_id": 81297,
+        "title": "Och, Karol",
+        "year": "1985",
+        "poster": "https://image.tmdb.org/t/p/w500/f9CSumJeunX4HeflawWLrl61NgV.jpg",
+        "rating": 4.8,
+        "overview": "Karol Górski lubuje się w grach i gierkach miłosnych. Mimo, że ma atrakcyjną żonę Marię, nie przepuści żadnej okazji, by pójść do łóżka z inną. A to rodzi coraz większe komplikacje. Irena ciosa mu kołki na głowie, by wreszcie się rozwiódł (i ożenił z nią); Paulina spodziewa się jego dziecka; Wanda chce mu załatwić lukratywną pracę w Nigerii. Wkrótce doba okazuje się zbyt krótka, by zadowolić wszystkie panie, a oczekiwania rosną. Cierpliwość i tak zdumiewająco tolerancyjnej żony też się kończy. Wreszcie pewnego dnia kochliwy architekt zastaje wszystkie kobiety...u siebie w domu."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11320,7 +11816,15 @@
       "start_time": "2026-07-17T22:05:00",
       "end_time": "2026-07-18T00:00:00",
       "category": "dramat obyczajowy",
-      "year": 1983
+      "year": 1983,
+      "tmdb": {
+        "tmdb_id": 158496,
+        "title": "Karate po polsku",
+        "year": "1982",
+        "poster": "https://image.tmdb.org/t/p/w500/ihRhu4R3SYbz2lTNdaRWk6KjiFZ.jpg",
+        "rating": 5.5,
+        "overview": "Dwaj plastycy, Piotr i Michał, przyjeżdżają do sennego miasteczka na Mazurach. Mają odnowić fresk w miejscowym kościele. Towarzyszy im partnerka Piotra, Dorota. Wkrótce po przyjeździe przybysze ratują z opresji byłego oficera AK, atakowanego przez grupę chuliganów, którym przewodzi Roman. Po tym zdarzeniu konflikt artystów z miejscowymi przybiera na sile. Banda Romana czuje się bezkarna, wciąż prowokuje awantury. Dorota ma do Piotra, mistrza karate, pretensje, że ten boi się użyć siły i przeciwstawić zbirom. Niebawem dochodzi do konfrontacji."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11329,7 +11833,15 @@
       "start_time": "2026-07-18T00:00:00",
       "end_time": "2026-07-18T01:55:00",
       "category": "dramat obyczajowy",
-      "year": 2024
+      "year": 2024,
+      "tmdb": {
+        "tmdb_id": 1283446,
+        "title": "Game Over",
+        "year": "2024",
+        "poster": "https://image.tmdb.org/t/p/w500/8z4XIHUKlni69c5dZWPbSBzJTg1.jpg",
+        "rating": 6.0,
+        "overview": "Dwudziestodziewięcioletni Wojtek, bezrobotny gamer, otrzymuje sądowy nakaz opuszczenia w ciągu miesiąca domu swojej matki, Joanny. Między bohaterami dochodzi do kłótni, po której Wojtek znajduje nieprzytomną Joannę przy wejściu na schody. Diagnoza wskazuje na uraz pnia mózgu, którego efektem jest tzw. zespół zamknięcia. Joanna jest świadoma, ale poza ruchami oczu nie jest w stanie się poruszyć. Jej szansę na powrót do sprawności może zwiększyć kosztowna rehabilitacja."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11338,7 +11850,15 @@
       "start_time": "2026-07-18T01:55:00",
       "end_time": "2026-07-18T03:50:00",
       "category": "dramat obyczajowy",
-      "year": 2011
+      "year": 2011,
+      "tmdb": {
+        "tmdb_id": 96005,
+        "title": "Wymyk",
+        "year": "2011",
+        "poster": "https://image.tmdb.org/t/p/w500/3FBgPBfqCOFW52mSTGTtCSyr1VT.jpg",
+        "rating": 6.288,
+        "overview": "Alfred żyje na krawędzi, uwielbia prędkość i adrenalinę, ale to jego młodszy brat jest odważny w prowadzeniu wspólnej firmy. Kobieta, interesy, uwaga rodziców – wszystko ich dzieli. Zazdrość Alfreda przeradza się w otwarty konflikt.  Tego dnia Alfred zrobi coś, co zmieni jego życie na zawsze."
+      }
     },
     {
       "channel_id": "Kino Polska",
@@ -11347,7 +11867,15 @@
       "start_time": "2026-07-18T03:50:00",
       "end_time": "2026-07-18T05:45:00",
       "category": "dramat SF",
-      "year": 2023
+      "year": 2023,
+      "tmdb": {
+        "tmdb_id": 1153470,
+        "title": "W nich cała nadzieja",
+        "year": "2023",
+        "poster": "https://image.tmdb.org/t/p/w500/hkhIo2pds2VbW6vBx6VEK60GK2K.jpg",
+        "rating": 5.867,
+        "overview": "W rzeczywistości postapokaliptycznej Ewa walczy nie tylko o przetrwanie, ale i zmaga się z dotkliwą samotnością. Prawdziwy dramat zaczyna się, kiedy przez absurdalną sytuację wchodzi w konflikt z robotem, swoim jedynym towarzyszem."
+      }
     },
     {
       "channel_id": "Kino Polska",
